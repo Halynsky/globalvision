@@ -1,0 +1,19 @@
+{
+  "name": "template",
+  "description": "template",
+  "main": "",
+  "authors": [],
+  "license": "MIT",
+  "homepage": "/",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "tests"
+  ],
+  "dependencies": {
+    "bourbon": "^4.3.4",
+    "jquery": "^3.2.1"
+  }
+}
