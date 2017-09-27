@@ -1,0 +1,21 @@
+.m-btn {
+  color: #ffffff;
+  border: 0;
+  font-weight: 600;
+  cursor: pointer;
+
+  &.main {
+    padding: 20px 23px;
+    min-width: 200px;
+    background-color: #411997;
+    box-shadow: 0 1px 7px 0 rgba(50, 0, 126, 0.26);
+    font-size: 16px;
+  }
+
+  &.getEstimation {
+    padding: 12px 15px;
+    background-color: #411997;
+    box-shadow: 0 1px 7px 0 rgba(50, 0, 126, 0.26);
+    margin-left: 15px;
+  }
+}

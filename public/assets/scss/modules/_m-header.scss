@@ -6,19 +6,20 @@
   @include align-items(center);
   @include justify-content(space-between);
 
+  &.fixed-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+
   .container {
     @include display(flex);
     @include justify-content(space-between);
 
-    .main-menu {
-      @include display(flex);
-      @include align-items(center);
-      @include justify-content(center);
-
+    .m-menu {
       a {
         font-size: 14px;
-        color: #000000;
-        padding: 0 15px;
       }
     }
   }

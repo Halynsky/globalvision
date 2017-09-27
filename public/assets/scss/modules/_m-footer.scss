@@ -1,0 +1,26 @@
+.m-footer {
+  .footer-top {
+    background: #ffffff;
+    padding: 60px 0;
+
+    .container {
+      @include display(flex);
+      @include align-items(center);
+      @include justify-content(spa);
+    }
+
+    .m-menu {
+      a {
+        font-size: 16px;
+      }
+    }
+  }
+
+  .footer-bottom {
+    padding: 15px 0;
+    background-color: #f7f8f9;
+    font-size: 14px;
+    text-align: center;
+    color: #bfbfbf;
+  }
+}

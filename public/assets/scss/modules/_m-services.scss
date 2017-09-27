@@ -1,0 +1,26 @@
+.m-services {
+  background-color: #ffffff;
+  padding: 73px 0;
+
+  .container {
+    display: block;
+  }
+
+  .under-title {
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    text-align: left;
+    color: #251841;
+    text-transform: uppercase;
+  }
+
+  .title {
+    font-size: 36px;
+    font-weight: bold;
+    line-height: 1.11;
+    letter-spacing: 1px;
+    color: rgba(0, 0, 0, 0.87);
+    padding-top: 10px;
+  }
+}

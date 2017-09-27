@@ -32,7 +32,7 @@ gulp.task('jsmin', function() {
 });
 
 gulp.task('watch', function(){
-    gulp.watch('resources/assets/scss/**/*.scss', ['sass']);
+    gulp.watch('public/assets/scss/**/*.scss', ['sass']);
     // Other watchers
 });
 gulp.task('default', ['sass', 'watch']);

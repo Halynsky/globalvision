@@ -1,0 +1,23 @@
+.m-about {
+  background-color: #f7f8f9;
+  padding: 73px 0;
+
+  .title {
+    font-size: 26px;
+    font-weight: bold;
+    line-height: 1.23;
+    letter-spacing: 0.9px;
+    text-align: left;
+    color: rgba(0, 0, 0, 0.86);
+    border-left: 3px solid rgba(0, 0, 0, 0.86);
+    padding-left: 77px;
+    min-width: 320px;
+    margin-right: 92px;
+  }
+
+  .description {
+    font-size: 16px;
+    text-align: left;
+    color: #9a9a9a;
+  }
+}

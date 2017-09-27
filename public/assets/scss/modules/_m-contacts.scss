@@ -1,0 +1,25 @@
+.m-contacts {
+  background: #ddd;
+  height: 500px;
+  position: relative;
+
+  #map {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  .container {
+    position: relative;
+  }
+
+  .contacts-form {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #ffffff;
+    padding: 36px 25px;
+  }
+}

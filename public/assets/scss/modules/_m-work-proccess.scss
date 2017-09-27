@@ -1,0 +1,28 @@
+.m-work-proccess {
+  background-color: #563dd1;
+  padding: 64px 0 78px 0;
+
+  .container {
+    @include display(flex);
+    @include justify-content(center);
+    @include flex-direction(column);
+  }
+
+  .under-title {
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    text-align: center;
+    color: #32007e;
+    text-transform: uppercase;
+    padding-bottom: 10px;
+  }
+
+  .title {
+    font-size: 26px;
+    font-weight: bold;
+    line-height: 1.23;
+    text-align: center;
+    color: #fdfdfd;
+  }
+}

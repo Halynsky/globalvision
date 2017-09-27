@@ -1,0 +1,53 @@
+.m-services__cards {
+  margin-top: 36px;
+  margin: 36px -15px 0 -15px;
+  @include display(flex);
+  @include align-items(flex-start);
+  @include justify-content(space-between);
+
+  .item {
+    padding: 36px 24px;
+    margin: 0 15px;
+    @include align-self(stretch);
+    background-color: #ffffff;
+    box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.12);
+
+    .logo {
+      width: 48px;
+      height: 48px;
+      //background: url();
+      background-color: #d8d8d8;
+      border: solid 1px #979797;
+      border-radius: 48px;
+      margin-bottom: 15px;
+    }
+
+    .title {
+      font-size: 20px;
+      font-weight: bold;
+      text-align: left;
+      color: #444444;
+    }
+
+    .description {
+      font-size: 16px;
+      text-align: left;
+      color: #9a9a9a;
+      padding: 15px 0;
+    }
+
+    .service-links {
+      @include display(flex);
+      @include flex-direction(column);
+
+      a {
+        font-size: 16px;
+        font-weight: 600;
+        text-align: left;
+        color: #402f6b;
+        text-decoration: none;
+        margin: 6px 0;
+      }
+    }
+  }
+}

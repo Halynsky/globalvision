@@ -2,12 +2,18 @@
 @import "../../../bower_components/bourbon/app/assets/stylesheets/_bourbon.scss";
 
 //Configuration
-@import "base/layout";
 @import "base/variables";
+@import "base/layout";
 
 //Modules
 @import "modules/m-home";
+@import "modules/m-menu";
 @import "modules/m-header";
 @import "modules/m-about";
+@import "modules/m-how-we-do";
+@import "modules/m-work-proccess";
+@import "modules/m-services";
+@import "modules/m-services__cards";
 @import "modules/m-contacts";
 @import "modules/m-footer";
+@import "modules/m-btn";
