@@ -35,7 +35,7 @@ html, body {
   -ms-flex-pack: justify; }
 
 a:hover {
-  color: red !important; }
+  text-decoration: underline !important; }
 
 .m-home {
   height: 100%;
@@ -174,7 +174,8 @@ a:hover {
     position: fixed;
     top: 0;
     left: 0;
-    right: 0; }
+    right: 0;
+    z-index: 99999; }
   .m-header .container {
     display: -webkit-box;
     display: -moz-box;
@@ -243,19 +244,10 @@ a:hover {
     -o-justify-content: space-between;
     justify-content: space-between;
     -ms-flex-pack: justify; }
-  .m-how-we-do .technologies {
-    -webkit-flex-basis: 0;
-    -moz-flex-basis: 0;
-    flex-basis: 0;
-    -ms-flex-preferred-size: 0; }
-    .m-how-we-do .technologies .circle {
-      width: 10px;
-      height: 10px;
-      background: red;
-      border-radius: 10px;
-      position: relative;
-      top: 30px;
-      left: 10px; }
+  .m-how-we-do #technologies {
+    width: 100%; }
+    .m-how-we-do #technologies svg {
+      overflow: visible !important; }
   .m-how-we-do .text-information {
     -webkit-flex-basis: 357px;
     -moz-flex-basis: 357px;
@@ -324,7 +316,187 @@ a:hover {
     font-weight: bold;
     line-height: 1.23;
     text-align: center;
-    color: #fdfdfd; }
+    color: #fdfdfd;
+    max-width: 454px; }
+  .m-work-proccess .items {
+    display: -webkit-box;
+    display: -moz-box;
+    display: box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -moz-box-pack: center;
+    box-pack: center;
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    -ms-justify-content: center;
+    -o-justify-content: center;
+    justify-content: center;
+    -ms-flex-pack: center;
+    margin: 0 -15px;
+    margin-top: 86px; }
+    .m-work-proccess .items .item {
+      display: -webkit-box;
+      display: -moz-box;
+      display: box;
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -moz-box-orient: vertical;
+      box-orient: vertical;
+      -webkit-box-direction: normal;
+      -moz-box-direction: normal;
+      box-direction: normal;
+      -webkit-flex-direction: column;
+      -moz-flex-direction: column;
+      flex-direction: column;
+      -ms-flex-direction: column;
+      -webkit-box-align: center;
+      -moz-box-align: center;
+      box-align: center;
+      -webkit-align-items: center;
+      -moz-align-items: center;
+      -ms-align-items: center;
+      -o-align-items: center;
+      align-items: center;
+      -ms-flex-align: center;
+      min-width: 239px;
+      max-width: 25%;
+      position: relative;
+      margin: 0 15px; }
+      .m-work-proccess .items .item:last-child:after {
+        content: none; }
+      .m-work-proccess .items .item:after {
+        content: '';
+        color: #fff;
+        position: absolute;
+        left: 185px;
+        top: 35px;
+        width: 150px;
+        height: 1px;
+        border-bottom: 1px dashed #fff; }
+      .m-work-proccess .items .item .logo {
+        width: 69px;
+        height: 69px;
+        border: solid 1px #ffffff;
+        border-radius: 69px;
+        background: transparent; }
+      .m-work-proccess .items .item .title {
+        font-size: 18px;
+        font-weight: 600;
+        text-align: center;
+        color: #ffffff;
+        padding: 15px 0; }
+      .m-work-proccess .items .item .description {
+        font-size: 16px;
+        text-align: center;
+        color: #ececec; }
+
+.m-testimonials {
+  background-color: #f7f8f9;
+  padding: 54px 0 60px 0; }
+  .m-testimonials .container {
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+    box-orient: vertical;
+    -webkit-box-direction: normal;
+    -moz-box-direction: normal;
+    box-direction: normal;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-direction: column; }
+  .m-testimonials .under-title {
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    text-align: center;
+    color: #32007e;
+    text-transform: uppercase;
+    padding-bottom: 10px; }
+  .m-testimonials .title {
+    font-size: 26px;
+    font-weight: bold;
+    line-height: 1.23;
+    text-align: center;
+    color: #2d2d2d; }
+  .m-testimonials .items {
+    margin-top: 45px;
+    display: -webkit-box;
+    display: -moz-box;
+    display: box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -moz-box-orient: horizontal;
+    box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -moz-box-direction: normal;
+    box-direction: normal;
+    -webkit-flex-direction: row;
+    -moz-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-direction: row; }
+    .m-testimonials .items .item {
+      max-width: 576px !important;
+      width: 100% !important;
+      display: -webkit-box;
+      display: -moz-box;
+      display: box;
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -moz-box-orient: vertical;
+      box-orient: vertical;
+      -webkit-box-direction: normal;
+      -moz-box-direction: normal;
+      box-direction: normal;
+      -webkit-flex-direction: column;
+      -moz-flex-direction: column;
+      flex-direction: column;
+      -ms-flex-direction: column;
+      -webkit-box-align: center;
+      -moz-box-align: center;
+      box-align: center;
+      -webkit-align-items: center;
+      -moz-align-items: center;
+      -ms-align-items: center;
+      -o-align-items: center;
+      align-items: center;
+      -ms-flex-align: center; }
+      .m-testimonials .items .item .avatar {
+        width: 80px;
+        height: 80px;
+        box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.58);
+        border: solid 5px #ffffff;
+        border-radius: 80px;
+        background: gold;
+        margin-bottom: 15px; }
+      .m-testimonials .items .item .text {
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 1.63;
+        text-align: center;
+        color: #c4c4c4; }
+      .m-testimonials .items .item .line {
+        width: 65px;
+        height: 3px;
+        background-color: #6853cf;
+        display: block;
+        margin: 23px 0; }
+      .m-testimonials .items .item .name {
+        font-size: 16px;
+        font-weight: bold;
+        text-align: center;
+        color: #444444; }
 
 .m-services {
   background-color: #ffffff;
@@ -437,13 +609,54 @@ a:hover {
     right: 0;
     bottom: 0; }
   .m-contacts .container {
-    position: relative; }
+    position: relative;
+    display: -webkit-box;
+    display: -moz-box;
+    display: box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    box-align: center;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -o-align-items: center;
+    align-items: center;
+    -ms-flex-align: center;
+    -webkit-box-pack: center;
+    -moz-box-pack: center;
+    box-pack: center;
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    -ms-justify-content: center;
+    -o-justify-content: center;
+    justify-content: center;
+    -ms-flex-pack: center; }
   .m-contacts .contacts-form {
     position: absolute;
-    top: 0;
+    top: 15px;
     right: 0;
     background: #ffffff;
-    padding: 36px 25px; }
+    padding: 36px 25px;
+    min-width: 420px; }
+    .m-contacts .contacts-form .under-title {
+      font-size: 14px;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+      text-align: left;
+      color: #32007e;
+      text-transform: uppercase;
+      padding-bottom: 10px; }
+    .m-contacts .contacts-form .title {
+      font-size: 26px;
+      font-weight: bold;
+      line-height: 1.23;
+      text-align: left;
+      color: #2e2e2e;
+      padding-bottom: 24px; }
 
 .m-footer .footer-top {
   background: #ffffff;
@@ -500,3 +713,73 @@ a:hover {
     background-color: #411997;
     box-shadow: 0 1px 7px 0 rgba(50, 0, 126, 0.26);
     margin-left: 15px; }
+
+.m-form {
+  box-sizing: border-box; }
+  .m-form .form-group {
+    margin-bottom: 15px; }
+    .m-form .form-group input, .m-form .form-group textarea {
+      background-color: #ffffff;
+      border: solid 1px #dfdfdf;
+      min-height: 42px;
+      width: 100%;
+      box-sizing: border-box;
+      font-family: "Muli", sans-serif;
+      padding: 0 15px; }
+      .m-form .form-group input.placeholder, .m-form .form-group textarea.placeholder {
+        font-size: 16px;
+        font-weight: 600;
+        text-align: left;
+        color: #cecece; }
+      .m-form .form-group input:-moz-placeholder, .m-form .form-group textarea:-moz-placeholder {
+        font-size: 16px;
+        font-weight: 600;
+        text-align: left;
+        color: #cecece; }
+      .m-form .form-group input::-moz-placeholder, .m-form .form-group textarea::-moz-placeholder {
+        font-size: 16px;
+        font-weight: 600;
+        text-align: left;
+        color: #cecece; }
+      .m-form .form-group input:-ms-input-placeholder, .m-form .form-group textarea:-ms-input-placeholder {
+        font-size: 16px;
+        font-weight: 600;
+        text-align: left;
+        color: #cecece; }
+      .m-form .form-group input::-webkit-input-placeholder, .m-form .form-group textarea::-webkit-input-placeholder {
+        font-size: 16px;
+        font-weight: 600;
+        text-align: left;
+        color: #cecece; }
+    .m-form .form-group textarea {
+      padding-top: 10px;
+      min-height: 139px;
+      resize: none; }
+  .m-form .m-btn.main {
+    padding: 10px 16px !important;
+    min-width: 174px !important;
+    display: -webkit-box;
+    display: -moz-box;
+    display: box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    box-align: center;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -o-align-items: center;
+    align-items: center;
+    -ms-flex-align: center;
+    -webkit-box-pack: justify;
+    -moz-box-pack: justify;
+    box-pack: justify;
+    -webkit-justify-content: space-between;
+    -moz-justify-content: space-between;
+    -ms-justify-content: space-between;
+    -o-justify-content: space-between;
+    justify-content: space-between;
+    -ms-flex-pack: justify; }

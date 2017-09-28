@@ -12,8 +12,14 @@
 @import "modules/m-about";
 @import "modules/m-how-we-do";
 @import "modules/m-work-proccess";
+@import "modules/m-testimonials";
 @import "modules/m-services";
 @import "modules/m-services__cards";
 @import "modules/m-contacts";
 @import "modules/m-footer";
 @import "modules/m-btn";
+@import "modules/m-form";
+
+//Resolution
+@import "resolution/tablet";
+@import "resolution/mobile";

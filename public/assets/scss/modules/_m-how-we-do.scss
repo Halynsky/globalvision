@@ -8,17 +8,13 @@
     @include justify-content(space-between);
   }
 
-  .technologies {
-    @include flex-basis(0);
+  #technologies {
+    width: 100%;
 
-    .circle {
-      width: 10px;
-      height: 10px;
-      background: red;
-      border-radius: 10px;
+    svg {
+      overflow: visible!important;
+      z-index: 9999;
       position: relative;
-      top: 30px;
-      left: 10px;
     }
   }
 

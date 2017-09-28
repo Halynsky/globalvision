@@ -24,5 +24,62 @@
     line-height: 1.23;
     text-align: center;
     color: #fdfdfd;
+    max-width: 454px;
+  }
+
+  .items {
+    @include display(flex);
+    @include justify-content(center);
+    margin: 0 -15px;
+    margin-top: 86px;
+
+    .item {
+      @include display(flex);
+      @include flex-direction(column);
+      @include align-items(center);
+      min-width: 239px;
+      max-width: 25%;
+      position: relative;
+      margin: 0 15px;
+
+      &:last-child {
+        &:after {
+          content: none;
+        }
+      }
+
+      &:after {
+        content: '';
+        color: #fff;
+        position: absolute;
+        left: 185px;
+        top: 35px;
+        width: 150px;
+        height: 1px;
+        border-bottom: 1px dashed #fff;
+      }
+
+      .logo {
+        width: 69px;
+        height: 69px;
+        border: solid 1px #ffffff;
+        border-radius: 69px;
+        background: transparent;
+      }
+
+      .title {
+        font-size: 18px;
+        font-weight: 600;
+        text-align: center;
+        color: #ffffff;
+        padding: 15px 0;
+      }
+
+      .description {
+        font-size: 16px;
+        text-align: center;
+        color: #ececec;
+      }
+    }
   }
 }

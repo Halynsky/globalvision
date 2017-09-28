@@ -13,13 +13,37 @@
 
   .container {
     position: relative;
+    @include display(flex);
+    @include align-items(center);
+    @include justify-content(center);
   }
 
   .contacts-form {
     position: absolute;
-    top: 0;
+    top: 15px;
     right: 0;
     background: #ffffff;
     padding: 36px 25px;
+    min-width: 420px;
+
+
+    .under-title {
+      font-size: 14px;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+      text-align: left;
+      color: #32007e;
+      text-transform: uppercase;
+      padding-bottom: 10px;
+    }
+
+    .title {
+      font-size: 26px;
+      font-weight: bold;
+      line-height: 1.23;
+      text-align: left;
+      color: #2e2e2e;
+      padding-bottom: 24px;
+    }
   }
 }
