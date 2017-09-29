@@ -4,6 +4,7 @@
   @include display(flex);
   @include align-items(flex-start);
   @include justify-content(space-between);
+  overflow: hidden;
 
   .item {
     padding: 36px 24px;

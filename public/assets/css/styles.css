@@ -247,7 +247,9 @@ a:hover {
   .m-how-we-do #technologies {
     width: 100%; }
     .m-how-we-do #technologies svg {
-      overflow: visible !important; }
+      overflow: visible !important;
+      z-index: 9999;
+      position: relative; }
   .m-how-we-do .text-information {
     -webkit-flex-basis: 357px;
     -moz-flex-basis: 357px;
@@ -426,26 +428,20 @@ a:hover {
     color: #2d2d2d; }
   .m-testimonials .items {
     margin-top: 45px;
-    display: -webkit-box;
-    display: -moz-box;
-    display: box;
-    display: -webkit-flex;
-    display: -moz-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -moz-box-orient: horizontal;
-    box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -moz-box-direction: normal;
-    box-direction: normal;
-    -webkit-flex-direction: row;
-    -moz-flex-direction: row;
-    flex-direction: row;
-    -ms-flex-direction: row; }
-    .m-testimonials .items .item {
-      max-width: 576px !important;
-      width: 100% !important;
+    max-width: 576px;
+    position: relative; }
+    .m-testimonials .items .testimonial-slider {
+      overflow: hidden; }
+    .m-testimonials .items .swiper-button-next, .m-testimonials .items .swiper-button-prev {
+      background: #fff;
+      box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.58);
+      width: 48px;
+      height: 48px;
+      border-radius: 48px;
+      opacity: 1;
+      -webkit-transition: 0.3s;
+      -moz-transition: 0.3s;
+      transition: 0.3s;
       display: -webkit-box;
       display: -moz-box;
       display: box;
@@ -453,16 +449,6 @@ a:hover {
       display: -moz-flex;
       display: -ms-flexbox;
       display: flex;
-      -webkit-box-orient: vertical;
-      -moz-box-orient: vertical;
-      box-orient: vertical;
-      -webkit-box-direction: normal;
-      -moz-box-direction: normal;
-      box-direction: normal;
-      -webkit-flex-direction: column;
-      -moz-flex-direction: column;
-      flex-direction: column;
-      -ms-flex-direction: column;
       -webkit-box-align: center;
       -moz-box-align: center;
       box-align: center;
@@ -471,7 +457,42 @@ a:hover {
       -ms-align-items: center;
       -o-align-items: center;
       align-items: center;
-      -ms-flex-align: center; }
+      -ms-flex-align: center;
+      -webkit-box-pack: center;
+      -moz-box-pack: center;
+      box-pack: center;
+      -webkit-justify-content: center;
+      -moz-justify-content: center;
+      -ms-justify-content: center;
+      -o-justify-content: center;
+      justify-content: center;
+      -ms-flex-pack: center;
+      color: #888; }
+      .m-testimonials .items .swiper-button-next i, .m-testimonials .items .swiper-button-prev i {
+        font-size: 35px; }
+      .m-testimonials .items .swiper-button-next:active, .m-testimonials .items .swiper-button-next:hover, .m-testimonials .items .swiper-button-prev:active, .m-testimonials .items .swiper-button-prev:hover {
+        opacity: 1;
+        -webkit-transition: 0.3s;
+        -moz-transition: 0.3s;
+        transition: 0.3s;
+        background: #32007e;
+        color: #fff; }
+      .m-testimonials .items .swiper-button-next.swiper-button-disabled, .m-testimonials .items .swiper-button-prev.swiper-button-disabled {
+        opacity: 1;
+        -webkit-transition: 0.3s;
+        -moz-transition: 0.3s;
+        transition: 0.3s;
+        color: #ddd;
+        box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.18); }
+    .m-testimonials .items .swiper-button-next {
+      right: -141px; }
+    .m-testimonials .items .swiper-button-prev {
+      left: -141px; }
+    .m-testimonials .items .lSSlideWrapper {
+      position: static; }
+    .m-testimonials .items .item {
+      max-width: 576px !important;
+      width: 100% !important; }
       .m-testimonials .items .item .avatar {
         width: 80px;
         height: 80px;
@@ -479,7 +500,7 @@ a:hover {
         border: solid 5px #ffffff;
         border-radius: 80px;
         background: gold;
-        margin-bottom: 15px; }
+        margin: 0 auto 15px auto; }
       .m-testimonials .items .item .text {
         font-size: 16px;
         font-weight: 600;
@@ -491,7 +512,7 @@ a:hover {
         height: 3px;
         background-color: #6853cf;
         display: block;
-        margin: 23px 0; }
+        margin: 23px auto; }
       .m-testimonials .items .item .name {
         font-size: 16px;
         font-weight: bold;
@@ -545,7 +566,8 @@ a:hover {
   -ms-justify-content: space-between;
   -o-justify-content: space-between;
   justify-content: space-between;
-  -ms-flex-pack: justify; }
+  -ms-flex-pack: justify;
+  overflow: hidden; }
   .m-services__cards .item {
     padding: 36px 24px;
     margin: 0 15px;

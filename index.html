@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="bower_components/lightslider/dist/css/lightslider.min.css" rel="stylesheet">
+    <link href="bower_components/swiper/dist/css/swiper.min.css" rel="stylesheet">
     <link href="public/assets/css/styles.css" rel="stylesheet" type="text/css">
 </head>
 <body>
@@ -56,41 +56,63 @@
         </div>
 
         <div class="m-services__cards">
-            <div class="item">
-                <div class="logo"></div>
-                <div class="title">Business solution</div>
-                <div class="description">
-                    Most people who work in an office environment, buy computer products, or have a computer
-                </div>
-                <div class="service-links">
-                    <a href="#">Application testing</a>
-                    <a href="#">Technical Support</a>
-                    <a href="#">Digatal marketing</a>
-                </div>
-            </div>
+            <div class="service-slider">
+                <div class="swiper-wrapper">
+                    <div class="item swiper-slide">
+                        <div class="logo"></div>
+                        <div class="title">Business solution</div>
+                        <div class="description">
+                            Most people who work in an office environment, buy computer products, or have a computer
+                        </div>
+                        <div class="service-links">
+                            <a href="#">Application testing</a>
+                            <a href="#">Technical Support</a>
+                            <a href="#">Digatal marketing</a>
+                        </div>
+                    </div>
 
-            <div class="item">
-                <div class="logo"></div>
-                <div class="title">Development</div>
-                <div class="description">
-                    Most people who work in an office environment, buy computer products, or have a computer
-                </div>
-                <div class="service-links">
-                    <a href="#">Front-end development</a>
-                    <a href="#">Back-end development</a>
-                </div>
-            </div>
+                    <div class="item swiper-slide">
+                        <div class="logo"></div>
+                        <div class="title">Development</div>
+                        <div class="description">
+                            Most people who work in an office environment, buy computer products, or have a computer
+                        </div>
+                        <div class="service-links">
+                            <a href="#">Front-end development</a>
+                            <a href="#">Back-end development</a>
+                        </div>
+                    </div>
 
-            <div class="item">
-                <div class="logo"></div>
-                <div class="title">Design</div>
-                <div class="description">
-                    Most people who work in an office environment, buy computer products, or have a computer
+                    <div class="item swiper-slide">
+                        <div class="logo"></div>
+                        <div class="title">Design</div>
+                        <div class="description">
+                            Most people who work in an office environment, buy computer products, or have a computer
+                        </div>
+                        <div class="service-links">
+                            <a href="#">Web design</a>
+                            <a href="#">Interface design</a>
+                            <a href="#">Mobile App Design</a>
+                        </div>
+                    </div>
+                    <div class="item swiper-slide">
+                        <div class="logo"></div>
+                        <div class="title">Design</div>
+                        <div class="description">
+                            Most people who work in an office environment, buy computer products, or have a computer
+                        </div>
+                        <div class="service-links">
+                            <a href="#">Web design</a>
+                            <a href="#">Interface design</a>
+                            <a href="#">Mobile App Design</a>
+                        </div>
+                    </div>
                 </div>
-                <div class="service-links">
-                    <a href="#">Web design</a>
-                    <a href="#">Interface design</a>
-                    <a href="#">Mobile App Design</a>
+                <div class="swiper-button-next">
+                    <i class="material-icons">keyboard_arrow_right</i>
+                </div>
+                <div class="swiper-button-prev">
+                    <i class="material-icons">keyboard_arrow_left</i>
                 </div>
             </div>
         </div>
@@ -171,16 +193,57 @@
         <div class="under-title">TESTIMONIALS</div>
         <div class="title">The way we do the job is the way<br> we feel</div>
 
-        <div class="items light-slider">
-            <div class="item">
-                <div class="avatar"></div>
-                <div class="text">
-                    I’m not really sure how old I was when I got the gift for Christmas, but I remember thinking it was
-                    a pretty impressive piece of electronic hardware. It was really cool looking (technologically
-                    speaking), and I was awfully proud to own it.
+        <div class="items">
+            <div class="testimonial-slider">
+                <div class="swiper-wrapper">
+                    <div class="item swiper-slide">
+                        <div class="avatar"></div>
+                        <div class="text">
+                            I’m not really sure how old I was when I got the gift for Christmas, but I remember thinking
+                            it
+                            was
+                            a pretty impressive piece of electronic hardware. It was really cool looking
+                            (technologically
+                            speaking), and I was awfully proud to own it.
+                        </div>
+                        <div class="line"></div>
+                        <div class="name">Christopher Nguyen</div>
+                    </div>
+
+                    <div class="item swiper-slide">
+                        <div class="avatar"></div>
+                        <div class="text">
+                            I’m not really sure how old I was when I got the gift for Christmas, but I remember thinking
+                            it
+                            was
+                            a pretty impressive piece of electronic hardware. It was really cool looking
+                            (technologically
+                            speaking), and I was awfully proud to own it.
+                        </div>
+                        <div class="line"></div>
+                        <div class="name">Christopher Nguyen</div>
+                    </div>
+
+                    <div class="item swiper-slide">
+                        <div class="avatar"></div>
+                        <div class="text">
+                            I’m not really sure how old I was when I got the gift for Christmas, but I remember thinking
+                            it
+                            was
+                            a pretty impressive piece of electronic hardware. It was really cool looking
+                            (technologically
+                            speaking), and I was awfully proud to own it.
+                        </div>
+                        <div class="line"></div>
+                        <div class="name">Christopher Nguyen</div>
+                    </div>
                 </div>
-                <div class="line"></div>
-                <div class="name">Christopher Nguyen</div>
+                <div class="swiper-button-next">
+                    <i class="material-icons">keyboard_arrow_right</i>
+                </div>
+                <div class="swiper-button-prev">
+                    <i class="material-icons">keyboard_arrow_left</i>
+                </div>
             </div>
         </div>
     </div>
@@ -244,7 +307,7 @@
 </section>
 
 <script src="bower_components/jquery/dist/jquery.min.js"></script>
-<script src="bower_components/lightslider/dist/js/lightslider.min.js"></script>
+<script src="bower_components/swiper/dist/js/swiper.min.js"></script>
 <script src="bower_components/d3/d3.min.js"></script>
 <script src="public/assets/build/min/main.min.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCLiTUW08h1QHEY8oP-nJG2RFeWa0k7Cvk&callback=initMap"></script>

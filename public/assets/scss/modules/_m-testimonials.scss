@@ -26,15 +26,65 @@
 
   .items {
     margin-top: 45px;
-    @include display(flex);
-    @include flex-direction(row);
+    //@include display(flex);
+    //@include flex-direction(row);
+    max-width: 576px;
+    position: relative;
+
+    .testimonial-slider {
+      overflow: hidden;
+    }
+
+    .swiper-button-next, .swiper-button-prev {
+      background: #fff;
+      box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.58);
+      width: 48px;
+      height: 48px;
+      border-radius: 48px;
+      opacity: 1;
+      @include transition(0.3s);
+      @include display(flex);
+      @include align-items(center);
+      @include justify-content(center);
+      color: #888;
+
+      i {
+        font-size: 35px;
+      }
+
+      &:active, &:hover {
+        opacity: 1;
+        @include transition(0.3s);
+        background: #32007e;
+        color: #fff;
+      }
+
+      &.swiper-button-disabled {
+        opacity: 1;
+        @include transition(0.3s);
+        color: #ddd;
+        box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.18);
+      }
+    }
+
+    .swiper-button-next {
+      right: -141px;
+    }
+
+    .swiper-button-prev {
+      left: -141px;
+    }
+
+    .lSSlideWrapper {
+      position: static;
+    }
 
     .item {
-      max-width: 576px!important;
-      width: 100%!important;
-      @include display(flex);
-      @include flex-direction(column);
-      @include align-items(center);
+      max-width: 576px !important;
+      width: 100% !important;
+      //@include display(flex);
+      //@include flex-direction(column);
+      //@include align-items(center);
 
       .avatar {
         width: 80px;
@@ -43,7 +93,7 @@
         border: solid 5px #ffffff;
         border-radius: 80px;
         background: gold;
-        margin-bottom: 15px;
+        margin: 0 auto 15px auto;
       }
 
       .text {
@@ -59,7 +109,7 @@
         height: 3px;
         background-color: #6853cf;
         display: block;
-        margin: 23px 0;
+        margin: 23px auto;
       }
 
       .name {

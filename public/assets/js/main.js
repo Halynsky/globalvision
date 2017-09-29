@@ -32,13 +32,27 @@ $(document).ready(function () {
             });
         },
         initSlider: function () {
-            $(".light-slider").lightSlider({
-                adaptiveHeight: true,
-                item: 1,
-                slideMargin: 0,
-                autoWidth: false,
-                loop: true,
-                pager: false
+            // $("").swiper({
+            //     // item: 1,
+            //     // slideMargin: 0,
+            //     // loop: true,
+            //     // autoWidth: true,
+            //     // pager: false
+            // });
+
+            var testimonial = new Swiper('.testimonial-slider', {
+                slidesPerView: 1,
+                spaceBetween: 30,
+                nextButton: '.swiper-button-next',
+                prevButton: '.swiper-button-prev'
+            });
+
+            var service = new Swiper('.service-slider', {
+                slidesPerView: 3,
+                spaceBetween: 30,
+                nextButton: '.swiper-button-next',
+                prevButton: '.swiper-button-prev',
+                effect: 'fade'
             });
         },
         technologies: function () {
