@@ -1,6 +1,8 @@
 {
   "private": true,
-  "scripts": {},
+  "scripts": {
+    "install": "bower install"
+  },
   "dependencies": {},
   "devDependencies": {
     "gulp": "^3.9.1",
