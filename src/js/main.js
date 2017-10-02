@@ -88,20 +88,20 @@ $(document).ready(function () {
             };
 
             var nodes = [
-                {index: 0, name: "Skills", value: 80, bgColor: "#fff", imageUrl: "public/assets/images/team.png"},
-                {index: 1, name: "HTML5", target: [0], value: 48, bgColor: "#fff", imageUrl: "public/assets/images/html.svg"},
-                {index: 2, name: "CSS3", target: [0, 1], value: 45, bgColor: "#fff", imageUrl: "public/assets/images/css.png"},
-                {index: 3, name: "Angular 2", target: [0, 1], value: 42, bgColor: "#fff", imageUrl: "public/assets/images/angular2.svg"},
-                {index: 4, name: "jQuery", target: [0, 1], value: 52, bgColor: "#fff", imageUrl: "public/assets/images/jquery.png"},
-                {index: 5, name: "JavaScript", target: [0, 1], value: 42, bgColor: "#fff", imageUrl: "public/assets/images/js.png"},
-                {index: 6, name: "Git", target: [0], value: 38, bgColor: "#fff", imageUrl: "public/assets/images/git.svg"},
-                {index: 7, name: "Gulp", target: [0, 1], value: 45, bgColor: "#fff", imageUrl: "public/assets/images/gulp.svg"},
-                {index: 8, name: "AngularJS", target: [0, 1], value: 38, bgColor: "#fff", imageUrl: "public/assets/images/angularjs.svg"},
-                {index: 9, name: "MySql", target: [0], value: 30, bgColor: "#fff", imageUrl: "public/assets/images/html.svg"},
-                {index: 10, name: "TypeScript", target: [0, 3], value: 39, bgColor: "#fff", imageUrl: "public/assets/images/html.svg"},
-                {index: 11, name: "PostgreSQL", target: [0], value: 43, bgColor: "#fff", imageUrl: "public/assets/images/postgresql.png"},
-                {index: 12, name: "Npm", target: [0, 1], value: 40, bgColor: "#fff", imageUrl: "public/assets/images/npm.svg"},
-                {index: 13, name: "Java", target: [0, 1 , 9 , 11], value: 63, bgColor: "#fff", imageUrl: "public/assets/images/java.png"}
+                {index: 0, name: "Skills", value: 80, bgColor: "#fff", imageUrl: "public/images/team.png"},
+                {index: 1, name: "HTML5", target: [0], value: 48, bgColor: "#fff", imageUrl: "public/images/html.svg"},
+                {index: 2, name: "CSS3", target: [0, 1], value: 45, bgColor: "#fff", imageUrl: "public/images/css.png"},
+                {index: 3, name: "Angular 2", target: [0, 1], value: 42, bgColor: "#fff", imageUrl: "public/images/angular2.svg"},
+                {index: 4, name: "jQuery", target: [0, 1], value: 52, bgColor: "#fff", imageUrl: "public/images/jquery.png"},
+                {index: 5, name: "JavaScript", target: [0, 1], value: 42, bgColor: "#fff", imageUrl: "public/images/js.png"},
+                {index: 6, name: "Git", target: [0], value: 38, bgColor: "#fff", imageUrl: "public/images/git.svg"},
+                {index: 7, name: "Gulp", target: [0, 1], value: 45, bgColor: "#fff", imageUrl: "public/images/gulp.svg"},
+                {index: 8, name: "AngularJS", target: [0, 1], value: 38, bgColor: "#fff", imageUrl: "public/images/angularjs.svg"},
+                {index: 9, name: "MySql", target: [0], value: 30, bgColor: "#fff", imageUrl: "public/images/html.svg"},
+                {index: 10, name: "TypeScript", target: [0, 3], value: 39, bgColor: "#fff", imageUrl: "public/images/html.svg"},
+                {index: 11, name: "PostgreSQL", target: [0], value: 43, bgColor: "#fff", imageUrl: "public/images/postgresql.png"},
+                {index: 12, name: "Npm", target: [0, 1], value: 40, bgColor: "#fff", imageUrl: "public/images/npm.svg"},
+                {index: 13, name: "Java", target: [0, 1 , 9 , 11], value: 63, bgColor: "#fff", imageUrl: "public/images/java.png"}
             ];
 
             var links = [];
@@ -275,27 +275,3 @@ $(document).ready(function () {
     })
 
 });
-
-// setInterval(function () {
-//     window.location.reload();
-// }, 5000);
-
-function initMap() {
-    var myLatLng = {lat: 48.9389463, lng: 24.7399861};
-
-    var map = new google.maps.Map(document.getElementById('map'), {
-        center: myLatLng,
-        scrollwheel: false,
-        zoom: 15
-    });
-
-    var image = "/assets/images/logo-map.png";
-
-    var marker = new google.maps.Marker({
-        map: map,
-        position: {lat: 48.9389463, lng: 24.7399861},
-        title: "Галицька 67",
-        icon: image
-    });
-}
-

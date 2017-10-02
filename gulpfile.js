@@ -8,6 +8,7 @@ const rename = require("gulp-rename");
 const runSequence = require('run-sequence');
 const imagemin = require('gulp-imagemin');
 const deletefile = require('gulp-delete-file');
+const sourcemaps = require('gulp-sourcemaps');
 
 // Main tasks
 
@@ -87,9 +88,11 @@ gulp.task('compress-js', function (callback) {
   };
 
   pump([
-      gulp.src(['!src/js/**/*.min.js' ,'src/js/**/*.js'], { base: "src" }),
+      gulp.src(['!src/js/**/*.min.js','!src/js/map.js' ,'src/js/**/*.js'], { base: "src" }),
+      sourcemaps.init(),
       uglify(options),
       rename({ suffix: '.min' }),
+      sourcemaps.write(),
       gulp.dest('public')
     ],
     callback
