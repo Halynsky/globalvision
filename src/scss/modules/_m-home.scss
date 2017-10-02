@@ -3,10 +3,10 @@
   background: url(../images/home-background.jpg);
   background-size: cover;
   background-attachment: fixed;
-  @include display(flex);
-  @include align-items(center);
-  @include justify-content(center);
-  @include flex-direction(column);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 
   .title {
     font-size: 64px;
@@ -17,8 +17,8 @@
   }
 
   button {
-    @include display(flex);
-    @include align-items(center);
-    @include justify-content(space-between);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 }

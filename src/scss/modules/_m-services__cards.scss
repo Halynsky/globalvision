@@ -1,15 +1,15 @@
 .m-services__cards {
   margin-top: 36px;
   margin: 36px -15px 0 -15px;
-  @include display(flex);
-  @include align-items(flex-start);
-  @include justify-content(space-between);
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
   overflow: hidden;
 
   .item {
     padding: 36px 24px;
     margin: 0 15px;
-    @include align-self(stretch);
+    align-self: stretch;
     background-color: #ffffff;
     box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.12);
 
@@ -38,8 +38,8 @@
     }
 
     .service-links {
-      @include display(flex);
-      @include flex-direction(column);
+      display: flex;
+      flex-direction: column;
 
       a {
         font-size: 16px;

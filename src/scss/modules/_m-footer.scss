@@ -4,9 +4,9 @@
     padding: 60px 0;
 
     .container {
-      @include display(flex);
-      @include align-items(center);
-      @include justify-content(spa);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
     }
 
     .m-menu {

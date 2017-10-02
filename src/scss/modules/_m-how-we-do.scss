@@ -3,9 +3,9 @@
   padding: 69px 0 116px 0;
 
   .container {
-    @include display(flex);
-    @include align-items(center);
-    @include justify-content(space-between);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 
   #technologies {
@@ -19,7 +19,7 @@
   }
 
   .text-information {
-    @include flex-basis(357px);
+    flex-basis: 357px;
 
     .under-title {
       font-size: 14px;

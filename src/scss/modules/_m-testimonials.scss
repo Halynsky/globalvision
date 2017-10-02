@@ -3,7 +3,7 @@
   padding: 54px 0 60px 0;
 
   .container {
-    @include flex-direction(column);
+    flex-direction: column;
   }
 
   .under-title {
@@ -26,8 +26,6 @@
 
   .items {
     margin-top: 45px;
-    //@include display(flex);
-    //@include flex-direction(row);
     max-width: 576px;
     position: relative;
 
@@ -42,10 +40,10 @@
       height: 48px;
       border-radius: 48px;
       opacity: 1;
-      @include transition(0.3s);
-      @include display(flex);
-      @include align-items(center);
-      @include justify-content(center);
+      transition: 0.3s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       color: #888;
 
       i {
@@ -54,14 +52,14 @@
 
       &:active, &:hover {
         opacity: 1;
-        @include transition(0.3s);
+        transition: 0.3s;
         background: #32007e;
         color: #fff;
       }
 
       &.swiper-button-disabled {
         opacity: 1;
-        @include transition(0.3s);
+        transition: 0.3s;
         color: #ddd;
         box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.18);
       }
@@ -82,9 +80,6 @@
     .item {
       max-width: 576px !important;
       width: 100% !important;
-      //@include display(flex);
-      //@include flex-direction(column);
-      //@include align-items(center);
 
       .avatar {
         width: 80px;

@@ -31,6 +31,24 @@ $(document).ready(function () {
                 $('html,body').animate({scrollTop: $('#contacts').offset().top}, 800);
             });
         },
+        checkResolution: function() {
+            var windowWidth = $(window).width();
+            var parent = $("body");
+
+            if(windowWidth <= 600){
+                console.log('XS');
+                parent.attr('class','');
+                parent.addClass('xs');
+            }
+            if ((windowWidth >= 601) || (windowWidth <= 992)) {
+                console.log('SM');
+                parent.attr('class','');
+                parent.addClass('sm');
+            }
+            else {
+                parent.attr('class','')
+            }
+        },
         initSlider: function () {
             // $("").swiper({
             //     // item: 1,
@@ -250,6 +268,11 @@ $(document).ready(function () {
     main.menuScrollToSection();
     main.initSlider();
     main.technologies();
+    main.checkResolution();
+
+    $(window).resize(function(){
+        main.checkResolution();
+    })
 
 });
 
