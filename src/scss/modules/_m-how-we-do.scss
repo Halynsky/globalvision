@@ -2,14 +2,23 @@
   background-color: #f7f8f9;
   padding: 69px 0 116px 0;
 
+  .xs & {
+    padding: 50px 0;
+  }
+
   .container {
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    .sm & , .xs & {
+     flex-direction: column;
+    }
   }
 
   #technologies {
     width: 100%;
+    box-sizing: border-box;
 
     svg {
       overflow: visible!important;
@@ -19,7 +28,11 @@
   }
 
   .text-information {
-    flex-basis: 357px;
+    flex: 0 0 350px;
+
+    .sm & , .xs & {
+      flex: 0;
+    }
 
     .under-title {
       font-size: 14px;

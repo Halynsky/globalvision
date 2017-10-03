@@ -3,12 +3,21 @@
   height: 500px;
   position: relative;
 
+  .xs & {
+    height: auto;
+  }
+
   #map {
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
+
+    .xs & {
+      position: relative;
+      height: 350px!important;
+    }
   }
 
   .container {
@@ -16,6 +25,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
+    .xs & {
+      background: #fff;
+    }
   }
 
   .contacts-form {
@@ -24,8 +37,24 @@
     right: 0;
     background: #ffffff;
     padding: 36px 25px;
-    min-width: 420px;
+    max-width: 420px;
+    width: 100%;
+    box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.14);
 
+    .sm & {
+      max-width: 330px;
+    }
+
+    .xs & {
+      position: relative;
+      top: -15px;
+      right: 0;
+      background: #fff;
+      padding: 36px 25px;
+      max-width: 100%;
+      width: 100%;
+      box-sizing: border-box;
+    }
 
     .under-title {
       font-size: 14px;

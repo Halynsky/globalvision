@@ -6,6 +6,10 @@
   align-items: center;
   justify-content: space-between;
 
+  .xs & {
+    display: none;
+  }
+
   &.fixed-header {
     position: fixed;
     top: 0;

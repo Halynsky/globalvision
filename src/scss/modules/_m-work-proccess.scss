@@ -25,6 +25,11 @@
     text-align: center;
     color: #fdfdfd;
     max-width: 454px;
+
+    .xs & {
+      font-size: 22px;
+      max-width: 290px;
+    }
   }
 
   .items {
@@ -32,6 +37,16 @@
     justify-content: center;
     margin: 0 -15px;
     margin-top: 86px;
+
+    .sm & {
+      flex-wrap: wrap;
+      max-width: 550px;
+    }
+
+    .xs & {
+      flex-wrap: wrap;
+      margin: 56px 0 0 0;
+    }
 
     .item {
       display: flex;
@@ -41,6 +56,14 @@
       max-width: 25%;
       position: relative;
       margin: 0 15px;
+
+      .sm & {
+        margin-bottom: 86px;
+      }
+
+      .xs & {
+        margin-bottom: 56px;
+      }
 
       &:last-child {
         &:after {
@@ -57,6 +80,10 @@
         width: 150px;
         height: 1px;
         border-bottom: 1px dashed #fff;
+
+        .xs & {
+          display: none;
+        }
       }
 
       .logo {

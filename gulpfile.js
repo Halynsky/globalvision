@@ -9,6 +9,7 @@ const runSequence = require('run-sequence');
 const imagemin = require('gulp-imagemin');
 const deletefile = require('gulp-delete-file');
 const sourcemaps = require('gulp-sourcemaps');
+const livereload = require('gulp-livereload');
 
 // Main tasks
 
@@ -56,7 +57,6 @@ gulp.task('autoprefixer-css', function (callback) {
         browsers: ['last 2 versions'],
         cascade: false
       }),
-
       gulp.dest('src/css')
     ],
     callback
@@ -68,11 +68,13 @@ gulp.task('minify-css', function (callback) {
       gulp.src(['!src/css/**/*.min.css','src/css/**/*.css'], { base: "src" }),
       cleanCSS({compatibility: 'ie8'}),
       rename({ suffix: '.min' }),
-      gulp.dest('public')
+      gulp.dest('public'),
+      livereload()
     ],
     callback
   );
 });
+
 
 gulp.task('compress-js', function (callback) {
 
@@ -93,7 +95,8 @@ gulp.task('compress-js', function (callback) {
       uglify(options),
       rename({ suffix: '.min' }),
       sourcemaps.write(),
-      gulp.dest('public')
+      gulp.dest('public'),
+      livereload()
     ],
     callback
   );
@@ -110,8 +113,16 @@ gulp.task('compress-images', function (callback) {
   );
 });
 
+gulp.task('reload-html', function() {
+  gulp.src('./*.html')
+    .pipe(livereload());
+});
+
 gulp.task('watch', function() {
-  gulp.watch('src/css/**/*.scss', ['compress-css']);
+  livereload({ start: true });
+  livereload.listen();
+  gulp.watch('src/scss/**/*.scss', ['compress-css']);
   gulp.watch('src/js/**/*.js', ['compress-js'] );
   gulp.watch('src/images/*', ['compress-images']);
+  gulp.watch('index.html', ['reload-html']);
 });

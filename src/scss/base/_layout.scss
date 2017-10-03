@@ -11,6 +11,33 @@ html,body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  //Small desktop screen
+  .md & {
+    max-width: 992px;
+    box-sizing: border-box;
+  }
+
+  //Tablet screen
+  .sm & {
+    max-width: 768px;
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
+
+  //Mobile screen
+  .xs & {
+    max-width: 100%;
+    padding: 0 15px;
+    box-sizing: border-box;
+  }
+
+  .title {
+    .xs & {
+      max-width: 290px;
+      font-size: 22px;
+    }
+  }
 }
 
 a {

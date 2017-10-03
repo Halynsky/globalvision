@@ -1,17 +1,58 @@
 .m-services__cards {
   margin-top: 36px;
   margin: 36px -15px 0 -15px;
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  overflow: hidden;
+  position: relative;
+
+  .xs & {
+    margin: 36px 0 0 0;
+  }
+
+  .service-slider {
+    position: static;
+    overflow: hidden;
+  }
+
+  .swiper-button-prev,.swiper-button-next {
+    background-image: none;
+
+    i {
+      font-size: 30px;
+
+      .xs & {
+        font-size: 20px;
+      }
+    }
+  }
+
+  .swiper-button-next {
+    right: 0;
+    top: -70px;
+
+    i {
+      transform: rotate(180deg);
+    }
+  }
+
+  .swiper-button-prev {
+    right: 50px;
+    left: inherit;
+    top: -70px;
+  }
 
   .item {
+    box-sizing: border-box;
     padding: 36px 24px;
-    margin: 0 15px;
+    min-width: 330px;
     align-self: stretch;
     background-color: #ffffff;
     box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.12);
+
+    .xs & {
+      min-width: inherit;
+      box-sizing: inherit;
+      width: 100%;
+      padding: 0;
+    }
 
     .logo {
       width: 48px;
