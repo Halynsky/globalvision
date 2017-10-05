@@ -144,7 +144,7 @@ $(document).ready(function () {
         .classed("svg-container", true)
         .append('svg')
         .attr("preserveAspectRatio", "xMinYMin meet")
-        .attr("viewBox", "0 0 1050 820")
+        .attr("viewBox", "0 0 680 820")
         .classed("svg-content-responsive", true);
 
 
@@ -220,6 +220,8 @@ $(document).ready(function () {
             return d.target.y;
           })
       });
+
+      player.setSize(width:Number, height:Number):Object
 
 
       // node.append('text')
