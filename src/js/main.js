@@ -221,8 +221,6 @@ $(document).ready(function () {
           })
       });
 
-      player.setSize(width:Number, height:Number):Object
-
 
       // node.append('text')
       //     .text(function (d) {
@@ -297,5 +295,10 @@ $(document).ready(function () {
   $(window).resize(function () {
     main.checkResolution();
   })
+
+
+  particlesJS.load('particles-js', 'src/js/particlesjs-config.json', function() {
+    console.log('callback - particles.js config loaded');
+  });
 
 });
