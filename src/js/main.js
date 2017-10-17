@@ -4,32 +4,36 @@ $(document).ready(function () {
 
   var main = {
     attachHeader: function () {
+
       $(window).scroll(function () {
-        if ($(document).scrollTop() >= $('.m-home').height()) {
+        if ($(document).scrollTop() >= $('#about').offset().top) {
           $('.m-header').addClass('fixed-header');
 
         } else {
           $('.m-header').removeClass('fixed-header');
         }
       });
+
     },
     menuScrollToSection: function () {
+
       $("a[href='#about']").on("click", function (event) {
         event.preventDefault();
         $('html,body').animate({scrollTop: $('#about').offset().top}, 800);
       });
       $("a[href='#services']").on("click", function (event) {
         event.preventDefault();
-        $('html,body').animate({scrollTop: $('#services').offset().top}, 800);
+        $('html,body').animate({scrollTop: $('#services').offset().top - 75}, 800);
       });
       $("a[href='#whatweare']").on("click", function (event) {
         event.preventDefault();
-        $('html,body').animate({scrollTop: $('#whatweare').offset().top}, 800);
+        $('html,body').animate({scrollTop: $('#whatweare').offset().top - 75}, 800);
       });
       $("a[href='#contacts']").on("click", function (event) {
         event.preventDefault();
-        $('html,body').animate({scrollTop: $('#contacts').offset().top}, 800);
+        $('html,body').animate({scrollTop: $('#contacts').offset().top - 75}, 800);
       });
+
     },
     checkResolution: function () {
       var windowWidth = $(window).width();
@@ -54,13 +58,6 @@ $(document).ready(function () {
       }
     },
     initSlider: function () {
-      // $("").swiper({
-      //     // item: 1,
-      //     // slideMargin: 0,
-      //     // loop: true,
-      //     // autoWidth: true,
-      //     // pager: false
-      // });
 
       var testimonial = new Swiper('.testimonial-slider', {
         slidesPerView: 1,
@@ -113,15 +110,36 @@ $(document).ready(function () {
         {index: 0, name: "Skills", value: 90, bgColor: "#fff", imageUrl: "public/images/team.png"},
         {index: 1, name: "HTML5", target: [0], value: 58, bgColor: "#fff", imageUrl: "public/images/html.svg"},
         {index: 2, name: "CSS3", target: [0, 1], value: 55, bgColor: "#fff", imageUrl: "public/images/css.png"},
-        {index: 3, name: "Angular 2", target: [0, 1], value: 52, bgColor: "#fff", imageUrl: "public/images/angular2.svg"},
+        {
+          index: 3,
+          name: "Angular 2",
+          target: [0, 1],
+          value: 52,
+          bgColor: "#fff",
+          imageUrl: "public/images/angular2.svg"
+        },
         {index: 4, name: "jQuery", target: [0, 1], value: 62, bgColor: "#fff", imageUrl: "public/images/jquery.png"},
         {index: 5, name: "JavaScript", target: [0, 1], value: 52, bgColor: "#fff", imageUrl: "public/images/js.png"},
         {index: 6, name: "Git", target: [0], value: 48, bgColor: "#fff", imageUrl: "public/images/git.svg"},
         {index: 7, name: "Gulp", target: [0, 1], value: 55, bgColor: "#fff", imageUrl: "public/images/gulp.svg"},
-        {index: 8, name: "AngularJS", target: [0, 1], value: 48, bgColor: "#fff", imageUrl: "public/images/angularjs.svg"},
+        {
+          index: 8,
+          name: "AngularJS",
+          target: [0, 1],
+          value: 48,
+          bgColor: "#fff",
+          imageUrl: "public/images/angularjs.svg"
+        },
         {index: 9, name: "MySql", target: [0], value: 40, bgColor: "#fff", imageUrl: "public/images/html.svg"},
         {index: 10, name: "TypeScript", target: [0, 3], value: 49, bgColor: "#fff", imageUrl: "public/images/html.svg"},
-        {index: 11, name: "PostgreSQL", target: [0], value: 53, bgColor: "#fff", imageUrl: "public/images/postgresql.png"},
+        {
+          index: 11,
+          name: "PostgreSQL",
+          target: [0],
+          value: 53,
+          bgColor: "#fff",
+          imageUrl: "public/images/postgresql.png"
+        },
         {index: 12, name: "Npm", target: [0, 1], value: 50, bgColor: "#fff", imageUrl: "public/images/npm.svg"},
         {index: 13, name: "Java", target: [0, 1, 9, 11], value: 73, bgColor: "#fff", imageUrl: "public/images/java.png"}
       ];
@@ -221,30 +239,6 @@ $(document).ready(function () {
           })
       });
 
-
-      // node.append('text')
-      //     .text(function (d) {
-      //         return d.name;
-      //     })
-      //     .attr('font-family', 'Muli', 'Helvetica Neue, Helvetica')
-      //     .attr('alignment-baseline', 'middle')
-      //     .attr('fill', function (d, i) {
-      //         if (i > 0 && d.value < 10) {
-      //             return palette.mediumgray;
-      //         } else if (i > 0 && d.value > 10) {
-      //             return palette.violet;
-      //         } else {
-      //             return palette.blue;
-      //         }
-      //     })
-      //     .attr('text-anchor', function (d, i) {
-      //         return 'middle';
-      //     })
-      //     .attr('font-size', function (d, i) {
-      //         var size = nodes[i].value / 2.5;
-      //         return size;
-      //     });
-
       node.append("svg:image")
         .attr("xlink:href", function (d) {
           return d.imageUrl;
@@ -283,6 +277,130 @@ $(document).ready(function () {
         });
 
       force.start();
+    },
+    particlesJs: function () {
+      var config = {
+        "particles": {
+          "number": {
+            "value": 70,
+            "density": {
+              "enable": true,
+              "value_area": 300
+            }
+          },
+          "color": {
+            "value": "#ffffff"
+          },
+          "shape": {
+            "type": "circle",
+            "stroke": {
+              "width": 0,
+              "color": "#ffffff"
+            },
+            "polygon": {
+              "nb_sides": 0
+            },
+            "image": {
+              "src": "img/github.svg",
+              "width": 100,
+              "height": 100
+            }
+          },
+          "opacity": {
+            "value": 0.5,
+            "random": true,
+            "anim": {
+              "enable": true,
+              "speed": 5,
+              "opacity_min": 0.2,
+              "sync": false
+            }
+          },
+          "size": {
+            "value": 3,
+            "random": true,
+            "anim": {
+              "enable": true,
+              "speed": 5,
+              "size_min": 0.5,
+              "sync": true
+            }
+          },
+          "line_linked": {
+            "enable": true,
+            "distance": 150,
+            "color": "#4c70c8",
+            "opacity": 0.4,
+            "width": 1
+          },
+          "move": {
+            "enable": true,
+            "speed": 4,
+            "direction": "none",
+            "random": true,
+            "straight": false,
+            "out_mode": "out",
+            "bounce": false,
+            "attract": {
+              "enable": false,
+              "rotateX": 600,
+              "rotateY": 1200
+            }
+          }
+        },
+        "interactivity": {
+          "detect_on": "canvas",
+          "events": {
+            "onhover": {
+              "enable": true,
+              "mode": "grab"
+            },
+            "onclick": {
+              "enable": true,
+              "mode": ""
+            },
+            "resize": true
+          },
+          "modes": {
+            "grab": {
+              "distance": 415.7842157842158,
+              "line_linked": {
+                "opacity": 0.6
+              },
+              "opacity": {
+                "value": 1
+              }
+            },
+            "bubble": {
+              "distance": 227.77222777222775,
+              "size": 40,
+              "duration": 2,
+              "opacity": 0.5354645354645354,
+              "speed": 3
+            },
+            "repulse": {
+              "distance": 567.4325674325675,
+              "duration": 0.4
+            },
+            "push": {
+              "particles_nb": 1
+            },
+            "remove": {
+              "particles_nb": 2
+            }
+          }
+        },
+        "retina_detect": true
+      };
+      var canvasParticles = $('#particles-js');
+      var width = canvasParticles.width();
+      var height = canvasParticles.height();
+      var ratio = width / height;
+
+      config.particles.number.value = Math.ceil(50 * ratio);
+
+      console.log('Particles ->' + config.particles.number.value);
+      particlesJS("particles-js", config);
     }
   };
 
@@ -291,14 +409,11 @@ $(document).ready(function () {
   main.initSlider();
   main.technologies();
   main.checkResolution();
+  main.particlesJs();
 
   $(window).resize(function () {
     main.checkResolution();
-  })
-
-
-  particlesJS.load('particles-js', 'src/js/particlesjs-config.json', function() {
-    console.log('callback - particles.js config loaded');
+    main.particlesJs();
   });
 
 });

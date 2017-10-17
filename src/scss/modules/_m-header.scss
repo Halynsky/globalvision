@@ -5,6 +5,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  opacity: 1;
+  transition: 0.3s;
 
   .xs & {
     display: none;
@@ -16,6 +18,8 @@
     left: 0;
     right: 0;
     z-index: 99999;
+    opacity: 1;
+    transition: 0.3s;
   }
 
   .container {
