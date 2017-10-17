@@ -310,20 +310,20 @@ $(document).ready(function () {
             "value": 0.5,
             "random": true,
             "anim": {
-              "enable": true,
-              "speed": 5,
+              "enable": false,
+              "speed": 2,
               "opacity_min": 0.2,
               "sync": false
             }
           },
           "size": {
-            "value": 3,
+            "value": 1.5,
             "random": true,
             "anim": {
               "enable": true,
-              "speed": 5,
-              "size_min": 0.5,
-              "sync": true
+              "speed": 2,
+              "size_min": 1,
+              "sync": false
             }
           },
           "line_linked": {
@@ -335,7 +335,7 @@ $(document).ready(function () {
           },
           "move": {
             "enable": true,
-            "speed": 4,
+            "speed": 2,
             "direction": "none",
             "random": true,
             "straight": false,
@@ -363,12 +363,9 @@ $(document).ready(function () {
           },
           "modes": {
             "grab": {
-              "distance": 415.7842157842158,
+              "distance": 300,
               "line_linked": {
-                "opacity": 0.6
-              },
-              "opacity": {
-                "value": 1
+                "opacity": 0.5
               }
             },
             "bubble": {
