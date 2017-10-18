@@ -9,22 +9,24 @@ function initMap() {
   });
 
   var contentString = '<div id="content">'+
-    '<div class="popup-contacts-body"><div class="popup-contacts-icon"><i class="material-icons">face</i> <div class="popup-contacts-text">kub.lorenza@hotmail.com</div></div></div>'+
-    '<div class="popup-contacts-body"><div class="popup-contacts-icon"><i class="material-icons">face</i> <div class="popup-contacts-text">(801) 732-1415</div></div></div>'+
-    '<div class="popup-contacts-body"><div class="popup-contacts-icon"><i class="material-icons" class="popup-contacts-icon">face</i> <div class="popup-contacts-text">560 Jeremy Place Suite 828,<br> North Herman, NM 76349-1429</div></div></div>';
+    '<div class="popup-contacts-body"><div class="popup-contacts-icon"><i class="material-icons">email</i></div> <div class="popup-contacts-text">kub.lorenza@hotmail.com</div></div>'+
+    '<div class="popup-contacts-body"><div class="popup-contacts-icon"><i class="material-icons">local_phone</i></div> <div class="popup-contacts-text">(801) 732-1415</div></div>'+
+    '<div class="popup-contacts-body"><div class="popup-contacts-icon"><i class="material-icons" class="popup-contacts-icon">location_on</i></div> <div class="popup-contacts-text">560 Jeremy Place Suite 828,<br> North Herman, NM 76349-1429</div></div>'+
+    '<div class="arrow"></div></div>';
 
   var infowindow = new google.maps.InfoWindow({
     content: contentString,
+    position: markerPosition,
     maxWidth: 230
   });
 
-  var marker = new google.maps.Marker({
-    position: markerPosition,
-    map: map,
-    icon: ''
-  });
+  // var marker = new google.maps.Marker({
+  //   position: markerPosition,
+  //   map: map,
+  //   icon: ''
+  // });
 
-  infowindow.open(map, marker);
+  infowindow.open(map);
 
   google.maps.event.addListener(infowindow, 'domready', function() {
 
@@ -36,7 +38,6 @@ function initMap() {
      * and took advantage of the existing reference .gm-style-iw for the previous div with .prev().
     */
     var iwBackground = iwOuter.prev();
-
     // Removes background shadow DIV
     iwBackground.children(':nth-child(2)').css({'display' : 'none'});
 

@@ -6,7 +6,7 @@ $(document).ready(function () {
     attachHeader: function () {
 
       $(window).scroll(function () {
-        if ($(document).scrollTop() >= $('#about').offset().top) {
+        if ($(document).scrollTop() >= $('.m-home').height()) {
           $('.m-header').addClass('fixed-header');
 
         } else {
@@ -59,35 +59,60 @@ $(document).ready(function () {
     },
     initSlider: function () {
 
-      var testimonial = new Swiper('.testimonial-slider', {
+      var testimonial = new Swiper('.testimonial-slider .swiper-container', {
         slidesPerView: 1,
         spaceBetween: 30,
-        nextButton: '.swiper-button-next',
-        prevButton: '.swiper-button-prev'
-      });
-
-      var service = new Swiper('.service-slider', {
-        speed: 1500,
-        slidesPerView: 3,
-        slidesPerGroup: 3,
-        spaceBetween: 26,
         nextButton: '.swiper-button-next',
         prevButton: '.swiper-button-prev',
         breakpoints: {
           1080: {
+            speed: 1200,
             slidesPerView: 3,
             slidesPerGroup: 3,
             spaceBetween: 20
           },
           992: {
+            speed: 900,
             slidesPerView: 2,
             slidesPerGroup: 2,
             spaceBetween: 20
           },
           768: {
+            speed: 600,
             slidesPerView: 1,
             slidesPerGroup: 1,
             spaceBetween: 0
+          }
+        }
+      });
+
+      var service = new Swiper('.m-services__cards .swiper-container', {
+        speed: 1500,
+        slidesPerView: 3,
+        slidesPerGroup: 3,
+        spaceBetween: 26,
+        scrollbarHide: true,
+        grabCursor: true,
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+        breakpoints: {
+          1080: {
+            speed: 1200,
+            slidesPerView: 3,
+            slidesPerGroup: 3,
+            spaceBetween: 20
+          },
+          992: {
+            speed: 900,
+            slidesPerView: 2,
+            slidesPerGroup: 2,
+            spaceBetween: 20
+          },
+          768: {
+            speed: 600,
+            slidesPerView: 1,
+            slidesPerGroup: 1,
+            spaceBetween: 20
           }
         }
       });
@@ -162,7 +187,7 @@ $(document).ready(function () {
         .classed("svg-container", true)
         .append('svg')
         .attr("preserveAspectRatio", "xMinYMin meet")
-        .attr("viewBox", "0 0 680 820")
+        .attr("viewBox", "0 0 800 820")
         .classed("svg-content-responsive", true);
 
 
@@ -393,8 +418,16 @@ $(document).ready(function () {
       var width = canvasParticles.width();
       var height = canvasParticles.height();
       var ratio = width / height;
+      var starCount = Math.ceil(50 * ratio);
 
-      config.particles.number.value = Math.ceil(50 * ratio);
+      if (starCount >= 70) {
+        starCount = 70;
+      }
+
+      if (starCount <= 50) {
+        starCount = 50;
+      }
+      config.particles.number.value = starCount;
 
       console.log('Particles ->' + config.particles.number.value);
       particlesJS("particles-js", config);

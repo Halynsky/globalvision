@@ -92,6 +92,13 @@
         border: solid 1px #ffffff;
         border-radius: 69px;
         background: transparent;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img {
+          max-width: 32px;
+        }
       }
 
       .title {

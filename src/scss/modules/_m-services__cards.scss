@@ -1,15 +1,34 @@
 .m-services__cards {
-  margin-top: 36px;
-  margin: 36px -15px 0 -15px;
+  margin: 36px 0 0 0;
   position: relative;
+  display: block;
 
   .xs & {
     margin: 36px 0 0 0;
   }
 
   .service-slider {
+    display: flex;
+    align-items: stretch;
     position: static;
     overflow: hidden;
+  }
+
+  .swiper-container {
+    display: flex;
+    align-items: stretch;
+    position: static;
+    padding: 3px;
+
+    .swiper-wrapper {
+      display: flex;
+      align-items: stretch;
+
+      .swiper-slide {
+        display: flex;
+        align-items: stretch;
+      }
+    }
   }
 
   .swiper-button-prev,.swiper-button-next {
@@ -51,7 +70,7 @@
       min-width: inherit;
       box-sizing: inherit;
       width: 100%;
-      padding: 0;
+      padding: 15px;
     }
 
     .logo {
