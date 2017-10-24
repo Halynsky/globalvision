@@ -1,16 +1,16 @@
 .m-about {
   background-color: #f7f8f9;
-  padding: 73px 0;
-
-  .xs & {
-    padding: 50px 0;
-  }
+  margin-top: 75px;
 
   .container {
+    padding: 73px 0;
+
     .xs & {
       flex-direction: column;
       margin: 0;
+      padding: 50px 0;
     }
+
   }
 
   .title {

@@ -39,6 +39,7 @@
     pointer-events: none;
     user-select: none;
     cursor: pointer;
+    text-decoration: none;
 
     .sm & {
         max-width: 540px;
@@ -56,12 +57,12 @@
     position: relative;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     text-decoration: none;
     z-index: 2;
 
     &:hover, &:active {
-
+      text-decoration: none!important;
     }
 
     &.fill:hover {

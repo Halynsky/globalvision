@@ -8,6 +8,7 @@
   <title>Document</title>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="bower_components/swiper/dist/css/swiper.min.css" rel="stylesheet">
+  <link href="bower_components/wow/css/libs/animate.css" rel="stylesheet">
   <link href="public/css/styles.min.css" rel="stylesheet" type="text/css">
 </head>
 <body>
@@ -17,7 +18,7 @@
   <h1 class="title">
     Hello!<br> We are Global Vision
   </h1>
-  <a href="#about" class="m-btn main fill">Explore us <i class="material-icons">trending_flat</i></a>
+  <a href="#about" class="m-btn main fill">Explore us</a>
 </section>
 <header class="m-header">
   <div class="container">
@@ -35,7 +36,7 @@
 </header>
 
 <section class="m-about" id="about">
-  <div class="container">
+  <div class="container wow fadeInUp">
     <div class="title">
       We are a dynamic team of creatives people of innovation
     </div>
@@ -49,10 +50,10 @@
 
 <section class="m-services" id="services">
   <div class="container">
-    <div class="under-title">
+    <div class="under-title wow fadeInUp">
       What we do
     </div>
-    <div class="title">
+    <div class="title wow fadeInUp">
       Services we provide
     </div>
 
@@ -60,7 +61,7 @@
       <div class="service-slider">
         <div class="swiper-container">
           <div class="swiper-wrapper">
-            <div class="swiper-slide">
+            <div class="swiper-slide wow fadeInUp" data-wow-delay="0.4s">
               <div class="item">
                 <div class="logo"></div>
                 <div class="title">Business solution</div>
@@ -75,7 +76,7 @@
               </div>
             </div>
 
-            <div class="swiper-slide">
+            <div class="swiper-slide wow fadeInUp" data-wow-delay="0.8s">
               <div class="item">
                 <div class="logo"></div>
                 <div class="title">Development</div>
@@ -89,7 +90,7 @@
               </div>
             </div>
 
-            <div class="swiper-slide">
+            <div class="swiper-slide wow fadeInUp" data-wow-delay="1.2s">
               <div class="item">
                 <div class="logo"></div>
                 <div class="title">Design</div>
@@ -158,10 +159,11 @@
         </div>
       </div>
     </div>
+  </div>
 </section>
 
-<section class="m-how-we-do">
-  <div class="container">
+<section class="m-how-we-do" id ="what-we-are">
+  <div class="container wow fadeInUp">
     <div id="technologies">
     </div>
     <div class="text-information">
@@ -180,7 +182,7 @@
 </section>
 
 <section class="m-work-proccess">
-  <div class="container">
+  <div class="container wow fadeInUp">
     <div class="under-title">
       work process
     </div>
@@ -238,7 +240,7 @@
 </section>
 
 <section class="m-testimonials">
-  <div class="container">
+  <div class="container wow fadeInUp">
     <div class="under-title">TESTIMONIALS</div>
     <div class="title">The way we do the job is the way we feel</div>
 
@@ -248,7 +250,7 @@
           <div class="swiper-wrapper">
             <div class="swiper-slide">
               <div class="item">
-                <div class="avatar"></div>
+                <div class="avatar" style="background: url('public/images/avatar.jpg');"></div>
                 <div class="text">
                   I’m not really sure how old I was when I got the gift for Christmas, but I remember thinking
                   it
@@ -308,7 +310,7 @@
 
 <section class="m-contacts" id="contacts">
   <div id="map" style="width: 100%; height: 500px; overflow: hidden;"></div>
-  <div class="container">
+  <div class="container wow bounceIn" data-wow-duration="0.7s">
     <div class="contacts-form">
       <div class="under-title">
         Contacts
@@ -335,7 +337,7 @@
 </section>
 
 <section class="m-footer">
-  <div class="footer-top">
+  <div class="footer-top wow bounceIn">
     <div class="container">
       <div class="logo">
         Logo
@@ -362,6 +364,7 @@
 <script src="bower_components/jquery/dist/jquery.min.js"></script>
 <script src="bower_components/swiper/dist/js/swiper.min.js"></script>
 <script src="bower_components/d3/d3.min.js"></script>
+<script src="bower_components/wow/dist/wow.min.js"></script>
 <script src="bower_components/particles.js/particles.min.js"></script>
 <script src="public/js/main.min.js"></script>
 <script src="src/js/map.js"></script>
