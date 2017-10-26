@@ -16,8 +16,8 @@ const livereload = require('gulp-livereload');
 gulp.task('default', function() {
   // place code for your default task here
 });
-gulp.task('prod', ['compress-css', 'compress-js', 'compress-images']);
-gulp.task('dev', ['compress-css', 'compress-js', 'compress-images', 'watch']);
+gulp.task('prod', ['compress-css', 'compress-js', 'compress-images', 'fonts']);
+gulp.task('dev', ['compress-css', 'compress-js', 'compress-images' , 'fonts', 'watch']);
 
 // Task sequences
 
@@ -75,6 +75,12 @@ gulp.task('minify-css', function (callback) {
   );
 });
 
+gulp.task('fonts', function() {
+  return gulp.src([
+    'src/fonts/**/*.*'] , { base: "src" })
+    .pipe(gulp.dest('public'));
+});
+
 
 gulp.task('compress-js', function (callback) {
 
@@ -125,4 +131,5 @@ gulp.task('watch', function() {
   gulp.watch('src/js/**/*.js', ['compress-js'] );
   gulp.watch('src/images/*', ['compress-images']);
   gulp.watch('index.html', ['reload-html']);
+  gulp.watch('src/fonts/**/*.*', ['fonts']);
 });
