@@ -236,7 +236,6 @@ $(document).ready(function () {
       var height = canvasParticles.height();
       var ratio = width / height;
       var starCount = Math.ceil(50 * ratio);
-
       if (starCount >= 50) {
         starCount = 50;
       }
