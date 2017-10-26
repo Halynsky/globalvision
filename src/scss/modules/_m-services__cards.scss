@@ -76,14 +76,15 @@
     .logo {
       width: 48px;
       height: 48px;
-      //background: url();
-      background-color: #d8d8d8;
-      border: solid 1px #979797;
-      border-radius: 48px;
       margin-bottom: 15px;
+
+      img {
+        width: 100%;
+      }
     }
 
     .title {
+      font-family: 'TexGyreAdventor', sans-serif;
       font-size: 20px;
       font-weight: bold;
       text-align: left;
