@@ -1,7 +1,16 @@
+RewriteEngine on
+RewriteBase /
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /([^.]+)\.html\ HTTP
+RewriteRule ^([^.]+)\.html$ global-vision.herokuapp.com/$1 [R=301,L]
+RewriteCond %{REQUEST_URI} !(\.[^./]+)$
+RewriteCond %{REQUEST_fileNAME} !-d
+RewriteCond %{REQUEST_fileNAME} !-f
+RewriteRule (.*) /$1.html
+
 Header add Access-Control-Allow-Origin "*"
 Header add Access-Control-Allow-Headers "origin, x-requested-with, content-type"
 Header add Access-Control-Allow-Methods "PUT, GET, POST, DELETE, OPTIONS"
-# кеширование в браузере на стороне пользователя
+# browser cache
 <IfModule mod_expires.c>
 ExpiresActive On
 ExpiresDefault "access 7 days"
@@ -13,7 +22,7 @@ ExpiresByType image/x-icon "access 1 year"
 ExpiresByType application/x-shockwave-flash "access 1 year"
 </IfModule>
 <ifModule mod_headers.c>
-# 30 дней
+# 30 days
 <filesMatch "\.(ico|pdf|flv|jpg|jpeg|png|gif|swf)$">
 Header set Cache-Control "max-age=2592000, public"
 </filesMatch>
