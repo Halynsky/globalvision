@@ -6,8 +6,6 @@ $(document).ready(function () {
     attachHeader: function () {
 
       $(window).scroll(function () {
-        console.log($('.m-home').height());
-        console.log($(document).scrollTop());
 
         if ($(window).scrollTop() > $('.m-home').height()) {
           $('.m-header').addClass('fixed-header');
@@ -122,104 +120,6 @@ $(document).ready(function () {
         }
       });
     },
-    technologies: function () {
-      var tech = $('#technologies');
-      tech.width($(".m-how-we-do .container").width() - $(".m-how-we-do .container .text-information").width());
-      tech.height("415px");
-
-      var technologies = [
-        {
-          name: "Team",
-          imageUrl: "public/images/team.png",
-          size: 191
-        },
-        {
-          name: "JQuery",
-          background: "#fff",
-          imageUrl: "public/images/jquery.png",
-          size: 116,
-          left: "132px",
-          top: "89px"
-        },
-        {
-          name: "NPM",
-          background: "#fff",
-          imageUrl: "public/images/npm.svg",
-          size: 87,
-          left: "237px",
-          top: "26px"
-        },
-
-
-        {
-          name: "HTML",
-          background: "#fff",
-          imageUrl: "public/images/html.svg",
-          size: 114,
-          left: "249px",
-          top: "314px"
-        },
-        {
-          name: "GIT",
-          background: "#fff",
-          imageUrl: "public/images/git.svg",
-          size: 125,
-          left: "131px",
-          top: "227px"
-        },
-        {
-          name: "NodeJS",
-          background: "#fff",
-          imageUrl: "public/images/angular2.svg",
-          size: 116,
-          left: "434px",
-          top: "75px"
-        },
-        {
-          name: "PostgreSQL",
-          background: "#fff",
-          imageUrl: "public/images/postgresql.png",
-          size: 96,
-          left: "346px",
-          top: "14px"
-        },
-        {
-          name: "Java",
-          background: "#fff",
-          imageUrl: "public/images/java.png",
-          size: 104,
-          left: "445px",
-          top: "208px"
-        },
-        {
-          name: "Javascript",
-          background: "#fff",
-          imageUrl: "public/images/js.png",
-          size: 90,
-          left: "374px",
-          top: "296px"
-        }
-      ];
-
-      for (var i=0; i<technologies.length; i++) {
-
-        if (i === 0) {
-          tech.append("<div class='item team' data-name='" + technologies[i].name + "' style='width: " + technologies[i].size + "px;" + "height: " + technologies[i].size + "px;font-size: " + technologies[i].size / technologies[i].name.length + "px'><img src='" + technologies[i].imageUrl + "' alt='" + technologies[i].name + "'></div>")
-        } else {
-          tech.append("<div class='item' style='" + "left: " + technologies[i].left + ";" + "top: " + technologies[i].top + ";" + "background: " + technologies[i].background + ";" + "width: " + technologies[i].size + "px;" + "height: " + technologies[i].size + "px;" + "border-radius: " + technologies[i].size + "px;font-size: " + technologies[i].size / technologies[i].name.length + "px'><img src='" + technologies[i].imageUrl + "' alt='" + technologies[i].name + "'></div>")
-        }
-
-        if ($(document).width() < 768){
-            technologies[i].size = technologies[i].size / 2;
-        }
-      }
-
-      tech.find('.item').on('mouseenter',function () {
-        console.log(this.style.width);
-        this.style.width = this.style.width.split('px');
-        console.log(this.style.width);
-      })
-    },
     particlesJs: function () {
       var config = {
         "particles": {
@@ -299,26 +199,26 @@ $(document).ready(function () {
             },
             "onclick": {
               "enable": true,
-              "mode": ""
+              "mode": "repulse"
             },
             "resize": true
           },
           "modes": {
             "grab": {
-              "distance": 300,
+              "distance": 200,
               "line_linked": {
-                "opacity": 0.5
+                "opacity": 0.7
               }
             },
             "bubble": {
-              "distance": 227.77222777222775,
+              "distance": 227,
               "size": 40,
               "duration": 2,
-              "opacity": 0.5354645354645354,
+              "opacity": 0.5,
               "speed": 3
             },
             "repulse": {
-              "distance": 567.4325674325675,
+              "distance": 200,
               "duration": 0.4
             },
             "push": {
@@ -337,17 +237,34 @@ $(document).ready(function () {
       var ratio = width / height;
       var starCount = Math.ceil(50 * ratio);
 
-      if (starCount >= 70) {
-        starCount = 70;
+      if (starCount >= 50) {
+        starCount = 50;
       }
 
-      if (starCount <= 50) {
-        starCount = 50;
+      if (starCount <= 30) {
+        starCount = 30;
       }
       config.particles.number.value = starCount;
 
       console.log('Particles ->' + config.particles.number.value);
       particlesJS("particles-js", config);
+    },
+    btnEffect: function () {
+        $('.m-btn')
+          .on('mouseenter', function(e) {
+            console.log('Gotcha');
+            var parentOffset = $(this).offset(),
+              relX = e.pageX - parentOffset.left,
+              relY = e.pageY - parentOffset.top;
+            $(this).find('span').css({top:relY, left:relX})
+          })
+          .on('mouseout', function(e) {
+            var parentOffset = $(this).offset(),
+              relX = e.pageX - parentOffset.left,
+              relY = e.pageY - parentOffset.top;
+            $(this).find('span').css({top:relY, left:relX})
+          });
+        $('[href=""]').click(function(){return false});
     },
     wowInit: function () {
 
@@ -357,7 +274,7 @@ $(document).ready(function () {
   main.attachHeader();
   main.menuScrollToSection();
   main.initSlider();
-  main.technologies();
+  main.btnEffect();
   main.checkResolution();
   main.particlesJs();
   new WOW({

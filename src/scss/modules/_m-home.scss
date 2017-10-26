@@ -54,36 +54,15 @@
   }
 
   a {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    z-index: 2;
+    //position: relative;
+    //display: flex;
+    //align-items: center;
+    //justify-content: center;
+    //text-decoration: none;
+    //z-index: 2;
 
     &:hover, &:active {
       text-decoration: none!important;
     }
-
-    &.fill:hover {
-      color: #fff;
-    }
-
-    &.fill:before {
-      content: "";
-      position: absolute;
-      background: #411997;
-      bottom: 0;
-      left: 0;
-      right: 100%;
-      top: 0;
-      z-index: -1;
-      -webkit-transition: right 0.09s ease-in;
-    }
-
-    &.fill:hover:before {
-      right: 0;
-    }
-
   }
 }
