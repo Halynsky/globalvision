@@ -7,19 +7,14 @@ if(isset($_POST) && !empty($_POST)) {
 	$errors = array();
     $name = $_POST['name'];
     $email = $_POST['email'];
-    $phone = $_POST['phone'];
     $message = $_POST['message'];
 
     if (!isset($name) || empty($name) || strlen($name) < 3) {
         $errors['name'] = 'Fullname is to short or undefined';
     }
 
-    if (!isset($phone) || empty($phone) || strlen($phone) < 3) {
-        $errors['phone'] = 'phone is to short or undefined';
-    }
-
     if (!isset($message) || empty($message) || strlen($message) < 3) {
-        $errors['message'] = 'message is to short or undefined';
+        $errors['message'] = 'Message is to short or undefined';
     }
 
     if (!isset($email) || empty($email) || !validateEmail($email)) {
@@ -37,8 +32,8 @@ if(isset($_POST) && !empty($_POST)) {
 
             $headers = 'From: "' . $admin_name . '" <' . $reply . '>' . "\r\n" .
                 'Reply-To: '.$admin_email . "\r\n" .
-                'Cc: caiter78@hotmail.com' . "\r\n" .
-                'Bcc: caiter78@hotmail.com' . "\r\n" .
+                'Cc: amartyniuk@codevision.com.ua' . "\r\n" .
+                'Bcc: noliynyk@codevision.com.ua' . "\r\n" .
                 'X-Mailer: PHP/' . phpversion();
 
 
