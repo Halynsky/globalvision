@@ -18,7 +18,7 @@
   <h1 class="title">
     Hello!<br> We are Global Vision
   </h1>
-  <a href="#about" class="m-btn main animate">Explore us<span></span></a>
+  <a href="#about" class="m-btn main animate" id="explore">Explore us<span class="animate-circle"></span></a>
 </section>
 <header class="m-header">
   <div class="container">
@@ -30,7 +30,7 @@
       <a href="#services">Services</a>
       <a href="#whatweare">What we are</a>
       <a href="#contacts">Contacts</a>
-      <button class="m-btn getEstimation animate">Get estimation<span></span></button>
+      <button class="m-btn getEstimation animate">Get estimation<span class="animate-circle"></span></button>
     </div>
   </div>
 </header>
@@ -266,23 +266,23 @@
       <div class="title">
         Find us on map
       </div>
-      <form class="m-form">
+      <form class="m-form" name="contactsForm" id="contactsForm"  method="POST" action="mail.php">
         <div class="form-group">
-          <input type="text" placeholder="Name" required>
+          <input type="text" name="name" placeholder="Name" required>
         </div>
         <div class="form-group">
-          <input type="text" placeholder="Email" required>
+          <input type="text" name="email" placeholder="Email" required>
         </div>
         <div class="form-group">
-          <textarea placeholder="Message" required></textarea>
+          <textarea name="message" placeholder="Message" required></textarea>
         </div>
-        <button class="m-btn main animate">Contact us <i class="material-icons">trending_flat</i><span></span></button>
+        <button class="m-btn main animate" type="submit">Contact us <i class="material-icons">trending_flat</i><span class="animate-circle"></span></button>
       </form>
     </div>
   </div>
 </section>
 <section class="m-footer">
-  <div class="footer-top wow bounceIn">
+  <div class="footer-top">
     <div class="container">
       <div class="logo">
         Logo

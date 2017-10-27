@@ -11,7 +11,7 @@ $(document).ready(function () {
           $('.m-header').addClass('fixed-header');
 
         } else {
-          $('.m-header').attr('style','top: ' + $('.m-home').height());
+          $('.m-header').attr('style', 'top: ' + $('.m-home').height());
           $('.m-header').removeClass('fixed-header');
         }
       });
@@ -59,6 +59,34 @@ $(document).ready(function () {
       else {
         parent.attr('class', '')
       }
+    },
+    sendMail: function () {
+      $("#contactsForm").on('submit', function () {
+        e.preventDefault();
+
+        $.ajax({
+          type: 'POST',
+          url: $(this).attr('action'),
+          data: $(this).serialize(),
+          success: function (data) {
+            console.log(data);
+          }
+        });
+
+      });
+    },
+    moveToMouse: function () {
+      var button = $('.m-btn');
+      button.on('mousemove', function (e) {
+        var mouseX = e.pageX - $(this).offset().left;
+        var mouseY = e.pageY - $(this).offset().top;
+        $(this).find('.animate-circle').css({'left': mouseX + 'px', 'top': mouseY + 'px'});
+      });
+
+      button.on('mouseleave', function () {
+        $(this).find('.animate-circle').css({'left': '-40px', 'top': '-40px'});
+      });
+
     },
     initSlider: function () {
 
@@ -115,6 +143,11 @@ $(document).ready(function () {
           }
         }
       });
+
+      if(service.slides.length <= 3) {
+        $('.swiper-button-next').hide();
+        $('.swiper-button-prev').hide();
+      }
     },
     particlesJs: function () {
       var config = {
@@ -245,21 +278,23 @@ $(document).ready(function () {
       particlesJS("particles-js", config);
     },
     btnEffect: function () {
-        $('.m-btn')
-          .on('mouseenter', function(e) {
-            console.log('Gotcha');
-            var parentOffset = $(this).offset(),
-              relX = e.pageX - parentOffset.left,
-              relY = e.pageY - parentOffset.top;
-            $(this).find('span').css({top:relY, left:relX})
-          })
-          .on('mouseout', function(e) {
-            var parentOffset = $(this).offset(),
-              relX = e.pageX - parentOffset.left,
-              relY = e.pageY - parentOffset.top;
-            $(this).find('span').css({top:relY, left:relX})
-          });
-        $('[href=""]').click(function(){return false});
+      $('.m-btn')
+        .on('mouseenter', function (e) {
+          console.log('Gotcha');
+          var parentOffset = $(this).offset(),
+            relX = e.pageX - parentOffset.left,
+            relY = e.pageY - parentOffset.top;
+          $(this).find('span').css({top: relY, left: relX})
+        })
+        .on('mouseout', function (e) {
+          var parentOffset = $(this).offset(),
+            relX = e.pageX - parentOffset.left,
+            relY = e.pageY - parentOffset.top;
+          $(this).find('span').css({top: relY, left: relX})
+        });
+      $('[href=""]').click(function () {
+        return false
+      });
     },
     wowInit: function () {
 
@@ -269,8 +304,10 @@ $(document).ready(function () {
   main.attachHeader();
   main.menuScrollToSection();
   main.initSlider();
-  main.btnEffect();
+  // main.btnEffect();
+  main.sendMail();
   main.checkResolution();
+  main.moveToMouse();
   main.particlesJs();
   new WOW({
     offset: 100,
