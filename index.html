@@ -20,18 +20,24 @@
   </h1>
   <a href="#about" class="m-btn main animate" id="explore">Explore us<span class="animate-circle"></span></a>
 </section>
+<div class="dark-overlay"></div>
 <header class="m-header">
   <div class="container">
     <div class="logo">
       Logo
     </div>
-    <div class="m-menu">
+    <button class="hamburger hamburger--slider" tabindex="0" type="button" aria-label="Menu" role="button" aria-controls="navigation">
+      <div class="hamburger-box">
+        <div class="hamburger-inner"></div>
+      </div>
+    </button>
+    <nav class="m-menu" id="navigation">
       <a href="#about">About</a>
       <a href="#services">Services</a>
       <a href="#whatweare">What we are</a>
       <a href="#contacts">Contacts</a>
       <button class="m-btn getEstimation animate">Get estimation<span class="animate-circle"></span></button>
-    </div>
+    </nav>
   </div>
 </header>
 <section class="m-about" id="about">
@@ -266,7 +272,7 @@
       <div class="title">
         Find us on map
       </div>
-      <form class="m-form" name="contactsForm" id="contactsForm"  method="POST" action="mail.php">
+      <form class="m-form" name="contactsForm" id="contactsForm" method="POST" action="mail.php">
         <div class="form-group">
           <input type="text" name="name" placeholder="Name" required>
         </div>
@@ -276,7 +282,8 @@
         <div class="form-group">
           <textarea name="message" placeholder="Message" required></textarea>
         </div>
-        <button class="m-btn main animate" type="submit">Contact us <i class="material-icons">trending_flat</i><span class="animate-circle"></span></button>
+        <button class="m-btn main animate" type="submit">Contact us <i class="material-icons">trending_flat</i><span
+          class="animate-circle"></span></button>
       </form>
     </div>
   </div>

@@ -10,10 +10,6 @@
   right: 0;
   z-index: 99;
 
-  .xs & {
-    display: none;
-  }
-
   &.fixed-header {
     position: fixed;
     top: 0;

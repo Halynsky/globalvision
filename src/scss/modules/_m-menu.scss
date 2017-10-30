@@ -2,10 +2,54 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+
+  .xs & {
+    position: absolute;
+    top: 90px;
+    left: 56px;
+    background: #fff;
+    right: 0;
+    bottom: 0;
+    flex-direction: column!important;
+    padding: 0 40px;
+    display: none;
+
+    &.active-menu {
+      display: flex;
+      top: 100px;
+      background: #fff;
+      height: 500px;
+      box-shadow: 0 0 5px 0 #999;
+    }
+  }
 
   a {
     color: #000000;
-    padding: 0 15px;
+    padding: 7px 0;
+    margin: 0 15px;
     text-decoration: none;
+    position: relative;
+
+    &:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      display: block;
+      margin: auto;
+      height: 3px;
+      width: 0;
+      bottom: 0;
+      background: transparent;
+      transition: width .3s ease, background-color .3s ease;
+    }
+
+    &:hover {
+      &:after {
+        width: 100%;
+        background: $button-default;
+      }
+    }
   }
 }

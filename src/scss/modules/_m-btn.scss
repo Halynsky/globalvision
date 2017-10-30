@@ -89,10 +89,10 @@ $bg-color: #eeeeee !default;
 
   &.main {
     padding: 20px 60px;
-    $btn-color: #411997;
+    $btn-color: $button-default;
     $btn-color-dark: shade($btn-color, 40%);
     color: #fff;
-    background: #411997;
+    background: $button-default;
     z-index: 9999;
     position: relative;
     text-decoration: none;
@@ -103,7 +103,7 @@ $bg-color: #eeeeee !default;
 
   &.getEstimation {
     padding: 12px 15px;
-    background: #411997;
+    background: $button-default;
     box-shadow: 0 1px 7px 0 rgba(50, 0, 126, 0.26);
     margin-left: 15px;
     z-index: 9999;
