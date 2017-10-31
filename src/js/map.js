@@ -8,6 +8,10 @@ function initMap() {
     zoom: 15
   });
 
+
+
+
+
   var contentString = '<div id="content">'+
     '<div class="popup-contacts-body"><div class="popup-contacts-icon"><i class="material-icons">email</i></div> <div class="popup-contacts-text">kub.lorenza@hotmail.com</div></div>'+
     '<div class="popup-contacts-body"><div class="popup-contacts-icon"><i class="material-icons">local_phone</i></div> <div class="popup-contacts-text">(801) 732-1415</div></div>'+
@@ -20,16 +24,22 @@ function initMap() {
     maxWidth: 230
   });
 
+  // console.log(map);
+  //
+  // if ($(document).width() <= 768){
+  //   map.center = {lat: infowindow.position.lat() , lng: infowindow.position.lng()};
+  // }
+  //
+  // console.log(map.center.lat);
+
   // var marker = new google.maps.Marker({
   //   position: markerPosition,
   //   map: map,
   //   icon: ''
   // });
 
-  infowindow.open(map);
-
-  google.maps.event.addListener(infowindow, 'domready', function() {
-
+  google.maps.event.addDomListener(window, 'load', function() {
+    infowindow.open(map);
     // Reference to the DIV that wraps the bottom of infowindow
     var iwOuter = $('.gm-style-iw');
 

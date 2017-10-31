@@ -18,6 +18,12 @@
     z-index: 99999;
   }
 
+  &.active {
+    position: fixed;
+    z-index: 99999;
+    top: 0;
+  }
+
   .container {
     display: flex;
     justify-content: space-between;

@@ -110,6 +110,15 @@ $bg-color: #eeeeee !default;
     position: relative;
     text-decoration: none;
     overflow: hidden;
+
+    .xs & {
+      max-width: 127px;
+      max-height: 41px;
+      padding: 0!important;
+      font-size: 14px!important;
+      font-weight: 600!important;
+      color: #ffffff!important;
+    }
   }
 
   &.animate {
