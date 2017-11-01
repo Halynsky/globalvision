@@ -62,6 +62,9 @@ $(document).ready(function () {
         parent.attr('class', '')
       }
     },
+    showSuccessDialog: function() {
+      $(".success-dialog").fadeIn('slow');
+    },
     sendMail: function () {
       $("#contactsForm").on('submit', function (e) {
         e.preventDefault();
@@ -69,11 +72,16 @@ $(document).ready(function () {
         $.ajax({
           type: 'POST',
           url: 'mail.php',
-          data: $(this).serialize(),
-          success: function (data) {
-            console.log(data);
-          }
-        });
+          data: $(this).serialize()
+        }).done(function() {
+
+          main.showSuccessDialog();
+
+        }).fail(function(data){
+
+          alert(data);
+
+        })
 
       });
     },
