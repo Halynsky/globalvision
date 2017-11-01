@@ -63,7 +63,7 @@ $(document).ready(function () {
       }
     },
     sendMail: function () {
-      $("#contactsForm").on('submit', function () {
+      $("#contactsForm").on('submit', function (e) {
         e.preventDefault();
 
         $.ajax({
@@ -355,6 +355,7 @@ $(document).ready(function () {
   $(window).resize(function () {
     main.checkResolution();
     main.particlesJs();
+    main.toggleMenu();
   });
 
 });
