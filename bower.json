@@ -17,6 +17,7 @@
     "d3": "^3.0.0",
     "swiper": "^3.4.2",
     "particles.js": "^2.0.0",
-    "wow": "wow.js#^1.1.2"
+    "wow": "wow.js#^1.1.2",
+    "jquery-validation": "https://github.com/ikajou/jquery-validation.git#^1.13.0"
   }
 }

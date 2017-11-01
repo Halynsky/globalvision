@@ -66,25 +66,49 @@ $(document).ready(function () {
       $(".success-dialog").fadeIn('slow');
     },
     sendMail: function () {
-      $("#contactsForm").on('submit', function (e) {
+      var contactForm = $("#contactsForm");
+
+      contactForm.validate(
+        {
+          rules:
+            {
+              name:
+                {
+                  required: true,
+                  maxlength: 10
+                },
+              email:
+                {
+                  required: true,
+                  email: true,
+                  maxlength:60
+                },
+              message:
+                {
+                  required: true,
+                  rangelength:[50,500]
+                }
+            }
+        });
+
+      contactForm.on('submit', function (e) {
         e.preventDefault();
 
-        $.ajax({
-          type: 'POST',
-          url: 'mail.php',
-          data: $(this).serialize()
-        }).done(function() {
+        if (contactForm.valid()) {
+          $.ajax({
+            type: 'POST',
+            url: 'mail.php',
+            data: $(this).serialize()
+          }).done(function() {
 
-          main.showSuccessDialog();
+            main.showSuccessDialog();
 
-        }).fail(function(errors){
+          }).fail(function(errors){
 
-          console.log(errors);
-          // for (var i=0; i<=errors.length;i++){
-          //   $("#error-" + errors).find('label').text(errors);
-          // }
+            console.log(errors.responseJSON);
 
-        })
+          })
+        }
 
       });
     },

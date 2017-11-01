@@ -274,22 +274,13 @@
             </div>
             <form class="m-form" name="contactsForm" id="contactsForm">
                 <div class="form-group">
-                    <input type="text" name="name" placeholder="Name" required>
-                </div>
-                <div class="hidden error" id="error-name">
-                    <label for="error-name"></label>
+                    <input type="text" name="name" placeholder="Name" maxlength="10">
                 </div>
                 <div class="form-group">
-                    <input type="text" name="email" placeholder="Email" required>
-                </div>
-                <div class="hidden error" id="error-email">
-                    <label for="error-email"></label>
+                    <input type="text" name="email" placeholder="Email" maxlength="60">
                 </div>
                 <div class="form-group">
-                    <textarea name="message" placeholder="Message" required></textarea>
-                </div>
-                <div class="hidden error" id="error-message">
-                    <label for="error-message"></label>
+                    <textarea name="message" placeholder="Message"></textarea>
                 </div>
                 <button class="m-btn main animate" type="submit">Contact us <i class="material-icons">trending_flat</i><span
                         class="animate-circle"></span></button>
@@ -322,6 +313,7 @@
     </div>
 </section>
 <script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="bower_components/jquery-validation/dist/jquery.validate.min.js"></script>
 <script src="bower_components/swiper/dist/js/swiper.min.js"></script>
 <script src="bower_components/wow/dist/wow.min.js"></script>
 <script src="bower_components/particles.js/particles.min.js"></script>
