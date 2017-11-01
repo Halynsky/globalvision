@@ -88,7 +88,10 @@ $(document).ready(function () {
                   required: true,
                   rangelength:[50,500]
                 }
-            }
+            },
+          errorPlacement: function(error, element) {
+              element.addClass("error");
+          }
         });
 
       contactForm.on('submit', function (e) {
@@ -165,20 +168,18 @@ $(document).ready(function () {
           1080: {
             speed: 1200,
             slidesPerView: 3,
-            slidesPerGroup: 3,
             spaceBetween: 20
           },
           992: {
             speed: 900,
             slidesPerView: 2,
-            slidesPerGroup: 2,
             spaceBetween: 20
           },
           768: {
             speed: 600,
             slidesPerView: 1,
-            slidesPerGroup: 1,
-            spaceBetween: 0
+            spaceBetween: 20,
+            autoWidth: false
           }
         }
       });
