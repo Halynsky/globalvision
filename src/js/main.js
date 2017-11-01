@@ -77,9 +77,12 @@ $(document).ready(function () {
 
           main.showSuccessDialog();
 
-        }).fail(function(data){
+        }).fail(function(errors){
 
-          alert(data);
+          console.log(errors);
+          // for (var i=0; i<=errors.length;i++){
+          //   $("#error-" + errors).find('label').text(errors);
+          // }
 
         })
 

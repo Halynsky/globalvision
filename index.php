@@ -276,11 +276,20 @@
                 <div class="form-group">
                     <input type="text" name="name" placeholder="Name" required>
                 </div>
+                <div class="hidden error" id="error-name">
+                    <label for="error-name"></label>
+                </div>
                 <div class="form-group">
                     <input type="text" name="email" placeholder="Email" required>
                 </div>
+                <div class="hidden error" id="error-email">
+                    <label for="error-email"></label>
+                </div>
                 <div class="form-group">
                     <textarea name="message" placeholder="Message" required></textarea>
+                </div>
+                <div class="hidden error" id="error-message">
+                    <label for="error-message"></label>
                 </div>
                 <button class="m-btn main animate" type="submit">Contact us <i class="material-icons">trending_flat</i><span
                         class="animate-circle"></span></button>
