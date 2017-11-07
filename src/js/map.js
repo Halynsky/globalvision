@@ -1,3 +1,9 @@
+var script=document.createElement("script");
+script.type="text/javascript";
+script.async=true;
+script.src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCLiTUW08h1QHEY8oP-nJG2RFeWa0k7Cvk&callback=initMap";
+document.body.appendChild(script);
+
 function initMap() {
   var mapPosition = {lat: 48.9389463, lng: 24.7499861};
   var markerPosition = {lat: 48.9389463, lng: 24.7399861};

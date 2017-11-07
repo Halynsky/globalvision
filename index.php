@@ -320,6 +320,5 @@
 <script src="bower_components/particles.js/particles.min.js"></script>
 <script src="public/js/main.min.js"></script>
 <script src="src/js/map.js"></script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCLiTUW08h1QHEY8oP-nJG2RFeWa0k7Cvk&callback=initMap"></script>
 </body>
 </html>
