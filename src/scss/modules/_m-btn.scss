@@ -88,7 +88,12 @@ $bg-color: #eeeeee !default;
   pointer-events: all;
 
   &.main {
-    padding: 20px 60px;
+    width: 179px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
     $btn-color: $button-default;
     $btn-color-dark: shade($btn-color, 40%);
     color: #fff;
@@ -97,6 +102,13 @@ $bg-color: #eeeeee !default;
     position: relative;
     text-decoration: none;
     overflow: hidden;
+
+    .sm & {
+      width: 179px;
+      height: 60px;
+      background-color: $button-default;
+      box-shadow: 0 1px 7px 0 rgba(50, 0, 126, 0.26);
+    }
   }
 
 

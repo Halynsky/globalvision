@@ -13,7 +13,7 @@ $(document).ready(function () {
           header.addClass('fixed-header');
 
         } else {
-          header.css('top',home.height());
+          // header.css('top',home.height());
           header.removeClass('fixed-header');
         }
       });
@@ -46,7 +46,7 @@ $(document).ready(function () {
 
 
       if (windowWidth <= 992) {
-        if (windowWidth <= 768) {
+        if (windowWidth <= 767) {
           console.log('XS');
           parent.attr('class', '');
           parent.addClass('xs');
@@ -203,7 +203,7 @@ $(document).ready(function () {
             slidesPerView: 2,
             spaceBetween: 20
           },
-          768: {
+          767: {
             speed: 600,
             slidesPerView: 1,
             spaceBetween: 20
@@ -390,8 +390,15 @@ $(document).ready(function () {
 
   $(window).resize(function () {
     main.checkResolution();
+    main.initSlider();
     main.particlesJs();
     main.toggleMenu();
+
+    new WOW({
+      offset: 100,
+      mobile: true,
+      live: true
+    }).init();
   });
 
 });

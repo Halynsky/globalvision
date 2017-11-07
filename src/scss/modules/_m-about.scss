@@ -5,6 +5,11 @@
   .container {
     padding: 73px 0;
 
+    .sm & {
+      padding: 73px 40px;
+      box-sizing: border-box;
+    }
+
     .xs & {
       flex-direction: column;
       margin: 0;
@@ -25,6 +30,16 @@
     padding-left: 77px;
     min-width: 320px;
     margin-right: 92px;
+
+    .sm & {
+      font-size: 22px;
+      line-height: 1.45;
+      letter-spacing: 0.7px;
+      text-align: left;
+      min-width: 255px;
+      padding-left: 56px;
+      margin-right: 31px;
+    }
 
     .xs & {
       max-width: 100%;

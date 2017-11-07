@@ -38,15 +38,29 @@
     justify-content: center;
     margin: 0 -15px;
     margin-top: 86px;
+    position: relative;
 
     .sm & {
       flex-wrap: wrap;
-      max-width: 550px;
+      max-width: 100%;
     }
 
     .xs & {
       flex-wrap: wrap;
       margin: 56px 0 0 0;
+    }
+
+    img.dashed-line {
+      display: none;
+
+      .sm & {
+        display: block;
+        position: absolute;
+        right: 65px;
+        top: -190px;
+        bottom: 0;
+        margin: auto;
+      }
     }
 
     .item {
@@ -60,10 +74,13 @@
 
       .sm & {
         margin-bottom: 86px;
+        min-width: 216px;
+        padding: 0 15px;
       }
 
       .xs & {
         margin-bottom: 56px;
+        min-width: 216px;
       }
 
       &:last-child {
@@ -84,6 +101,14 @@
 
         .xs & {
           display: none;
+        }
+      }
+
+      &:nth-child(2) {
+        &:after {
+          .sm & {
+            display: none;
+          }
         }
       }
 
@@ -115,6 +140,10 @@
         font-size: 16px;
         text-align: center;
         color: #ececec;
+
+        .xs & , .sm & {
+            font-size: 14px;
+        }
       }
     }
   }

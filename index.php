@@ -172,6 +172,7 @@
                     Clever design means handy product
                 </div>
             </div>
+            <img src="/public/images/curve.svg" class="dashed-line wow fadeInUp" alt="Curve svg">
             <div class="item wow fadeInUp">
                 <div class="logo">
                     <img src="public/images/process-3.png" alt="Work Process">
