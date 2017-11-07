@@ -111,7 +111,22 @@ $bg-color: #eeeeee !default;
     }
   }
 
-
+  &.contacts {
+    width: 174px;
+    height: 46px;
+    background-color: $button-default;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: left;
+    overflow: hidden;
+    color: #ffffff;
+    box-shadow: 0 1px 7px 0 rgba(50, 0, 126, 0.26);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px;
+    position: relative;
+  }
 
   &.getEstimation {
     padding: 12px 15px;

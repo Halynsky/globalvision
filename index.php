@@ -283,7 +283,7 @@
                 <div class="form-group">
                     <textarea name="message" placeholder="Message"></textarea>
                 </div>
-                <button class="m-btn main animate" type="submit">Contact us <i class="material-icons">trending_flat</i><span
+                <button class="m-btn contacts animate" type="submit">Contact us <i class="material-icons">trending_flat</i><span
                         class="animate-circle"></span></button>
             </form>
         </div>

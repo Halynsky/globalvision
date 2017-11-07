@@ -45,7 +45,7 @@ $(document).ready(function () {
       var parent = $("body");
 
 
-      if (windowWidth <= 992) {
+      if (windowWidth <= 1080) {
         if (windowWidth <= 767) {
           console.log('XS');
           parent.attr('class', '');
@@ -160,17 +160,13 @@ $(document).ready(function () {
     initSlider: function () {
 
       var testimonial = new Swiper('.testimonial-slider .swiper-container', {
+        speed: 1500,
         slidesPerView: 1,
         spaceBetween: 30,
         nextButton: '.swiper-button-next',
         prevButton: '.swiper-button-prev',
         breakpoints: {
           1080: {
-            speed: 1200,
-            slidesPerView: 3,
-            spaceBetween: 20
-          },
-          992: {
             speed: 900,
             slidesPerView: 2,
             spaceBetween: 20
@@ -194,11 +190,6 @@ $(document).ready(function () {
         prevButton: '.swiper-button-prev',
         breakpoints: {
           1080: {
-            speed: 1200,
-            slidesPerView: 3,
-            spaceBetween: 20
-          },
-          992: {
             speed: 900,
             slidesPerView: 2,
             spaceBetween: 20
