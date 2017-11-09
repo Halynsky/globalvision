@@ -139,8 +139,13 @@ $(document).ready(function () {
         });
       }
 
-      $(".m-menu a").click(function () {
-
+      $(".m-menu a").on('click',function (e) {
+        if ($(document).width() <= 767) {
+          e.preventDefault();
+          e.stopPropagation();
+          $(".dark-overlay").fadeOut();
+          $(".hamburger").removeClass('is-active');
+        }
       });
 
     },
@@ -171,7 +176,7 @@ $(document).ready(function () {
             slidesPerView: 2,
             spaceBetween: 20
           },
-          768: {
+          767: {
             speed: 600,
             slidesPerView: 1,
             spaceBetween: 20,
@@ -360,7 +365,6 @@ $(document).ready(function () {
       });
     },
     wowInit: function () {
-
     }
   };
 

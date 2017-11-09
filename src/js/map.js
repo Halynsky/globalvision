@@ -1,9 +1,3 @@
-var script=document.createElement("script");
-script.type="text/javascript";
-script.async=true;
-script.src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCLiTUW08h1QHEY8oP-nJG2RFeWa0k7Cvk&callback=initMap";
-document.body.appendChild(script);
-
 function initMap() {
   var mapPosition = {lat: 48.9389463, lng: 24.7499861};
   var markerPosition = {lat: 48.9389463, lng: 24.7399861};
@@ -13,10 +7,6 @@ function initMap() {
     scrollwheel: false,
     zoom: 15
   });
-
-
-
-
 
   var contentString = '<div id="content">'+
     '<div class="popup-contacts-body"><div class="popup-contacts-icon"><i class="material-icons">email</i></div> <div class="popup-contacts-text">kub.lorenza@hotmail.com</div></div>'+
@@ -30,6 +20,7 @@ function initMap() {
     maxWidth: 230
   });
 
+  console.log('Debugging:',map);
   // console.log(map);
   //
   // if ($(document).width() <= 768){
@@ -50,6 +41,13 @@ function initMap() {
     var iwOuter = $('.gm-style-iw');
 
     iwOuter.addClass("wow bounceInDown");
+
+    if ($(document).width() <= 768) {
+      map.panBy(-iwOuter.width(), -iwOuter.height());
+    }
+    else {
+      map.panBy(0, -iwOuter.height());
+    }
 
     /* Since this div is in a position prior to .gm-div style-iw.
      * We use jQuery and create a iwBackground variable,
@@ -86,5 +84,6 @@ function initMap() {
     iwCloseBtn.mouseout(function(){
       $(this).css({opacity: '1'});
     });
+
   });
 }
