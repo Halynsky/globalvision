@@ -145,6 +145,8 @@ $(document).ready(function () {
           e.stopPropagation();
           $(".dark-overlay").fadeOut();
           $(".hamburger").removeClass('is-active');
+          $("#navigation").removeClass("active-menu");
+          $("body").css('overflow','auto');
         }
       });
 
@@ -173,14 +175,13 @@ $(document).ready(function () {
         breakpoints: {
           1080: {
             speed: 900,
-            slidesPerView: 2,
+            slidesPerView: 1,
             spaceBetween: 20
           },
           767: {
             speed: 600,
             slidesPerView: 1,
-            spaceBetween: 20,
-            autoWidth: false
+            spaceBetween: 0
           }
         }
       });

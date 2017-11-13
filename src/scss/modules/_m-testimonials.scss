@@ -12,6 +12,10 @@
 
   .swiper-container {
     position: static;
+
+    .swiper-wrapper {
+      box-sizing: border-box !important;
+    }
   }
 
   .under-title {
@@ -122,58 +126,45 @@
       position: static;
     }
 
-    .item {
-      max-width: 576px !important;
-      width: 100% !important;
+    .avatar {
+      width: 80px;
+      height: 80px;
+      box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.58);
+      border: solid 5px #ffffff;
+      border-radius: 80px;
+      background: gold;
+      margin: 0 auto 15px auto;
+      background-size: cover !important;
+      background-position: 50% !important;
+    }
 
-      .sm & {
-        max-width: 100%!important;
-      }
+    .text {
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 1.63;
+      text-align: center;
+      color: #c4c4c4;
 
       .xs & {
-        //max-width: 210px!important;
+        font-size: 12px;
+        line-height: 1.5;
+        padding: 0 56px;
       }
+    }
 
-      .avatar {
-        width: 80px;
-        height: 80px;
-        box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.58);
-        border: solid 5px #ffffff;
-        border-radius: 80px;
-        background: gold;
-        margin: 0 auto 15px auto;
-        background-size: cover!important;
-        background-position: 50%!important;
-      }
+    .line {
+      width: 65px;
+      height: 3px;
+      background-color: #6853cf;
+      display: block;
+      margin: 23px auto;
+    }
 
-      .text {
-        font-size: 16px;
-        font-weight: 600;
-        line-height: 1.63;
-        text-align: center;
-        color: #c4c4c4;
-
-        .xs & {
-          font-size: 12px;
-          line-height: 1.5;
-          padding: 0 56px;
-        }
-      }
-
-      .line {
-        width: 65px;
-        height: 3px;
-        background-color: #6853cf;
-        display: block;
-        margin: 23px auto;
-      }
-
-      .name {
-        font-size: 16px;
-        font-weight: bold;
-        text-align: center;
-        color: #444444;
-      }
+    .name {
+      font-size: 16px;
+      font-weight: bold;
+      text-align: center;
+      color: #444444;
     }
   }
 }
