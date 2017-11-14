@@ -63,7 +63,17 @@ $(document).ready(function () {
       }
     },
     showSuccessDialog: function() {
-      $(".success-dialog").fadeIn('slow');
+      $(".dark-overlay").fadeIn('slow');
+      $(".success-dialog").css('display','flex');
+      $(".success-dialog").animate({opacity: 1},300);
+      $("body").css('overflow','hidden');
+
+      setTimeout(function(){
+        $(".dark-overlay").fadeOut('slow');
+        $(".success-dialog").css('display','none');
+        $(".success-dialog").animate({opacity: 0},300);
+        $("body").css('overflow','auto');
+      },2000)
     },
     sendMail: function () {
       var contactForm = $("#contactsForm");
@@ -103,12 +113,10 @@ $(document).ready(function () {
             url: 'mail.php',
             data: $(this).serialize()
           }).done(function() {
-
             main.showSuccessDialog();
-
           }).fail(function(errors){
 
-            console.log(errors.responseJSON);
+            console.log("Error in server");
 
           })
         }
@@ -346,55 +354,30 @@ $(document).ready(function () {
       console.log('Particles ->' + config.particles.number.value);
       particlesJS("particles-js", config);
     },
-    btnEffect: function () {
-      $('.m-btn')
-        .on('mouseenter', function (e) {
-          console.log('Gotcha');
-          var parentOffset = $(this).offset(),
-            relX = e.pageX - parentOffset.left,
-            relY = e.pageY - parentOffset.top;
-          $(this).find('span').css({top: relY, left: relX})
-        })
-        .on('mouseout', function (e) {
-          var parentOffset = $(this).offset(),
-            relX = e.pageX - parentOffset.left,
-            relY = e.pageY - parentOffset.top;
-          $(this).find('span').css({top: relY, left: relX})
-        });
-      $('[href=""]').click(function () {
-        return false
-      });
-    },
     wowInit: function () {
+      new WOW({
+        offset: 100,
+        mobile: true,
+        live: true
+      }).init();
     }
   };
 
   main.attachHeader();
   main.menuScrollToSection();
   main.initSlider();
-  // main.btnEffect();
   main.sendMail();
   main.checkResolution();
   main.moveToMouse();
   main.toggleMenu();
   main.particlesJs();
-  new WOW({
-    offset: 100,
-    mobile: true,
-    live: true
-  }).init();
+  main.wowInit();
 
   $(window).resize(function () {
     main.checkResolution();
     main.initSlider();
     main.particlesJs();
     main.toggleMenu();
-
-    new WOW({
-      offset: 100,
-      mobile: true,
-      live: true
-    }).init();
+    main.wowInit();
   });
-
 });

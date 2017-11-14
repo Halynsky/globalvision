@@ -31,6 +31,9 @@ include "src/html/testimonials.html";
 include "src/html/contacts.html";
 include "src/html/footer.html";
 ?>
+<div class="success-dialog">
+    Your message send.<br> Thank you.
+</div>
 
 <script src="bower_components/jquery/dist/jquery.min.js"></script>
 <script src="bower_components/jquery-validation/dist/jquery.validate.min.js"></script>
