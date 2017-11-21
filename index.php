@@ -1,6 +1,15 @@
 <!doctype html>
 <html lang="en">
 <head>
+    <link rel="apple-touch-icon" sizes="180x180" href="public/images/favicon/apple-touch-icon.png?v=QEMm2EkzgY">
+    <link rel="icon" type="image/png" sizes="32x32" href="public/images/favicon/favicon-32x32.png?v=QEMm2EkzgY">
+    <link rel="icon" type="image/png" sizes="16x16" href="public/images/favicon/favicon-16x16.png?v=QEMm2EkzgY">
+    <link rel="manifest" href="public/images/favicon/manifest.json?v=QEMm2EkzgY">
+    <link rel="mask-icon" href="public/images/favicon/safari-pinned-tab.svg?v=QEMm2EkzgY" color="#603cba">
+    <link rel="shortcut icon" href="public/images/favicon/favicon.ico?v=QEMm2EkzgY">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="public/images/favicon/mstile-144x144.png?v=QEMm2EkzgY">
+    <meta name="theme-color" content="#ffffff">
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -31,9 +40,6 @@ include "src/html/testimonials.html";
 include "src/html/contacts.html";
 include "src/html/footer.html";
 ?>
-<div class="success-dialog">
-    Your message send.<br> Thank you.
-</div>
 
 <script src="bower_components/jquery/dist/jquery.min.js"></script>
 <script src="bower_components/jquery-validation/dist/jquery.validate.min.js"></script>

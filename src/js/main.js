@@ -76,36 +76,47 @@ $(document).ready(function () {
       },2000)
     },
     sendMail: function () {
+
       var contactForm = $("#contactsForm");
 
-      contactForm.validate(
-        {
-          rules:
-            {
-              name:
-                {
-                  required: true,
-                  maxlength: 10
-                },
-              email:
-                {
-                  required: true,
-                  email: true,
-                  maxlength:60
-                },
-              message:
-                {
-                  required: true,
-                  rangelength:[50,500]
-                }
-            },
-          errorPlacement: function(error, element) {
-              element.addClass("error");
-          }
-        });
+      // contactForm.validate(
+      //   {
+      //     rules:
+      //       {
+      //         name:
+      //           {
+      //             required: true,
+      //             maxlength: 10
+      //           },
+      //         email:
+      //           {
+      //             required: true,
+      //             email: true,
+      //             maxlength:60
+      //           },
+      //         message:
+      //           {
+      //             required: true,
+      //             rangelength:[50,500]
+      //           }
+      //       },
+      //     errorPlacement: function(error, element) {
+      //         element.addClass("error");
+      //     }
+      //   });
 
       contactForm.on('submit', function (e) {
         e.preventDefault();
+
+
+        $(".panel").addClass('flip');
+
+        setTimeout(function(){
+          $(".panel").removeClass('flip');
+        },2000);
+
+
+
 
         if (contactForm.valid()) {
           $.ajax({
