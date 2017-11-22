@@ -7,12 +7,13 @@ require 'vendor/Exception.php';
 require 'vendor/PHPMailer.php';
 require 'vendor/SMTP.php';
 
-echo 'sending'
+echo 'sending';
 
-$mail = new PHPMailer(true);                              // Passing `true` enables exceptions
+
 try {
+    $mail = new PHPMailer(true);                              // Passing `true` enables exceptions
     //Server settings
-    $mail->SMTPDebug = 2;                                 // Enable verbose debug output
+    $mail->SMTPDebug = 4;                                 // Enable verbose debug output
     $mail->isSMTP();                                      // Set mailer to use SMTP
     $mail->Host = 'smtp.rambler.ru';  // Specify main and backup SMTP servers
     $mail->SMTPAuth = true;                               // Enable SMTP authentication
@@ -22,13 +23,13 @@ try {
     $mail->Port = 465;                                    // TCP port to connect to
 
     //Recipients
-    $mail->setFrom('norely@globalvision.com.ua', 'GlobalVision');
+    $mail->setFrom('pupkin-vova@rambler.ua', 'GlobalVision');
     $mail->addAddress('amartyniuk@codevision.com.ua', 'Joe User');     // Add a recipient
     $mail->addAddress('noliynyk@codevision.com.ua');               // Name is optional
-    $mail->addReplyTo('noliynyk@codevision.com.ua', 'Information');
+    $mail->addReplyTo('pupkin-vova@rambler.ua', 'Information');
 
     //Content
-    $mail->isHTML(true);                                  // Set email format to HTML
+    $mail->isHTML(false);                                  // Set email format to HTML
     $mail->Subject = 'Subject';
     $mail->Body    = 'qjqjqjq';
 
