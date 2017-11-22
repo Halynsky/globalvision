@@ -9,9 +9,6 @@ require 'vendor/SMTP.php';
 
 
 if(isset($_POST) && !empty($_POST)) {
-    $admin_email = 'caiterchrome@gmail.com';
-    $admin_name = 'Contact Form';
-    $reply = 'caiterchrome@gmail.com';
     $errors = array();
     $name = $_POST['name'];
     $email = $_POST['email'];
@@ -33,7 +30,7 @@ if(isset($_POST) && !empty($_POST)) {
     } else {
             $content = "Name: " . $name . " \n";
             $content .= "Email: " . $email . " \n";
-            $content .= "MEssage: " . $message . " \n";
+            $content .= "Message: " . $message . " \n";
            
             try {
                 $mail = new PHPMailer(true);
@@ -47,7 +44,6 @@ if(isset($_POST) && !empty($_POST)) {
                 $mail->Port = 465;
                 $mail->setFrom('pupkin-vova@rambler.ua', 'GlobalVision');
                 $mail->addAddress('noliynyk@codevision.com.ua');
-                $mail->addAddress('caiterchrome@gmail.com');
                 $mail->addReplyTo('pupkin-vova@rambler.ua', 'Information');
                 $mail->isHTML(false);
                 $mail->Subject = 'Contact Form';
