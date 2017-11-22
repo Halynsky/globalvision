@@ -14,7 +14,7 @@ function initMap() {
     '<div class="popup-contacts-body"><div class="popup-contacts-icon"><i class="material-icons" class="popup-contacts-icon">location_on</i></div> <div class="popup-contacts-text">560 Jeremy Place Suite 828,<br> North Herman, NM 76349-1429</div></div>'+
     '<div class="arrow"></div></div>';
 
-  var infowindow = new google.maps.InfoWindow({
+  var infoWindow = new google.maps.InfoWindow({
     content: contentString,
     position: markerPosition,
     maxWidth: 230
@@ -36,7 +36,8 @@ function initMap() {
   // });
 
   google.maps.event.addDomListener(window, 'load', function() {
-    infowindow.open(map);
+    infoWindow.close();
+    infoWindow.open(map);
     // Reference to the DIV that wraps the bottom of infowindow
     var iwOuter = $('.gm-style-iw');
 
@@ -85,5 +86,8 @@ function initMap() {
       $(this).css({opacity: '1'});
     });
 
+    google.maps.event.addDomListener(window, 'resize', function() {
+      infoWindow.setPosition(markerPosition);
+    });
   });
 }
