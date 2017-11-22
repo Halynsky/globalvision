@@ -28,7 +28,7 @@ try {
     //Content
     $mail->isHTML(true);                                  // Set email format to HTML
     $mail->Subject = 'Subject';
-    $mail->Body    = $content;
+    $mail->Body    = 'qjqjqjq';
 
     $mail->send();
     header('Content-type: application/json');
