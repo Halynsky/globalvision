@@ -34,7 +34,7 @@ if(isset($_POST) && !empty($_POST)) {
            
             try {
                 $mail = new PHPMailer(true);
-                $mail->SMTPDebug = 2;
+                $mail->SMTPDebug = 0;
                 $mail->isSMTP();
                 $mail->Host = 'smtp.rambler.ru';
                 $mail->SMTPAuth = true;
