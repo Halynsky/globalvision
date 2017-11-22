@@ -60,10 +60,6 @@ try {
     $mail->addAddress('noliynyk@codevision.com.ua');               // Name is optional
     $mail->addReplyTo('noliynyk@codevision.com.ua', 'Information');
 
-    //Attachments
-    $mail->addAttachment('/var/tmp/file.tar.gz');         // Add attachments
-    $mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
-
     //Content
     $mail->isHTML(true);                                  // Set email format to HTML
     $mail->Subject = 'Subject';
