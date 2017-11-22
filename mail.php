@@ -31,12 +31,12 @@ try {
     $mail->Body    = 'qjqjqjq';
 
     $mail->send();
-    header('Content-type: application/json');
-    http_response_code(200);
+    echo 'Message has been sent';
+    // header('Content-type: application/json');
+    // http_response_code(200);
 } catch (Exception $e) {
-    header('Content-type: application/json');
-    http_response_code(400);
-    echo json_encode($mail->ErrorInfo);
+    echo 'Message could not be sent.';
+    echo 'Mailer Error: ' . $mail->ErrorInfo;
 }
 
 
