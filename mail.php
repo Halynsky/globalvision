@@ -1,9 +1,13 @@
 <?php
 
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
+require 'vendor/Exception.php';
+require 'vendor/PHPMailer.php';
+require 'vendor/SMTP.php';
+
 if(isset($_POST) && !empty($_POST)) {
-	$admin_email = 'caiterchrome@gmail.com';
-	$admin_name = 'Contact Form';
-	$reply = 'caiterchrome@gmail.com';
 	$errors = array();
     $name = $_POST['name'];
     $email = $_POST['email'];
@@ -30,19 +34,54 @@ if(isset($_POST) && !empty($_POST)) {
             $content .= "Email: " . $email . " \n";
             $content .= "MEssage: " . $message . " \n";
 
-            $headers = 'From: "' . $admin_name . '" <' . $reply . '>' . "\r\n" .
-                'Reply-To: '.$admin_email . "\r\n" .
-                'Cc: amartyniuk@codevision.com.ua' . "\r\n" .
-                'Bcc: noliynyk@codevision.com.ua' . "\r\n" .
-                'X-Mailer: PHP/' . phpversion();
+            // $headers = 'From: "' . $admin_name . '" <' . $reply . '>' . "\r\n" .
+            //     'Reply-To: '.$admin_email . "\r\n" .
+            //     'Cc: amartyniuk@codevision.com.ua' . "\r\n" .
+            //     'Bcc: noliynyk@codevision.com.ua' . "\r\n" .
+            //     'X-Mailer: PHP/' . phpversion();
 
 
-            mail($admin_email, $admin_name, $content, $headers);
+            // mail($admin_email, $admin_name, $content, $headers);
+$mail = new PHPMailer(true);                              // Passing `true` enables exceptions
+try {
+    //Server settings
+    $mail->SMTPDebug = 2;                                 // Enable verbose debug output
+    $mail->isSMTP();                                      // Set mailer to use SMTP
+    $mail->Host = 'smtp.rambler.ru';  // Specify main and backup SMTP servers
+    $mail->SMTPAuth = true;                               // Enable SMTP authentication
+    $mail->Username = 'pupkin-vova@rambler.ua';                 // SMTP username
+    $mail->Password = '102030Aa';                           // SMTP password
+    $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
+    $mail->Port = 465;                                    // TCP port to connect to
+
+    //Recipients
+    $mail->setFrom('norely@globalvision.com.ua', 'GlobalVision');
+    $mail->addAddress('amartyniuk@codevision.com.ua', 'Joe User');     // Add a recipient
+    $mail->addAddress('noliynyk@codevision.com.ua');               // Name is optional
+    $mail->addReplyTo('noliynyk@codevision.com.ua', 'Information');
+
+    //Attachments
+    $mail->addAttachment('/var/tmp/file.tar.gz');         // Add attachments
+    $mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
+
+    //Content
+    $mail->isHTML(true);                                  // Set email format to HTML
+    $mail->Subject = 'Subject';
+    $mail->Body    = $content;
+
+    $mail->send();
+    header('Content-type: application/json');
+    http_response_code(200);
+} catch (Exception $e) {
+    header('Content-type: application/json');
+    http_response_code(400);
+    echo json_encode($mail->ErrorInfo);
+}
 
 
 
-            header('Content-type: application/json');
-            http_response_code(200);
+
+            
 		}
 } else {
 	header('Content-type: application/json');
