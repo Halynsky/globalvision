@@ -213,6 +213,7 @@
       padding: 36px 25px;
       max-width: 420px;
       width: 100%;
+      box-sizing: border-box;
       box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.14);
       height: inherit;
       z-index: 900;
@@ -236,9 +237,9 @@
       align-items: center;
       text-align: center;
       height: 470px;
-      box-sizing: border-box;
       padding: 36px 25px;
       font-size: 25px;
+      box-sizing: border-box;
       box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.14);
       color: #ffffff;
       background: $button-default;
