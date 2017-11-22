@@ -7,6 +7,7 @@ require 'vendor/Exception.php';
 require 'vendor/PHPMailer.php';
 require 'vendor/SMTP.php';
 
+
 if(isset($_POST) && !empty($_POST)) {
     $admin_email = 'caiterchrome@gmail.com';
     $admin_name = 'Contact Form';
