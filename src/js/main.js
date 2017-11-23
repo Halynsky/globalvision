@@ -78,16 +78,16 @@ $(document).ready(function () {
             type: 'POST',
             url: 'mail.php',
             data: $(this).serialize()
-          }).done(function () {
+          }).done(function (data) {
 
             $(".panel").addClass('flip');
 
             setTimeout(function () {
               $(".panel").removeClass('flip');
             }, 4000);
-          }).fail(function (errors) {
+          }).fail(function (jqXHR, textStatus) {
 
-            console.log("Error in server");
+            console.log(textStatus);
 
           })
         }
