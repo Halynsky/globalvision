@@ -22,7 +22,7 @@ if(isset($_POST) && !empty($_POST)) {
     if (!isset($email) || empty($email) || !validateEmail($email)) {
         $errors['email'] = 'Email is not valid';
     }
-    
+
     if (count($errors) > 0) {
         header('Content-type: application/json');
         http_response_code(400);
@@ -31,11 +31,12 @@ if(isset($_POST) && !empty($_POST)) {
             $content = "Name: " . $name . " \n";
             $content .= "Email: " . $email . " \n";
             $content .= "Message: " . $message . " \n";
-           
+
             try {
                 $mail = new PHPMailer(true);
                 $mail->SMTPDebug = 0;
                 $mail->isSMTP();
+                $mail->CharSet = 'UTF-8';
                 $mail->Host = 'smtp.rambler.ru';
                 $mail->SMTPAuth = true;
                 $mail->Username = 'pupkin-vova@rambler.ua';
@@ -55,7 +56,7 @@ if(isset($_POST) && !empty($_POST)) {
             } catch (Exception $e) {
                 http_response_code(400);
                 echo json_encode($mail->ErrorInfo);
-            }   
+            }
         }
 } else {
     header('Content-type: application/json');
