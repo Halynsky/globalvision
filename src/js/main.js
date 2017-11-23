@@ -51,7 +51,7 @@ $(document).ready(function () {
               name:
                 {
                   required: true,
-                  maxlength: 10
+                  maxlength: 50
                 },
               email:
                 {
