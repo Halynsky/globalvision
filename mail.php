@@ -22,7 +22,7 @@ if(isset($_POST) && !empty($_POST)) {
     if (!isset($email) || empty($email) || !validateEmail($email)) {
         $errors['email'] = 'Email is not valid';
     }
-    
+
     if (count($errors) > 0) {
         header('Content-type: application/json');
         http_response_code(400);
@@ -31,7 +31,7 @@ if(isset($_POST) && !empty($_POST)) {
             $content = "Name: " . $name . " \n";
             $content .= "Email: " . $email . " \n";
             $content .= "Message: " . $message . " \n";
-           
+
             try {
                 $mail = new PHPMailer(true);
                 $mail->SMTPDebug = 0;
@@ -50,12 +50,11 @@ if(isset($_POST) && !empty($_POST)) {
                 $mail->Body    = $content;
 
                 $mail->send();
-                header('Content-type: application/json');
                 http_response_code(200);
             } catch (Exception $e) {
                 http_response_code(400);
                 echo json_encode($mail->ErrorInfo);
-            }   
+            }
         }
 } else {
     header('Content-type: application/json');
