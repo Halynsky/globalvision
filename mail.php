@@ -36,6 +36,7 @@ if(isset($_POST) && !empty($_POST)) {
                 $mail = new PHPMailer(true);
                 $mail->SMTPDebug = 0;
                 $mail->isSMTP();
+                $mail->CharSet = 'UTF-8';
                 $mail->Host = 'smtp.rambler.ru';
                 $mail->SMTPAuth = true;
                 $mail->Username = 'pupkin-vova@rambler.ua';
