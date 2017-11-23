@@ -14,7 +14,7 @@
   display: none;
   outline: none;
 
-  .xs & {
+  @media (max-width: 767px) {
     display: inline-block;
   }
 }

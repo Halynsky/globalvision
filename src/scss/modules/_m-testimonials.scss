@@ -2,7 +2,7 @@
   background-color: #f7f8f9;
   padding: 54px 0 60px 0;
 
-  .xs & {
+  @media (max-width: 767px) {
     padding: 50px 0;
   }
 
@@ -35,6 +35,10 @@
     line-height: 1.23;
     text-align: center;
     color: #2d2d2d;
+
+    @media (max-width: 767px) {
+      font-size: 22px;
+    }
   }
 
   .items {
@@ -42,7 +46,7 @@
     max-width: 576px;
     position: relative;
 
-    .xs & {
+    @media (max-width: 767px) {
       max-width: 100%;
     }
 
@@ -63,7 +67,7 @@
       justify-content: center;
       color: #888;
 
-      .xs & {
+      @media (max-width: 767px) {
         width: 30px;
         height: 30px;
       }
@@ -71,7 +75,7 @@
       i {
         font-size: 35px;
 
-        .xs & {
+        @media (max-width: 767px) {
           font-size: 25px;
         }
       }
@@ -101,11 +105,11 @@
     .swiper-button-next {
       right: -141px;
 
-      .sm & {
+      @media (max-width: 992px) {
         right: -65px;
       }
 
-      .xs & {
+      @media (max-width: 767px) {
         right: 0;
       }
     }
@@ -113,11 +117,11 @@
     .swiper-button-prev {
       left: -141px;
 
-      .sm & {
+      @media (max-width: 992px) {
         left: -65px;
       }
 
-      .xs & {
+      @media (max-width: 767px) {
         left: 0;
       }
     }
@@ -145,7 +149,7 @@
       text-align: center;
       color: #c4c4c4;
 
-      .xs & {
+      @media (max-width: 767px) {
         font-size: 12px;
         line-height: 1.5;
         padding: 0 56px;

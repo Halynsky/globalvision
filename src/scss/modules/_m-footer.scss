@@ -1,4 +1,11 @@
 .m-footer {
+  z-index: 99;
+
+  @media (max-width: 767px) {
+    top: 470px;
+    position: relative;
+  }
+
   .footer-top {
     background: #ffffff;
     padding: 60px 0;
@@ -37,7 +44,7 @@
   }
 
   .m-menu {
-    .xs & {
+    @media (max-width: 767px) {
       display: none;
     }
   }

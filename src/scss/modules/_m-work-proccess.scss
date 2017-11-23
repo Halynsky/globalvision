@@ -27,7 +27,7 @@
     color: #fdfdfd;
     max-width: 454px;
 
-    .xs & {
+    @media (max-width: 767px) {
       font-size: 22px;
       max-width: 290px;
     }
@@ -40,12 +40,12 @@
     margin-top: 86px;
     position: relative;
 
-    .sm & {
+    @media (max-width: 992px) {
       flex-wrap: wrap;
       max-width: 100%;
     }
 
-    .xs & {
+    @media (max-width: 767px) {
       flex-wrap: wrap;
       margin: 56px 0 0 0;
     }
@@ -53,13 +53,17 @@
     img.dashed-line {
       display: none;
 
-      .sm & {
+      @media (max-width: 992px) {
         display: block;
         position: absolute;
         right: 65px;
         top: -190px;
         bottom: 0;
         margin: auto;
+      }
+
+      @media (max-width: 767px) {
+        display: none;
       }
     }
 
@@ -72,13 +76,17 @@
       position: relative;
       margin: 0 15px;
 
-      .sm & {
+      @media (max-width: 1080px) {
+        min-width: 200px;
+      }
+
+      @media (max-width: 992px) {
         margin-bottom: 86px;
         min-width: 216px;
         padding: 0 15px;
       }
 
-      .xs & {
+      @media (max-width: 767px) {
         margin-bottom: 56px;
         min-width: 216px;
       }
@@ -99,14 +107,18 @@
         height: 1px;
         border-bottom: 1px dashed #fff;
 
-        .xs & {
+        @media (max-width: 1080px) {
+          width: 65px;
+        }
+
+        @media (max-width: 767px) {
           display: none;
         }
       }
 
       &:nth-child(2) {
         &:after {
-          .sm & {
+          @media (max-width: 992px) {
             display: none;
           }
         }
@@ -141,7 +153,7 @@
         text-align: center;
         color: #ececec;
 
-        .xs & , .sm & {
+        @media (max-width: 992px) {
             font-size: 14px;
         }
       }

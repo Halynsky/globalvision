@@ -41,11 +41,11 @@
     cursor: pointer;
     text-decoration: none;
 
-    .sm & {
+    @media (max-width: 992px) {
         max-width: 540px;
     }
 
-    .xs & {
+    @media (max-width: 767px) {
       font-size: 42px;
       max-width: 230px;
       padding-bottom: 110px;

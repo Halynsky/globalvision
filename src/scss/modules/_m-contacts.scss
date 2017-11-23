@@ -2,8 +2,9 @@
   background: #ddd;
   height: 500px;
   position: relative;
+  z-index: 999;
 
-  .xs & {
+  @media (max-width: 767px) {
     height: auto;
   }
 
@@ -56,7 +57,7 @@
       padding-left: 12px;
     }
 
-    .xs & {
+    @media (max-width: 767px) {
       position: relative;
       height: 350px !important;
     }
@@ -146,18 +147,18 @@
     align-items: center;
     justify-content: center;
 
-    .xs & {
+    @media (max-width: 767px) {
       background: #fff;
     }
   }
 
   .contacts-form {
-    .sm & {
+    @media (max-width: 992px) {
       max-width: 330px;
       right: 45px;
     }
 
-    .xs & {
+    @media (max-width: 767px) {
       position: relative;
       top: -15px;
       right: 0;
@@ -190,8 +191,11 @@
   }
 
   .panel {
-    -webkit-perspective: 1000px;
-    -moz-perspective: 1000px;
+    perspective: 1000px;
+
+    @media (max-width: 767px) {
+      perspective: 1800px;
+    }
 
     &.flip {
       .front {
@@ -225,8 +229,15 @@
       -webkit-transition: all .6s ease-in-out;
       transition: all .6s ease-in-out;
 
-      .xs & {
-        position: relative;
+      @media (max-width: 992px) {
+        max-width: 330px;
+      }
+
+      @media (max-width: 767px) {
+        top: -15px;
+        left: 0;
+        margin: auto;
+        max-width: 292px;
       }
     }
 
@@ -254,8 +265,15 @@
       -webkit-transition: all .6s ease-in-out;
       transition: all .6s ease-in-out;
 
-      .xs & {
-        position: relative;
+      @media (max-width: 992px) {
+        max-width: 330px;
+      }
+
+      @media (max-width: 767px) {
+        top: -15px;
+        left: 0;
+        margin: auto;
+        max-width: 292px;
       }
     }
   }

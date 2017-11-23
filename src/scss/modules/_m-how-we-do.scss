@@ -2,7 +2,7 @@
   background-color: #f7f8f9;
   padding: 69px 0 116px 0;
 
-  .xs & {
+  @media (max-width: 767px) {
     padding: 50px 0;
   }
 
@@ -11,7 +11,7 @@
     align-items: center;
     justify-content: space-between;
 
-    .sm & , .xs & {
+    @media (max-width: 992px) {
      flex-direction: column;
     }
   }
@@ -21,7 +21,7 @@
     box-sizing: border-box;
     position: relative;
 
-    .xs & , .sm & {
+    @media (max-width: 992px) {
       text-align: center;
 
       img {
@@ -35,7 +35,7 @@
   .text-information {
     flex: 0 0 350px;
 
-    .sm & , .xs & {
+    @media (max-width: 992px) {
       flex: 0;
     }
 
@@ -57,6 +57,10 @@
       text-align: left;
       color: rgba(46, 46, 46, 0.87);
       padding-bottom: 35px;
+
+      @media (max-width: 767px) {
+        font-size: 22px;
+      }
     }
 
     .description {

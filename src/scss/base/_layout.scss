@@ -6,7 +6,7 @@ html, body {
 }
 
 .container {
-  max-width: 1040px;
+  max-width: 992px;
   width: 100%;
   margin: 0 auto;
   display: flex;
@@ -14,27 +14,27 @@ html, body {
   justify-content: space-between;
 
   //Small desktop screen
-  .md & {
-    max-width: 992px;
+  @media (max-width: 1080px) {
+    max-width: 700px;
     box-sizing: border-box;
   }
 
   //Tablet screen
-  .sm & {
+  @media (max-width: 992px) {
     max-width: 768px;
     padding: 0 40px;
     box-sizing: border-box;
   }
 
   //Mobile screen
-  .xs & {
+  @media (max-width: 767px) {
     max-width: 100%;
     padding: 0 15px;
     box-sizing: border-box;
   }
 
   .title {
-    .xs & {
+    @media (max-width: 767px) {
       max-width: 290px;
       font-size: 22px;
     }
@@ -54,7 +54,7 @@ a {
   right: 0;
   bottom: 0;
   background: rgba(0, 0, 0, 0.8);
-  z-index: 999999;
+  z-index: 99999;
 }
 
 .error {
@@ -81,7 +81,7 @@ a {
   font-size: 34px;
   z-index: 9999999;
 
-  .xs & {
+  @media (max-width: 767px) {
     font-size: 24px;
     width: 300px;
     height: 200px;

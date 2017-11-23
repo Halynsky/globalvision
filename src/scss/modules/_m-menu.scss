@@ -4,24 +4,27 @@
   justify-content: center;
   position: relative;
 
-  .xs & {
+  @media (max-width: 767px) {
     position: fixed;
     top: 90px;
     background: #fff;
     width: 80%;
-    right: -100%;
     bottom: 0;
     flex-direction: column!important;
     padding: 0 10px;
-    display: none;
+    opacity: 0;
+    transform: translate3d(120%,0,0);
 
     &.active-menu {
       display: flex;
+      opacity: 1;
       top: 100px;
       width: 80%;
       background: #fff;
       box-shadow: 0 0 5px 0 #999;
       align-items: flex-start;
+      transform: translate3d(20%,0,0);
+      transition: transform 2s ease;
     }
   }
 
@@ -32,7 +35,7 @@
     text-decoration: none;
     position: relative;
 
-    .xs & {
+    @media (max-width: 767px) {
       font-size: 16px;
       font-weight: 600;
       text-align: left;

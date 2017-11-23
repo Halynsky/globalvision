@@ -103,7 +103,7 @@ $bg-color: #eeeeee !default;
     text-decoration: none;
     overflow: hidden;
 
-    .sm & {
+    @media (max-width: 992px) {
       width: 179px;
       height: 60px;
       background-color: $button-default;
@@ -131,6 +131,8 @@ $bg-color: #eeeeee !default;
 
   &.getEstimation {
     padding: 12px 15px;
+    color: #ffffff;
+    font-weight: 400;
     background: $button-default;
     box-shadow: 0 1px 7px 0 rgba(50, 0, 126, 0.26);
     margin-left: 15px;
@@ -139,7 +141,7 @@ $bg-color: #eeeeee !default;
     text-decoration: none;
     overflow: hidden;
 
-    .xs & {
+    @media (max-width: 767px) {
       max-width: 127px;
       max-height: 41px;
       padding: 0!important;
@@ -163,7 +165,7 @@ $bg-color: #eeeeee !default;
       left: -40px;
     }
 
-    .xs & {
+    @media (max-width: 767px) {
       padding: 13px 23px;
       min-width: 179px;
       min-height: 60px;

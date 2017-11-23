@@ -5,12 +5,12 @@
   .container {
     padding: 73px 0;
 
-    .sm & {
+    @media (max-width: 767px) {
       padding: 73px 40px;
       box-sizing: border-box;
     }
 
-    .xs & {
+    @media (max-width: 767px) {
       flex-direction: column;
       margin: 0;
       padding: 50px 15px;
@@ -31,7 +31,7 @@
     min-width: 320px;
     margin-right: 92px;
 
-    .sm & {
+    @media (max-width: 992px) {
       font-size: 22px;
       line-height: 1.45;
       letter-spacing: 0.7px;
@@ -41,7 +41,7 @@
       margin-right: 31px;
     }
 
-    .xs & {
+    @media (max-width: 767px) {
       max-width: 100%;
       font-size: 22px;
       padding-left: 38px;
@@ -57,7 +57,7 @@
     text-align: left;
     color: #9a9a9a;
 
-    .xs & {
+    @media (max-width: 767px) {
       font-size: 14px;
     }
   }

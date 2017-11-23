@@ -3,7 +3,7 @@
   position: relative;
   display: block;
 
-  .xs & {
+  @media (max-width: 767px) {
     margin: 36px 0 0 0;
   }
 
@@ -37,7 +37,7 @@
     i {
       font-size: 30px;
 
-      .xs & {
+      @media (max-width: 767px) {
         font-size: 20px;
       }
     }
@@ -64,7 +64,7 @@
     background-color: #ffffff;
     box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.12);
 
-    .xs & {
+    @media (max-width: 767px) {
       min-width: inherit;
       box-sizing: inherit;
       width: 100%;
