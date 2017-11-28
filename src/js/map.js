@@ -1,17 +1,17 @@
 function initMap() {
-  var mapPosition = {lat: 48.9389463, lng: 24.7499861};
-  var markerPosition = {lat: 48.9389463, lng: 24.7399861};
+  var mapPosition = {lat: 40.7404878, lng: -73.9782298};
+  var markerPosition = {lat: 40.7404878, lng: -73.9782298};
 
   var map = new google.maps.Map(document.getElementById('map'), {
     center: mapPosition,
     scrollwheel: false,
-    zoom: 15
+    zoom: 13
   });
 
   var contentString = '<div id="content">'+
-    '<div class="popup-contacts-body"><div class="popup-contacts-icon"><i class="material-icons">email</i></div> <div class="popup-contacts-text">kub.lorenza@hotmail.com</div></div>'+
-    '<div class="popup-contacts-body"><div class="popup-contacts-icon"><i class="material-icons">local_phone</i></div> <div class="popup-contacts-text">(801) 732-1415</div></div>'+
-    '<div class="popup-contacts-body"><div class="popup-contacts-icon"><i class="material-icons" class="popup-contacts-icon">location_on</i></div> <div class="popup-contacts-text">560 Jeremy Place Suite 828,<br> North Herman, NM 76349-1429</div></div>'+
+    '<div class="popup-contacts-body"><div class="popup-contacts-icon"><i class="material-icons">email</i></div> <div class="popup-contacts-text">ceo@codevision.com.ua</div></div>'+
+    '<div class="popup-contacts-body"><div class="popup-contacts-icon"><i class="material-icons">local_phone</i></div> <div class="popup-contacts-text">212-390-0323</div></div>'+
+    '<div class="popup-contacts-body"><div class="popup-contacts-icon"><i class="material-icons" class="popup-contacts-icon">location_on</i></div> <div class="popup-contacts-text">509 Madison Ave, 2004<br>New York, NY 10022</div></div>'+
     '<div class="arrow"></div></div>';
 
   var infoWindow = new google.maps.InfoWindow({
@@ -21,20 +21,6 @@ function initMap() {
   });
 
   console.log('Debugging:',map);
-  // console.log(map);
-  //
-  // if ($(document).width() <= 768){
-  //   map.center = {lat: infowindow.position.lat() , lng: infowindow.position.lng()};
-  // }
-  //
-  // console.log(map.center.lat);
-
-  // var marker = new google.maps.Marker({
-  //   position: markerPosition,
-  //   map: map,
-  //   icon: ''
-  // });
-
   google.maps.event.addDomListener(window, 'load', function() {
     infoWindow.close();
     infoWindow.open(map);
@@ -50,10 +36,6 @@ function initMap() {
       map.panBy(0, -iwOuter.height());
     }
 
-    /* Since this div is in a position prior to .gm-div style-iw.
-     * We use jQuery and create a iwBackground variable,
-     * and took advantage of the existing reference .gm-style-iw for the previous div with .prev().
-    */
     var iwBackground = iwOuter.prev();
     // Removes background shadow DIV
     iwBackground.children(':nth-child(2)').css({'display' : 'none'});
