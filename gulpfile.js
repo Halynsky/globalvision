@@ -119,9 +119,15 @@ gulp.task('compress-images', function (callback) {
   );
 });
 
-gulp.task('reload-html', function() {
-  gulp.src('./*.html')
-    .pipe(livereload());
+gulp.task('reload-html', function(callback) {
+
+  pump([
+      gulp.src('src/html/**/*.html'),
+      livereload()
+    ],
+    callback
+  );
+
 });
 
 gulp.task('watch', function() {
@@ -129,7 +135,7 @@ gulp.task('watch', function() {
   livereload.listen();
   gulp.watch('src/scss/**/*.scss', ['compress-css']);
   gulp.watch('src/js/**/*.js', ['compress-js'] );
-  gulp.watch('src/images/*', ['compress-images']);
-  gulp.watch('index.html', ['reload-html']);
+  gulp.watch('src/images/**/*', ['compress-images']);
+  gulp.watch('src/html/**/*.html', ['reload-html']);
   gulp.watch('src/fonts/**/*.*', ['fonts']);
 });

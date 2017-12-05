@@ -21,6 +21,7 @@ function initMap() {
   });
 
   console.log('Debugging:',map);
+
   google.maps.event.addDomListener(window, 'load', function() {
     infoWindow.close();
     infoWindow.open(map);
