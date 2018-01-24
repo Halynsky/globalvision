@@ -1,5 +1,7 @@
 .m-footer {
   z-index: 99;
+  background: $main-blue;
+  padding: 79px 0 30px;
 
   @media (max-width: 767px) {
     top: 470px;
@@ -7,7 +9,6 @@
   }
 
   .footer-top {
-    background: #ffffff;
     padding: 60px 0;
 
     .container {
@@ -36,11 +37,13 @@
   }
 
   .footer-bottom {
-    padding: 15px 0;
-    background-color: #f7f8f9;
-    font-size: 14px;
+    opacity: 0.5;
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 2.67;
+    letter-spacing: 2.6px;
     text-align: center;
-    color: #bfbfbf;
+    color: rgba(255, 255, 255, 0.5);
   }
 
   .m-menu {

@@ -22,22 +22,16 @@
     <link href="public/css/styles.min.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-<section class="m-home">
-    <div id="particles-js"></div>
-    <h1 class="title">
-        Hello!<br> We are Global Vision
-    </h1>
-    <a href="#about" class="m-btn main animate" id="explore">Explore us<span class="animate-circle"></span></a>
-</section>
 <div class="dark-overlay"></div>
 <?php
+include "src/html/home.html";
 include "src/html/header.html";
 include "src/html/about.html";
 include "src/html/services.html";
-include "src/html/what-we-are.html";
-include "src/html/work-proccess.html";
-include "src/html/testimonials.html";
-include "src/html/contacts.html";
+//include "src/html/what-we-are.html";
+//include "src/html/work-proccess.html";
+//include "src/html/testimonials.html";
+//include "src/html/contacts.html";
 include "src/html/footer.html";
 ?>
 

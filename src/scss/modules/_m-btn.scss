@@ -94,10 +94,10 @@ $bg-color: #eeeeee !default;
     justify-content: center;
     align-items: center;
     padding: 0;
-    $btn-color: $button-default;
-    $btn-color-dark: shade($btn-color, 40%);
+    //$btn-color: $button-default;
+    //$btn-color-dark: shade($btn-color, 40%);
     color: #fff;
-    background: $button-default;
+    //background: $button-default;
     z-index: 9999;
     position: relative;
     text-decoration: none;
@@ -106,7 +106,7 @@ $bg-color: #eeeeee !default;
     @media (max-width: 992px) {
       width: 179px;
       height: 60px;
-      background-color: $button-default;
+      //background-color: $button-default;
       box-shadow: 0 1px 7px 0 rgba(50, 0, 126, 0.26);
     }
   }
@@ -114,7 +114,7 @@ $bg-color: #eeeeee !default;
   &.contacts {
     width: 174px;
     height: 46px;
-    background-color: $button-default;
+    //background-color: $button-default;
     font-size: 16px;
     font-weight: 600;
     text-align: left;
@@ -133,7 +133,7 @@ $bg-color: #eeeeee !default;
     padding: 12px 15px;
     color: #ffffff;
     font-weight: 400;
-    background: $button-default;
+    //background: $button-default;
     box-shadow: 0 1px 7px 0 rgba(50, 0, 126, 0.26);
     margin-left: 15px;
     z-index: 9999;

@@ -1,68 +1,22 @@
 .m-services__cards {
-  margin: 36px 0 0 0;
-  position: relative;
-  display: block;
+  display: flex;
+  position: static;
+  overflow: hidden;
+  margin: 84px -15px 0;
 
   @media (max-width: 767px) {
     margin: 36px 0 0 0;
   }
 
-  .service-slider {
-    display: flex;
-    align-items: stretch;
-    position: static;
-    overflow: hidden;
-  }
-
-  .swiper-container {
-    display: flex;
-    align-items: stretch;
-    position: static;
-    padding: 3px;
-
-    .swiper-wrapper {
-      display: flex;
-      align-items: stretch;
-
-      .swiper-slide {
-        display: flex;
-        align-items: stretch;
-      }
-    }
-  }
-
-  .swiper-button-prev,.swiper-button-next {
-    background-image: none;
-
-    i {
-      font-size: 30px;
-
-      @media (max-width: 767px) {
-        font-size: 20px;
-      }
-    }
-  }
-
-  .swiper-button-next {
-    right: 0;
-    top: -70px;
-
-    i {
-      transform: rotate(180deg);
-    }
-  }
-
-  .swiper-button-prev {
-    right: 50px;
-    left: inherit;
-    top: -70px;
-  }
-
   .item {
-    padding: 36px 0;
-    align-self: stretch;
-    background-color: #ffffff;
-    box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.12);
+    height: 414px;
+    background-color: $white;
+    border: solid 1px #e2e2e2;
+    padding: 30px 25px;
+
+    &:hover {
+      box-shadow: 7.8px 11.6px 57px 0 rgba(64, 64, 63, 0.1);
+    }
 
     @media (max-width: 767px) {
       min-width: inherit;
@@ -71,46 +25,62 @@
       padding: 15px;
     }
 
-    .logo {
-      width: 48px;
-      height: 48px;
-      margin: 0 24px 15px 24px;
+    .top {
+      display: flex;
+      flex: 0;
+      height: 85px;
 
-      img {
-        width: 100%;
+      .logo {
+        width: 74px;
+        margin: 0 25px 0 0;
+
+        img {
+          width: 100%;
+        }
+      }
+
+      .title {
+        font-size: 20px;
+        font-weight: bold;
+        line-height: 1;
+        text-align: left;
+        color: #454545;
       }
     }
 
-    .title {
-      font-family: 'TexGyreAdventor', sans-serif;
-      font-size: 20px;
-      font-weight: bold;
-      text-align: left;
-      color: #444444;
-      margin: 0 24px;
-    }
-
-    .description {
-      font-size: 16px;
-      text-align: left;
-      color: #9a9a9a;
-      padding: 15px 0;
-      margin: 0 24px;
-    }
-
-    .service-links {
+    .bottom {
       display: flex;
       flex-direction: column;
-      margin: 0 24px;
+      flex: 1;
+      justify-content: space-between;
+      height: calc(100% - 85px);
 
-      a {
-        font-size: 16px;
-        font-weight: 600;
-        text-align: left;
-        color: #402f6b;
-        text-decoration: none;
-        margin: 6px 0;
+      .description {
+        font-size: 15px;
+        line-height: 2;
+        text-align: justify;
+        color: #6b7175;
       }
+
+      .service-links {
+        display: flex;
+        flex-direction: column;
+
+        a {
+          font-size: 14px;
+          font-weight: bold;
+          line-height: 2.14;
+          text-align: left;
+          color: $secondary-blue;
+          text-transform: uppercase;
+          text-decoration: none;
+
+          &:hover , &:active {
+            color: $yellow;
+          }
+        }
+      }
+
     }
   }
 }
