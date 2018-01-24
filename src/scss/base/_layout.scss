@@ -1,7 +1,7 @@
 html, body {
   margin: 0;
   height: 100%;
-  font-family: 'Muli', sans-serif;
+  font-family: $Hind;
   user-select: none;
 }
 
@@ -63,7 +63,6 @@ a {
 .col-3 {
   width: 33.33333333333%;
   padding: 0 15px;
-  margin-bottom: 30px;
 }
 
 .success-dialog {

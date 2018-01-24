@@ -1,0 +1,58 @@
+.m-benefits {
+  background-color: $main-blue;
+  padding: 73px 0 107px;
+
+  @media (max-width: 767px) {
+    padding: 50px 0;
+  }
+
+  .container {
+    display: block;
+    max-width: 1199px;
+    text-align: center;
+  }
+
+  .items {
+    display: flex;
+    margin: 0 -15px;
+    padding-top: 23px;
+
+    .item {
+      max-width: 254px;
+      margin: 0 auto;
+
+      .logo {
+        text-align: center;
+        font-size: 40px;
+        width: 79px;
+        height: 79px;
+        border-radius: 79px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: solid 2px $yellow;
+        margin: 51px auto 23px;
+
+        i {
+          color: $yellow;
+        }
+      }
+
+      .title {
+        font-size: 20px;
+        font-weight: 600;
+        text-align: center;
+        color: $white;
+        padding-bottom: 19px;
+      }
+
+      .description {
+        font-family: $OpenSans;
+        font-size: 15px;
+        line-height: 2;
+        text-align: center;
+        color: #d3d3d3;
+      }
+    }
+  }
+}

@@ -1,36 +1,11 @@
 .m-work-proccess {
-  background-color: #563dd1;
+  background-color: #f9f9f9;
   padding: 64px 0 78px 0;
 
   .container {
     display: flex;
     justify-content: center;
     flex-direction: column;
-  }
-
-  .under-title {
-    font-size: 14px;
-    font-weight: 800;
-    letter-spacing: 0.5px;
-    text-align: center;
-    color: #32007e;
-    text-transform: uppercase;
-    padding-bottom: 10px;
-  }
-
-  .title {
-    font-family: 'TexGyreAdventor', sans-serif;
-    font-size: 26px;
-    font-weight: bold;
-    line-height: 1.23;
-    text-align: center;
-    color: #fdfdfd;
-    max-width: 454px;
-
-    @media (max-width: 767px) {
-      font-size: 22px;
-      max-width: 290px;
-    }
   }
 
   .items {
@@ -140,18 +115,21 @@
       }
 
       .title {
-        font-family: 'Muli', sans-serif;
-        font-size: 18px;
-        font-weight: 600;
+        font-size: 14px;
+        font-weight: bold;
+        letter-spacing: 2.5px;
         text-align: center;
-        color: #ffffff;
-        padding: 15px 0;
+        color: #454545;
+        text-transform: uppercase;
+        padding-bottom: 12px;
       }
 
       .description {
-        font-size: 16px;
+        font-family: $OpenSans;
+        font-size: 15px;
+        line-height: 2;
         text-align: center;
-        color: #ececec;
+        color: #6b7175;
 
         @media (max-width: 992px) {
             font-size: 14px;

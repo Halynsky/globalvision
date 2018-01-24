@@ -19,65 +19,6 @@
 
   }
 
-  .upper-title {
-    font-size: 14px;
-    font-weight: bold;
-    letter-spacing: 4.2px;
-    text-align: center;
-    color: $white;
-    text-transform: uppercase;
-    padding-bottom: 25px;
-
-    @media (max-width: 992px) {
-      font-size: 22px;
-      line-height: 1.45;
-      letter-spacing: 0.7px;
-      text-align: left;
-      min-width: 255px;
-      padding-left: 56px;
-      margin-right: 31px;
-    }
-
-    @media (max-width: 767px) {
-      max-width: 100%;
-      font-size: 22px;
-      padding-left: 38px;
-      line-height: 1.45;
-      margin-right: 34px;
-      min-width: inherit;
-      margin-bottom: 45px;
-    }
-  }
-
-  .title {
-    font-size: 40.1px;
-    font-weight: bold;
-    line-height: 1.05;
-    letter-spacing: 0.8px;
-    text-align: center;
-    color: $white;
-
-    @media (max-width: 992px) {
-      font-size: 22px;
-      line-height: 1.45;
-      letter-spacing: 0.7px;
-      text-align: left;
-      min-width: 255px;
-      padding-left: 56px;
-      margin-right: 31px;
-    }
-
-    @media (max-width: 767px) {
-      max-width: 100%;
-      font-size: 22px;
-      padding-left: 38px;
-      line-height: 1.45;
-      margin-right: 34px;
-      min-width: inherit;
-      margin-bottom: 45px;
-    }
-  }
-
   .description {
     font-size: 16px;
     line-height: 1.88;
@@ -86,6 +27,7 @@
     color: $secondary-gray;
     padding-top: 68px;
     max-width: 680px;
+    font-family: $Raleway;
 
     @media (max-width: 767px) {
       font-size: 14px;

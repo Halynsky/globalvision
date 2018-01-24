@@ -8,13 +8,24 @@
   right: 0;
   top: 23px;
   z-index: 99;
+  opacity: 1;
+  transition: 0.3s;
 
   &.fixed-header {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
+    background: $white;
     z-index: 99999;
+    opacity: 1;
+    transition: 0.3s;
+
+    .m-menu {
+      a {
+        color: #454545;
+      }
+    }
   }
 
   &.active {
@@ -26,12 +37,6 @@
   .container {
     display: flex;
     justify-content: space-between;
-
-    .m-menu {
-      a {
-        font-size: 14px;
-      }
-    }
 
     .logo {
       img {

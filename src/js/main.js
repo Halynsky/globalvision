@@ -9,7 +9,7 @@ $(document).ready(function () {
         var header = $('.m-header'),
           home = $('.m-home');
 
-        if ($(window).scrollTop() > home.height()) {
+        if ($(window).scrollTop() > home.height() / 2 - 200) {
           header.addClass('fixed-header');
 
         } else {
