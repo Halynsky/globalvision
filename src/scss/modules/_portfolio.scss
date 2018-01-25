@@ -17,14 +17,29 @@
     padding: 111px 0 300px;
     color: #999;
 
+    @media (max-width: 767px) {
+      padding: 30px 0 200px;
+    }
+
     .container {
       display: flex;
       justify-content: space-between;
       align-items: center;
+
+      @media (max-width: 767px) {
+        justify-content: space-around;
+        flex-wrap: wrap;
+      }
     }
 
     img {
       max-width: 60px;
+
+      @media (max-width: 767px) {
+        width: 33.333333333%;
+        max-width: 100%;
+        padding: 20px;
+      }
     }
   }
 
@@ -42,6 +57,10 @@
     .content {
       width: 100%;
       display: flex;
+
+      @media (max-width: 767px) {
+        flex-direction: column;
+      }
     }
 
     .upper-title {
@@ -58,6 +77,10 @@
       flex-direction: column;
       margin-right: 15px;
 
+      @media (max-width: 767px) {
+        margin: 0 0 30px 0;
+      }
+
       .card-1 {
         background: $white;
         height: 284px;
@@ -65,6 +88,11 @@
         padding-top: 66px;
         margin-bottom: 56px;
         box-sizing: border-box;
+
+        @media (max-width: 767px) {
+          height: auto;
+          min-height: 181px;
+        }
       }
 
       .card-2 {
@@ -72,6 +100,12 @@
         background-position: 50%;
         background-size: cover;
         margin-bottom: 37px;
+
+        @media (max-width: 767px) {
+          height: auto;
+          min-height: 337px;
+          margin-bottom: 30px;
+        }
       }
 
       .card-3 {
@@ -79,7 +113,13 @@
         display: flex;
         margin: 0 -17px;
 
-        .sub-card-1 , .sub-card-2 {
+        @media (max-width: 767px) {
+          height: auto;
+          margin: 0;
+          flex-direction: column;
+        }
+
+        .sub-card-1, .sub-card-2 {
           padding: 0 17px;
           flex: 1;
 
@@ -98,6 +138,10 @@
       display: flex;
       flex-direction: column;
       margin-left: 15px;
+
+      @media (max-width: 767px) {
+        margin: 0;
+      }
 
       .card-1 {
         background-position: 50%;

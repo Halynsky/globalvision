@@ -32,6 +32,10 @@
     right: 0;
     width: 406px;
     z-index: 1;
+
+    @media (max-width: 767px) {
+      display: none;
+    }
   }
 
   @media (max-width: 767px) {
@@ -79,6 +83,11 @@
     display: flex;
     margin: 0 -15px;
     padding-top: 23px;
+
+    @media (max-width: 767px) {
+      margin: 0;
+      flex-direction: column;
+    }
 
     .item {
       max-width: 254px;

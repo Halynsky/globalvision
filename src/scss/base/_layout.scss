@@ -5,6 +5,10 @@ html, body {
   user-select: none;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 .container {
   max-width: 992px;
   width: 100%;
@@ -120,6 +124,15 @@ a {
 .col-3 {
   width: 33.33333333333%;
   padding: 0 15px;
+
+  @media (max-width: 768px) {
+    width: 50%;
+  }
+
+  @media (max-width: 576px) {
+    width: 100%;
+    padding: 0;
+  }
 }
 
 .success-dialog {

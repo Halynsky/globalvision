@@ -19,9 +19,9 @@ $(document).ready(function () {
 
         //Title animation
 
-        // var titles = document.getElementsByClassName('title-animate');
+        var titles = $('.title-nimate');
         // var windowHeight = window.innerHeight;
-        // console.log(titles);
+        console.log(titles);
         //
         // for(var i=0;i < titles.length;i++) {
         //   titles[i].getBoundingClientRect();

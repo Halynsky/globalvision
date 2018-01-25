@@ -4,6 +4,7 @@
 
   @media (max-width: 767px) {
     margin: 36px 0 0 0;
+    flex-direction: column;
   }
 
   .item {
@@ -23,6 +24,9 @@
       box-sizing: inherit;
       width: 100%;
       padding: 15px;
+      height: auto;
+      min-height: 350px;
+      margin-bottom: 15px;
     }
 
     .top {

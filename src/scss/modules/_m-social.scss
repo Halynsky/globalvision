@@ -2,6 +2,11 @@
   padding-top: 43px;
   margin: 0 -17px;
 
+  @media (max-width: 767px) {
+    padding-top: 20px;
+    margin: 0;
+  }
+
   i {
     color: $white;
 
