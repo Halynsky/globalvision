@@ -31,11 +31,30 @@
   a {
     font-size: 16px;
     font-family: $OpenSans;
-    line-height: 2.68;
     text-align: right;
     color: $white;
-    padding-left: 50px;
+    margin: 10px 25px 0;
     text-decoration: none;
+
+    &:after
+    {
+      content: '';
+      margin: 9px auto 0;
+      display: block;
+      height: 2px;
+      width: 0;
+      background: transparent;
+      transition: width .5s ease, background-color .5s ease;
+      -webkit-transition: width .5s ease, background-color .5s ease;
+      -moz-transition: width .5s ease, background-color .5s ease;
+    }
+
+    &:hover {
+      &:after {
+        width: 80%;
+        background: $white;
+      }
+    }
 
     @media (max-width: 767px) {
       font-size: 16px;
@@ -43,27 +62,6 @@
       text-align: left;
       //color: $black;
       margin: 10px 15px;
-    }
-
-    &:after {
-      content: '';
-      position: absolute;
-      left: 0;
-      right: 0;
-      display: block;
-      margin: auto;
-      height: 3px;
-      width: 0;
-      bottom: 0;
-      background: transparent;
-      transition: width .3s ease, background-color .3s ease;
-    }
-
-    &:hover {
-      &:after {
-        width: 100%;
-        //background: $button-default;
-      }
     }
   }
 }

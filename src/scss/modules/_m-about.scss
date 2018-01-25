@@ -1,13 +1,14 @@
 .m-about {
   background: $main-blue;
   position: relative;
+  overflow: hidden;
 
   .triangles {
     background-size: cover;
     background: url(/public/images/triangles-1.png) no-repeat;
-    height: 100%;
+    height: 119%;
     position: absolute;
-    top: 0;
+    bottom: 0;
     left: 0;
     width: 100%;
   }

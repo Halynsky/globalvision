@@ -16,6 +16,22 @@ $(document).ready(function () {
           // header.css('top',home.height());
           header.removeClass('fixed-header');
         }
+
+        //Title animation
+
+        // var titles = document.getElementsByClassName('title-animate');
+        // var windowHeight = window.innerHeight;
+        // console.log(titles);
+        //
+        // for(var i=0;i < titles.length;i++) {
+        //   titles[i].getBoundingClientRect();
+        //   console.log(titles[i].getBoundingClientRect());
+        //
+        //   if ($(window).scrollTop() > titles[i].offsetTop - 300) {
+        //
+        //     titles[i].className += " animate";
+        //   }
+        // }
       });
 
     },

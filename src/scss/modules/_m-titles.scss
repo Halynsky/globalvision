@@ -45,6 +45,40 @@
   display: inline-block;
   position: relative;
 
+  &.animate {
+
+    .left-angle {
+      animation: 300ms focus-left cubic-bezier(.94,.14,1,.99);
+    }
+
+    .right-angle {
+      animation: 300ms focus-right cubic-bezier(.94,.14,1,.99);
+    }
+  }
+
+  @keyframes focus-left {
+    0% {
+      left: -20px;
+      bottom: -25px;
+
+    }
+    100% {
+      left: 0;
+      bottom: -5px;
+    }
+  }
+
+  @keyframes focus-right {
+    0% {
+      right: -18px;
+      top: -25px;
+    }
+    100% {
+      right: 2px;
+      top: -5px;
+    }
+  }
+
   .left-angle {
     position: absolute;
     left: 0;
@@ -65,26 +99,26 @@
       }
     }
 
-     &:after {
-       content: '';
-       width: 19px;
-       height: 5px;
-       background: $yellow;
-       position: absolute;
-       left: -16px;
-       bottom: 0;
-     }
+    &:after {
+      content: '';
+      width: 19px;
+      height: 5px;
+      background: $yellow;
+      position: absolute;
+      left: -16px;
+      bottom: 0;
+    }
 
-     &:before {
-       content: '';
-       width: 5px;
-       height: 19px;
-       background: $yellow;
-       position: absolute;
-       left: -16px;
-       bottom: 0;
-     }
-   }
+    &:before {
+      content: '';
+      width: 5px;
+      height: 19px;
+      background: $yellow;
+      position: absolute;
+      left: -16px;
+      bottom: 0;
+    }
+  }
 
   .right-angle {
     position: absolute;

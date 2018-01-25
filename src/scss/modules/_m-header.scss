@@ -31,6 +31,12 @@
     .m-menu {
       a {
         color: #454545;
+
+        &:hover {
+          &:after {
+            background: $main-blue;
+          }
+        }
       }
     }
   }
