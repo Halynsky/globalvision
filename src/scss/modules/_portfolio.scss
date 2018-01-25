@@ -16,6 +16,16 @@
     position: relative;
     padding: 111px 0 300px;
     color: #999;
+
+    .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    img {
+      max-width: 60px;
+    }
   }
 
   .portfolio-content {

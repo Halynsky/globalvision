@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="39" height="39" viewBox="0 0 39 39">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #fff;
+        stroke-width: 1px;
+      }
+    </style>
+  </defs>
+  <rect id="Rectangle_16_copy" data-name="Rectangle 16 copy" class="cls-1" x="0.5" y="0.5" width="38" height="38"/>
+  <image id="phone_icon" data-name="phone icon" x="10.5" y="10.5" width="19" height="19" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAATCAQAAADYWf5HAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QAAKqNIzIAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfiARkLMQqt9CDBAAABTklEQVQoz3WSP2jTURRGT1Pon4QIkRSitAl0EjsFxEFai6CL4NAuFmwWJ6mLQkgGOxRdtNXFuFiKIFJUXEToEgpCWqgldCkuZujQwZSCo2BEPA7+QhvNu3d57+Nyvu9dHmLSsntWTEioY6R4wgVmOM0dYoTKJT/YL0665USIhrumo8uCq54MmX4jHoEfk+Fqd88YXyhE5x/84nco20XrxkW87SszIdM6nykBvUzziYMQDfPueEm8Yc2x0EsR56x5Spx33Wx4bMCK70yIj6w6EhrDtO9dMSE+dN2zYtprTrX32GM75DAvaFDmO/e4whvOkaWXrzxnE46jc1ZdNiHOWrXogHHvu2HJ5BENYISntLhLkz5+RtplbtH8N+yQz/zoeId2xv1OGsAgNymwxiKtSHlLo/vHyfvSmkVzpnztqqn/aX8ryXmuM8oJtnnA4R8waxOyNd2d1AAAAABJRU5ErkJggg=="/>
+</svg>

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="39" height="39" viewBox="0 0 39 39">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #fff;
+        stroke-width: 1px;
+      }
+    </style>
+  </defs>
+  <rect class="cls-1" x="0.5" y="0.5" width="38" height="38"/>
+  <image id="map_pin" data-name="map pin" x="12.5" y="10.5" width="14" height="19" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAATCAQAAAAKCfQfAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QAAKqNIzIAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfiARkLMQva8xBXAAABQ0lEQVQoz1WQvSvtARjHP7+fE+d4T5fu4iV5KQYbp0PurTuJzUQmWQwysLJ4SSkli5TILZksB/cOXmLA4o8QpZTBy0DiY+D88DzL0/dTT8/zCQSAUgZIUgjcc8YylwCI2OmxYzaYa8I6Rz22RwSxwxMb5UtXeWivYJmn1orlLrht2mmLxZ+eWh04BkxQyRrr/CdGD830cccg9bhljbhsf7R00nGxzHTIK+cUUM4GmVolScA1tyEBz+TwzGMEH8giBF5DQn5wgzRFsJ0LXsglP+SK38gis1QA0MQQ80CSJ2x135jY64Er/nXXPyKm7UKcc0rEIttMGhdx2JV3Q3FPTH0zVO+ZJX64/eWRiQiFbtudcYs45UwER1x6nzJBtju2iFjnrkXfIaY8Mi7+szOTBUa/M0nIDTUMRsmXG2NuumfeZ/IG53fsX+TqPfoAAAAASUVORK5CYII="/>
+</svg>

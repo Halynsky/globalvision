@@ -50,6 +50,21 @@
     left: 0;
     bottom: -5px;
 
+    &.invert {
+      top: -5px;
+      bottom: inherit;
+
+      &:after {
+        top: -5px;
+        bottom: inherit;
+      }
+
+      &:before {
+        top: -5px;
+        bottom: inherit;
+      }
+    }
+
      &:after {
        content: '';
        width: 19px;
@@ -75,6 +90,22 @@
     position: absolute;
     right: 2px;
     top: -5px;
+
+    &.invert {
+      bottom: 0;
+      top: inherit;
+      right: 45px;
+
+      &:after {
+        bottom: -5px;
+        top: inherit;
+      }
+
+      &:before {
+        bottom: -5px;
+        top: inherit;
+      }
+    }
 
     &:after {
       content: '';

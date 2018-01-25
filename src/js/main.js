@@ -145,8 +145,10 @@ $(document).ready(function () {
         speed: 1500,
         slidesPerView: 1,
         spaceBetween: 30,
-        nextButton: '.swiper-button-next',
-        prevButton: '.swiper-button-prev',
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true
+        },
         breakpoints: {
           1080: {
             speed: 900,
