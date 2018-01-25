@@ -1,9 +1,12 @@
 .m-social {
+  padding-top: 43px;
+  margin: 0 -17px;
+
   i {
-    color: #aaaaaa;
+    color: $white;
 
     &:hover {
-      color: #411997;
+      color: $yellow;
     }
   }
 }

@@ -1,5 +1,5 @@
 .m-header {
-  height: 75px;
+  height: 62px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -11,6 +11,17 @@
   opacity: 1;
   transition: 0.3s;
 
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+
+  svg {
+    path {
+      fill: $white;
+    }
+  }
+
   &.fixed-header {
     position: fixed;
     top: 0;
@@ -20,6 +31,13 @@
     z-index: 99999;
     opacity: 1;
     transition: 0.3s;
+    box-shadow: 0 10px 25px -15px #999;
+
+    svg {
+      path {
+        fill: $main-blue;
+      }
+    }
 
     .m-menu {
       a {

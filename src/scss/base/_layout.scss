@@ -45,6 +45,39 @@ a {
   position: relative;
 }
 
+.learn-more {
+  font-size: 20px;
+  margin: 0;
+  font-weight: 600;
+  line-height: 2.55;
+  letter-spacing: 2px;
+  text-align: right;
+  color: $yellow;
+  text-transform: uppercase;
+  cursor: pointer;
+  position: relative;
+
+  &.blue {
+    color: $secondary-blue;
+    margin: 0 auto;
+    margin-top: 55px;
+
+    &:after {
+      background: $secondary-blue;
+    }
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 10px;
+    right: 10px;
+    height: 2px;
+    background: $yellow;
+  }
+}
+
 .dark-overlay {
   position: fixed;
   display: none;

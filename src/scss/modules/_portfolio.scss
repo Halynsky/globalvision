@@ -1,0 +1,112 @@
+.m-portfolio {
+  background-color: $white;
+  padding: 0 0 116px 0;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1170px;
+  }
+
+  #technologies {
+    background: #f9f9f9;
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+    padding: 111px 0 300px;
+    color: #999;
+  }
+
+  .portfolio-content {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: -180px;
+    height: 954px;
+
+    .container {
+      flex-direction: column;
+    }
+
+    .content {
+      width: 100%;
+      display: flex;
+    }
+
+    .upper-title {
+      text-align: left;
+    }
+
+    @media (max-width: 992px) {
+      flex: 0;
+    }
+
+    .left-blocks {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      margin-right: 15px;
+
+      .card-1 {
+        background: $white;
+        height: 284px;
+        padding-left: 60px;
+        padding-top: 66px;
+        margin-bottom: 56px;
+        box-sizing: border-box;
+      }
+
+      .card-2 {
+        height: 337px;
+        background-position: 50%;
+        background-size: cover;
+        margin-bottom: 37px;
+      }
+
+      .card-3 {
+        height: 270px;
+        display: flex;
+        margin: 0 -17px;
+
+        .sub-card-1 , .sub-card-2 {
+          padding: 0 17px;
+          flex: 1;
+
+          .content {
+            background-position: 50%;
+            background-size: cover;
+            height: 100%;
+            width: auto;
+          }
+        }
+      }
+    }
+
+    .right-blocks {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      margin-left: 15px;
+
+      .card-1 {
+        background-position: 50%;
+        background-size: cover;
+        height: 384px;
+        margin-bottom: 30px;
+      }
+
+      .card-2 {
+        background-position: 50%;
+        background-size: cover;
+        height: 570px;
+      }
+    }
+
+    .description {
+      font-size: 16px;
+      text-align: left;
+      color: #9a9a9a;
+    }
+  }
+}
