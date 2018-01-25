@@ -11,6 +11,8 @@
     background-color: $white;
     border: solid 1px #e2e2e2;
     padding: 30px 25px;
+    position: relative;
+    z-index: 4;
 
     &:hover {
       box-shadow: 7.8px 11.6px 57px 0 rgba(64, 64, 63, 0.1);

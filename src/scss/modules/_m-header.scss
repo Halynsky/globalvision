@@ -11,17 +11,6 @@
   opacity: 1;
   transition: 0.3s;
 
-  .logo {
-    display: flex;
-    align-items: center;
-  }
-
-  svg {
-    path {
-      fill: $white;
-    }
-  }
-
   &.fixed-header {
     position: fixed;
     top: 0;
@@ -43,6 +32,17 @@
       a {
         color: #454545;
       }
+    }
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+
+  svg {
+    path {
+      fill: $white;
     }
   }
 

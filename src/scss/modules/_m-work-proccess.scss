@@ -1,11 +1,35 @@
 .m-work-proccess {
-  background-color: #f9f9f9;
-  padding: 64px 0 78px 0;
+  background: #f9f9f9;
+  padding: 64px 0 70px 0;
+  position: relative;
+
+  &:after {
+    content: '';
+    background: #f9f9f9;
+    height: 160px;
+    left: 0;
+    right: -100px;
+    overflow: hidden;
+    position: absolute;
+    top: -85px;
+    transform: rotate(-4.2deg);
+    z-index: 0;
+  }
+
+  .upper-title {
+    position: relative;
+    z-index: 1;
+  }
+
+  .title {
+    z-index: 1;
+  }
 
   .container {
     display: flex;
     justify-content: center;
     flex-direction: column;
+    overflow-x: hidden;
   }
 
   .items {

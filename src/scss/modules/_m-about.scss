@@ -1,5 +1,16 @@
 .m-about {
   background: $main-blue;
+  position: relative;
+
+  .triangles {
+    background-size: cover;
+    background: url(/public/images/triangles-1.png) no-repeat;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
 
   .container {
     padding: 76px 0 110px;

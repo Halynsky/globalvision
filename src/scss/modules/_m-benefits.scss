@@ -1,12 +1,51 @@
+.overflow-x {
+  background: #f1f1f1;
+  padding-top: 152px;
+  overflow: hidden;
+}
+
 .m-benefits {
   background-color: $main-blue;
   padding: 73px 0 107px;
+  position: relative;
+  z-index: 1;
+
+  &:after {
+    content: '';
+    background: #002e5b;
+    height: 160px;
+    left: 0;
+    right: -100px;
+    overflow: hidden;
+    position: absolute;
+    top: -85px;
+    transform: rotate(-4.2deg);
+    z-index: 0;
+  }
+
+  .triangles {
+    background-size: cover;
+    background: url(/public/images/triangles-2.png) no-repeat;
+    height: 100%;
+    position: absolute;
+    top: -432px;
+    right: 0;
+    width: 406px;
+    z-index: 1;
+  }
 
   @media (max-width: 767px) {
     padding: 50px 0;
   }
 
+  .upper-title {
+    position: relative;
+    z-index: 1;
+  }
+
   .title {
+    z-index: 1;
+
     .right-angle {
       top: -15px;
     }

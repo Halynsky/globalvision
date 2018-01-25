@@ -1,6 +1,6 @@
 .m-testimonials {
   background-color: $white;
-  padding: 54px 0 60px 0;
+  padding: 54px 0 196px 0;
 
   @media (max-width: 767px) {
     padding: 50px 0;
@@ -24,12 +24,16 @@
       font-weight: bold;
       font-family: $Cabin;
       font-size: 1218.2px;
-      line-height: 0.51;
       letter-spacing: -85.3px;
       text-align: center;
       color: rgba(58, 58, 58, 0.05);
       position: absolute;
       left: -296px;
+      line-height: 72%;
+      width: 700px;
+      height: 314px;
+      overflow: hidden;
+      top: -133px;
     }
   }
 
