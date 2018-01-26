@@ -11,6 +11,10 @@
   opacity: 1;
   transition: 0.3s;
 
+  @media(max-width: 767px) {
+    top: 0;
+  }
+
   &.fixed-header {
     position: fixed;
     top: 0;
@@ -21,6 +25,10 @@
     opacity: 1;
     transition: 0.3s;
     box-shadow: 0 10px 25px -15px #999;
+
+    .hamburger-inner,.hamburger-inner:after,.hamburger-inner:before {
+      background-color: $main-blue;
+    }
 
     svg {
       path {
@@ -56,6 +64,17 @@
     position: fixed;
     z-index: 99999;
     top: 0;
+    background: $white;
+
+    svg {
+      path {
+        fill: $main-blue;
+      }
+    }
+
+    .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+      background-color: $main-blue;
+    }
   }
 
   .container {

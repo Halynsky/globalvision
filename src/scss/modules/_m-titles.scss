@@ -20,7 +20,7 @@
   }
 
   @media (max-width: 767px) {
-
+    font-size: 12px;
   }
 }
 
@@ -36,10 +36,14 @@
   &.animate {
 
     .left-angle {
+      left: 0;
+      bottom: -5px;
       animation: 300ms focus-left cubic-bezier(.94,.14,1,.99);
     }
 
     .right-angle {
+      right: 2px;
+      top: -5px;
       animation: 300ms focus-right cubic-bezier(.94,.14,1,.99);
     }
   }
@@ -69,8 +73,8 @@
 
   .left-angle {
     position: absolute;
-    left: 0;
-    bottom: -5px;
+    left: -20px;
+    bottom: -25px;
 
     &.invert {
       top: -5px;
@@ -110,13 +114,17 @@
 
   .right-angle {
     position: absolute;
-    right: 2px;
-    top: -5px;
+    right: -18px;
+    top: -25px;
 
     &.invert {
       bottom: 0;
       top: inherit;
       right: 45px;
+
+      @media(max-width: 767px) {
+        right: -20px;
+      }
 
       &:after {
         bottom: -5px;

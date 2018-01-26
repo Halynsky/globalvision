@@ -1,6 +1,10 @@
 .m-services__cards {
   display: flex;
-  margin: 84px -15px 0;
+  margin: 30px -15px 0;
+
+  &:first-child {
+    margin: 84px -15px 0;
+  }
 
   @media (max-width: 767px) {
     margin: 36px 0 0 0;
@@ -14,6 +18,7 @@
     padding: 30px 25px;
     position: relative;
     z-index: 4;
+    box-sizing: content-box;
 
     &:hover {
       box-shadow: 7.8px 11.6px 57px 0 rgba(64, 64, 63, 0.1);
@@ -43,12 +48,22 @@
         }
       }
 
+      object {
+        @media(max-width: 767px) {
+          max-width: 70%;
+        }
+      }
+
       .title {
         font-size: 20px;
         font-weight: bold;
         line-height: 1;
         text-align: left;
         color: #454545;
+
+        @media(max-width: 767px) {
+          font-size: 16px;
+        }
       }
     }
 
@@ -57,18 +72,23 @@
       flex-direction: column;
       flex: 1;
       justify-content: space-between;
-      height: calc(100% - 85px);
+      height: calc(100% - 64px);
 
       .description {
         font-size: 15px;
         line-height: 2;
         text-align: justify;
         color: #6b7175;
+        flex: 1;
+        display: flex;
+        align-items: center;
       }
 
       .service-links {
         display: flex;
         flex-direction: column;
+        flex: 0;
+        min-height: 80px;
 
         a {
           font-size: 14px;

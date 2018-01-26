@@ -19,19 +19,31 @@ $(document).ready(function () {
 
         //Title animation
 
-        var titles = $('.title-nimate');
-        // var windowHeight = window.innerHeight;
-        console.log(titles);
-        //
-        // for(var i=0;i < titles.length;i++) {
-        //   titles[i].getBoundingClientRect();
-        //   console.log(titles[i].getBoundingClientRect());
-        //
-        //   if ($(window).scrollTop() > titles[i].offsetTop - 300) {
-        //
-        //     titles[i].className += " animate";
-        //   }
-        // }
+        var titles = $('.title-animate');
+        var windowHeight = window.innerHeight;
+        console.log(windowHeight);
+
+        for(var i=0;i < titles.length;i++) {
+          titles[i].boundaries = titles[i].getBoundingClientRect();
+          console.log("Element" + i ,titles[i].boundaries);
+          console.log("Wind",window.pageYOffset);
+          // console.log("Window",$(document).scrollTop() + windowHeight);
+          // console.log("Window2",$(document).scrollTop() + windowHeight + windowHeight /2);
+          if ((window.pageYOffset > titles[i].boundaries.top) && ((window.pageYOffset < titles[i].boundaries.top + 200))) {
+
+            if (titles[i].classList.contains('animate')) {
+              titles[i].classList.remove('animate');
+              titles[i].classList.add('animate');
+            }
+            else {
+              titles[i].classList.add('animate');
+            }
+          }
+
+          else {
+            titles[i].classList.remove('animate');
+          }
+        }
       });
 
     },
@@ -40,19 +52,19 @@ $(document).ready(function () {
       $("a[href='#about']").on("click", function (event) {
         event.preventDefault();
 
-        $('html,body').animate({scrollTop: $('#about').position().top}, 800);
+        $('html,body').animate({scrollTop: $('#about').position().top - 62}, 800);
       });
       $("a[href='#services']").on("click", function (event) {
         event.preventDefault();
-        $('html,body').animate({scrollTop: $('#services').position().top - 75}, 800);
+        $('html,body').animate({scrollTop: $('#services').position().top - 62}, 800);
       });
       $("a[href='#whatweare']").on("click", function (event) {
         event.preventDefault();
-        $('html,body').animate({scrollTop: $('#what-we-are').position().top - 75}, 800);
+        $('html,body').animate({scrollTop: $('#what-we-are').position().top - 62}, 800);
       });
       $("a[href='#contacts']").on("click", function (event) {
         event.preventDefault();
-        $('html,body').animate({scrollTop: $('#contacts').position().top - 75}, 800);
+        $('html,body').animate({scrollTop: $('#contacts').position().top - 62}, 800);
       });
 
     },
@@ -157,14 +169,11 @@ $(document).ready(function () {
     },
     initSlider: function () {
 
-      var testimonial = new Swiper('.testimonial-slider .swiper-container', {
-        speed: 1500,
+      var testimonial = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
         slidesPerView: 1,
-        spaceBetween: 30,
-        pagination: {
-          el: '.swiper-pagination',
-          clickable: true
-        },
+        centeredSlides: true,
+        paginationClickable: true,
         breakpoints: {
           1080: {
             speed: 900,
@@ -179,27 +188,27 @@ $(document).ready(function () {
         }
       });
 
-      var service = new Swiper('.m-services__cards .swiper-container', {
-        speed: 1500,
-        slidesPerView: 3,
-        spaceBetween: 26,
-        scrollbarHide: true,
-        grabCursor: true,
-        nextButton: '.swiper-button-next',
-        prevButton: '.swiper-button-prev',
-        breakpoints: {
-          1080: {
-            speed: 900,
-            slidesPerView: 2,
-            spaceBetween: 20
-          },
-          767: {
-            speed: 600,
-            slidesPerView: 1,
-            spaceBetween: 20
-          }
-        }
-      });
+      // var service = new Swiper('.m-services__cards .swiper-container', {
+      //   speed: 1500,
+      //   slidesPerView: 3,
+      //   spaceBetween: 26,
+      //   scrollbarHide: true,
+      //   grabCursor: true,
+      //   nextButton: '.swiper-button-next',
+      //   prevButton: '.swiper-button-prev',
+      //   breakpoints: {
+      //     1080: {
+      //       speed: 900,
+      //       slidesPerView: 2,
+      //       spaceBetween: 20
+      //     },
+      //     767: {
+      //       speed: 600,
+      //       slidesPerView: 1,
+      //       spaceBetween: 20
+      //     }
+      //   }
+      // });
     },
     wowInit: function () {
       new WOW({

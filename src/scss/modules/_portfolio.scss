@@ -50,6 +50,11 @@
     margin-top: -180px;
     height: 954px;
 
+    @media(max-width: 767px) {
+      height: auto;
+      min-height: 954px;
+    }
+
     .container {
       flex-direction: column;
     }
@@ -78,7 +83,7 @@
       margin-right: 15px;
 
       @media (max-width: 767px) {
-        margin: 0 0 30px 0;
+        margin: 0 0 15px 0;
       }
 
       .card-1 {
@@ -90,8 +95,7 @@
         box-sizing: border-box;
 
         @media (max-width: 767px) {
-          height: auto;
-          min-height: 181px;
+          height: 181px;
         }
       }
 
@@ -102,9 +106,7 @@
         margin-bottom: 37px;
 
         @media (max-width: 767px) {
-          height: auto;
-          min-height: 337px;
-          margin-bottom: 30px;
+          margin-bottom: 15px;
         }
       }
 
@@ -122,6 +124,15 @@
         .sub-card-1, .sub-card-2 {
           padding: 0 17px;
           flex: 1;
+
+          @media(max-width: 767px) {
+            height: 270px;
+            padding: 0;
+
+            &:first-child {
+              margin-bottom: 15px;
+            }
+          }
 
           .content {
             background-position: 50%;
@@ -148,12 +159,21 @@
         background-size: cover;
         height: 384px;
         margin-bottom: 30px;
+
+        @media (max-width: 767px) {
+          margin-bottom: 15px;
+          height: 300px;
+        }
       }
 
       .card-2 {
         background-position: 50%;
         background-size: cover;
         height: 570px;
+
+        @media(max-width: 767px) {
+          height: 300px;
+        }
       }
     }
 

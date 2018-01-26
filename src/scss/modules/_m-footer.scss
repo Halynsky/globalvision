@@ -116,6 +116,14 @@
     letter-spacing: 2.6px;
     text-align: center;
     color: rgba(255, 255, 255, 0.5);
+
+    @media(max-width: 767px) {
+      padding-top: 10px;
+      line-height: 1.5;
+      letter-spacing: 1px;
+      text-align: center;
+      color: rgba(255,255,255,.5);
+    }
   }
 
   .m-menu {
