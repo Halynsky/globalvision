@@ -58,7 +58,7 @@
         flex-direction: column;
       }
 
-      i {
+      object {
         border: solid 1px #ffffff;
         width: 38px;
         height: 38px;
@@ -92,7 +92,7 @@
           line-height: 1.5;
         }
 
-        i {
+        object {
           @media(max-width: 992px) {
             margin-right: 20px;
           }

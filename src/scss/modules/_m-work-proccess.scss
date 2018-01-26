@@ -41,6 +41,31 @@
 
   .title {
     z-index: 1;
+
+    .line-blink {
+      position: absolute;
+      opacity: 0;
+      width: 19px;
+      height: 6px;
+      background: $yellow;
+      right: 15px;
+      bottom: 10px;
+      animation: 1000ms blink infinite;
+
+      @media(max-width: 992px) {
+        height: 4px;
+        right: 5px;
+        bottom: 7px;
+        width: 16px;
+      }
+
+      @media(max-width: 767px) {
+        height: 4px;
+        right: 4px;
+        bottom: 5px;
+        width: 14px;
+      }
+    }
   }
 
   .container {
@@ -161,6 +186,17 @@
         @media(max-width: 767px) {
           padding-top: 12px;
         }
+      }
+
+      @keyframes blink {
+        0%,50% {
+          opacity: 0;
+        }
+
+        51%,100% {
+          opacity: 1;
+        }
+
       }
 
       .description {

@@ -53,28 +53,6 @@
 
   .title {
     z-index: 1;
-
-    .line-blink {
-      position: absolute;
-      opacity: 0;
-      width: 19px;
-      height: 6px;
-      background: $yellow;
-      right: -20px;
-      bottom: 2px;
-      animation: 1000ms blink infinite;
-    }
-  }
-
-  @keyframes blink {
-    0%,50% {
-      opacity: 0;
-    }
-
-    51%,100% {
-      opacity: 1;
-    }
-
   }
 
   .container {

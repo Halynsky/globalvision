@@ -117,26 +117,6 @@
     right: -18px;
     top: -25px;
 
-    &.invert {
-      bottom: 0;
-      top: inherit;
-      right: 45px;
-
-      @media(max-width: 992px) {
-        right: -20px;
-      }
-
-      &:after {
-        bottom: -5px;
-        top: inherit;
-      }
-
-      &:before {
-        bottom: -5px;
-        top: inherit;
-      }
-    }
-
     &:after {
       content: '';
       width: 19px;

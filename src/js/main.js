@@ -29,7 +29,7 @@ $(document).ready(function () {
           console.log("Wind",window.pageYOffset);
           // console.log("Window",$(document).scrollTop() + windowHeight);
           // console.log("Window2",$(document).scrollTop() + windowHeight + windowHeight /2);
-          if ((window.pageYOffset > titles[i].boundaries.top) && ((window.pageYOffset < titles[i].boundaries.top + 200))) {
+          if ((titles[i].boundaries.top > 64) && ((titles[i].boundaries.top < windowHeight - 64))) {
 
             if (titles[i].classList.contains('animate')) {
               titles[i].classList.remove('animate');
