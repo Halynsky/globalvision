@@ -3,8 +3,8 @@
   padding-top: 152px;
   overflow: hidden;
 
-  @media(max-width: 767px) {
-    padding-top: 94px;
+  @media(max-width: 576px) {
+    padding-top: 99px;
   }
 }
 
@@ -87,8 +87,9 @@
     display: flex;
     margin: 0 -15px;
     padding-top: 23px;
+    flex-wrap: wrap;
 
-    @media (max-width: 767px) {
+    @media (max-width: 576px) {
       margin: 0;
       flex-direction: column;
     }

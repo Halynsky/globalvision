@@ -58,13 +58,17 @@ $(document).ready(function () {
         event.preventDefault();
         $('html,body').animate({scrollTop: $('#services').position().top - 62}, 800);
       });
-      $("a[href='#whatweare']").on("click", function (event) {
+      $("a[href='#work-process']").on("click", function (event) {
         event.preventDefault();
-        $('html,body').animate({scrollTop: $('#what-we-are').position().top - 62}, 800);
+        $('html,body').animate({scrollTop: $('#work-process').position().top - 62}, 800);
       });
-      $("a[href='#contacts']").on("click", function (event) {
+      $("a[href='#benefits']").on("click", function (event) {
         event.preventDefault();
-        $('html,body').animate({scrollTop: $('#contacts').position().top - 62}, 800);
+        $('html,body').animate({scrollTop: $('#benefits').position().top - 62}, 800);
+      });
+      $("a[href='#portfolio']").on("click", function (event) {
+        event.preventDefault();
+        $('html,body').animate({scrollTop: $('#portfolio').position().top - 62}, 800);
       });
 
     },

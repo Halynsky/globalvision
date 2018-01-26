@@ -39,6 +39,8 @@
   }
 
   .title {
+    z-index: 99;
+
     &:after {
       content: '“';
       font-weight: bold;
@@ -53,6 +55,14 @@
       width: 466px;
       height: 314px;
       top: -133px;
+
+      @media(max-width: 992px) {
+        font-size: 1245px;
+        letter-spacing: 0;
+        left: -111px;
+        width: 311px;
+        top: -136px;
+      }
 
       @media(max-width: 767px) {
         font-size: 500px;

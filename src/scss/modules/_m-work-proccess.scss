@@ -3,6 +3,10 @@
   padding: 64px 0 70px 0;
   position: relative;
 
+  @media(max-width: 992px) {
+    padding: 0;
+  }
+
   .line {
     background: #dedede;
     width: 100%;
@@ -12,13 +16,9 @@
     right: 0;
     top: 383px;
 
-    @media(max-width: 767px) {
+    @media(max-width: 992px) {
       display: none;
     }
-  }
-
-  @media(max-width: 767px) {
-    padding: 0;
   }
 
   &:after {
@@ -98,9 +98,11 @@
       }
 
       @media (max-width: 992px) {
-        margin-bottom: 86px;
         min-width: 216px;
-        padding: 0 15px;
+        padding: 0 15px 70px 0;
+        max-width: 100%;
+        width: 50%;
+        margin: 0 auto;
       }
 
       @media (max-width: 767px) {
@@ -108,44 +110,9 @@
         min-width: 216px;
       }
 
-      &:last-child {
-        &:after {
-          content: none;
-        }
-      }
-
-      &:after {
-        content: '';
-        color: #fff;
-        position: absolute;
-        left: 185px;
-        top: 35px;
-        width: 150px;
-        height: 1px;
-        border-bottom: 1px dashed #fff;
-
-        @media (max-width: 1080px) {
-          width: 65px;
-        }
-
-        @media (max-width: 767px) {
-          display: none;
-        }
-      }
-
-      &:nth-child(2) {
-        &:after {
-          @media (max-width: 992px) {
-            display: none;
-          }
-        }
-      }
-
       .logo {
         width: 69px;
         height: 69px;
-        border: solid 1px #ffffff;
-        border-radius: 69px;
         background: transparent;
         display: flex;
         align-items: center;
@@ -178,13 +145,17 @@
           margin: auto;
           background-color: #dedede;
 
-          @media(max-width: 767px) {
+          @media(max-width: 992px) {
             display: none;
           }
 
           &.active {
             background-color: $secondary-blue;
           }
+        }
+
+        @media(max-width: 992px) {
+          padding-top: 20px;
         }
 
         @media(max-width: 767px) {
@@ -198,6 +169,10 @@
         line-height: 2;
         text-align: center;
         color: #6b7175;
+
+        @media(max-width: 992px) {
+          max-width: 70%;
+        }
 
         @media(max-width: 767px) {
             font-size: 13px;

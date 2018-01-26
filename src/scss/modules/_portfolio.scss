@@ -35,8 +35,12 @@
     img {
       max-width: 60px;
 
+      @media (max-width: 992px) {
+        width: 12%;
+      }
+
       @media (max-width: 767px) {
-        width: 33.333333333%;
+        width: 14%;
         max-width: 100%;
         padding: 20px;
       }

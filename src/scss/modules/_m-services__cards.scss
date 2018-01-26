@@ -1,12 +1,13 @@
 .m-services__cards {
   display: flex;
   margin: 30px -15px 0;
+  flex-wrap: wrap;
 
   &:first-child {
     margin: 84px -15px 0;
   }
 
-  @media (max-width: 767px) {
+  @media (max-width: 576px) {
     margin: 36px 0 0 0;
     flex-direction: column;
   }
@@ -19,6 +20,7 @@
     position: relative;
     z-index: 4;
     box-sizing: content-box;
+    margin-bottom: 30px;
 
     &:hover {
       box-shadow: 7.8px 11.6px 57px 0 rgba(64, 64, 63, 0.1);
@@ -29,8 +31,7 @@
       box-sizing: inherit;
       width: 100%;
       padding: 15px;
-      height: auto;
-      min-height: 350px;
+      min-height: 380px;
       margin-bottom: 15px;
     }
 
