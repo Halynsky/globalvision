@@ -10,7 +10,7 @@ html, body {
 }
 
 .container {
-  max-width: 992px;
+  max-width: 1170px;
   width: 100%;
   margin: 0 auto;
   display: flex;
@@ -127,7 +127,7 @@ a {
 }
 
 .error {
-  border: 1px solid red!important;
+  border-bottom: 1px solid red!important;
 }
 
 .col-3 {
@@ -141,6 +141,23 @@ a {
   @media (max-width: 576px) {
     width: 100%;
     padding: 0;
+  }
+}
+
+.col-tech {
+  width: 9%;
+  padding: 0 30px;
+
+  img {
+    margin: 25px auto;
+    display: block;width: 100%  }
+
+  @media(max-width: 992px) {
+      padding: 0 15px;
+  };
+
+  @media (max-width: 767px) {
+    width: 25%;
   }
 }
 

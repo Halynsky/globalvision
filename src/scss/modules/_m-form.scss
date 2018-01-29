@@ -6,7 +6,8 @@
 
     input, textarea {
       background-color: #ffffff;
-      border: solid 1px #dfdfdf;
+      border: 0;
+      border-bottom: 1px solid rgba(113, 113, 113, 0.2);
       min-height: 42px;
       width: 100%;
       box-sizing: border-box;
@@ -15,16 +16,18 @@
       outline: none;
 
       &::placeholder {
-        font-size: 16px;
-        font-weight: 600;
+        opacity: 0.5;
+        font-family: $OpenSans;
+        font-size: 15px;
+        letter-spacing: 0.3px;
         text-align: left;
-        color: #cecece;
+        color: rgba(68, 68, 68, 0.5);
       }
     }
 
     textarea {
       padding-top: 10px;
-      min-height: 139px;
+      min-height: 80px;
       resize: none;
     }
   }

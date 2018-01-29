@@ -20,7 +20,6 @@
     position: relative;
     z-index: 4;
     box-sizing: content-box;
-    margin-bottom: 30px;
 
     &:hover {
       box-shadow: 7.8px 11.6px 57px 0 rgba(64, 64, 63, 0.1);
@@ -31,7 +30,8 @@
       box-sizing: inherit;
       width: 100%;
       padding: 15px;
-      min-height: 380px;
+      min-height: auto;
+      height: auto;
       margin-bottom: 15px;
     }
 

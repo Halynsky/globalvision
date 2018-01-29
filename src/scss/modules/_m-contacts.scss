@@ -1,6 +1,6 @@
 .m-contacts {
   background: #ddd;
-  height: 500px;
+  height: 472px;
   position: relative;
   z-index: 999;
 
@@ -16,17 +16,8 @@
     bottom: 0;
     margin: 0;
     padding: 0;
-    height: 400px;
+    height: 472px!important;
     max-width: none;
-
-    .gm-style-iw > div {
-      max-width: 100% !important;
-      display: block !important;
-
-      &:last-child {
-        display: none !important;
-      }
-    }
 
     img {
       max-width: none !important;
@@ -60,63 +51,6 @@
     @media (max-width: 767px) {
       position: relative;
       height: 350px !important;
-    }
-
-    .gm-style-iw {
-      width: 230px !important;
-      top: 15px !important;
-      left: 0 !important;
-      padding: 15px;
-      background-color: #32007e;
-      box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.14);
-      overflow: visible !important;
-    }
-    #iw-container {
-      margin-bottom: 10px;
-    }
-    #iw-container .iw-title {
-      font-size: 22px;
-      font-weight: 400;
-      padding: 10px;
-      background-color: red;
-      color: white;
-      margin: 0;
-      border-radius: 2px 2px 0 0;
-    }
-    #iw-container .iw-content {
-      padding: 15px 5px 20px 15px;
-      max-height: 140px;
-      overflow-y: auto;
-      overflow-x: hidden;
-      font-size: 12px;
-      font-weight: 600;
-      text-align: left;
-      color: #f4f4f4;
-    }
-    .iw-content img {
-      float: right;
-      margin: 0 5px 5px 10px;
-    }
-    .iw-subTitle {
-      font-size: 16px;
-      font-weight: 700;
-      padding: 5px 0;
-    }
-
-    .gm-style > div:first-child > div + div > div:last-child > div > div:first-child {
-      display: none;
-    }
-
-    .iw-bottom-gradient {
-      position: absolute;
-      width: 326px;
-      height: 25px;
-      bottom: 10px;
-      right: 18px;
-      background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
-      background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
-      background: -moz-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
-      background: -ms-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
     }
 
     #content {
@@ -154,7 +88,6 @@
 
   .contacts-form {
     @media (max-width: 992px) {
-      max-width: 330px;
       right: 45px;
     }
 
@@ -163,7 +96,7 @@
       top: -15px;
       right: 0;
       background: #fff;
-      padding: 36px 25px;
+      padding: 15px;
       max-width: 100%;
       width: 100%;
       box-sizing: border-box;
@@ -180,13 +113,17 @@
     }
 
     .title {
-      font-family: 'TexGyreAdventor', sans-serif;
-      font-size: 26px;
+      font-family: $Hind;
+      font-size: 40px;
       font-weight: bold;
-      line-height: 1.23;
+      line-height: 2.03;
+      letter-spacing: 0.8px;
       text-align: left;
-      color: #2e2e2e;
-      padding-bottom: 24px;
+      color: #444444;
+
+      @media (max-width: 767px) {
+        font-size: 18px;
+      }
     }
   }
 
@@ -211,11 +148,11 @@
 
     .front {
       position: absolute;
-      top: 15px;
+      top: 114px;
       right: 0;
       background: #ffffff;
-      padding: 36px 25px;
-      max-width: 420px;
+      padding: 48px 55px;
+      max-width: 402px;
       width: 100%;
       box-sizing: border-box;
       box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.14);
@@ -243,16 +180,16 @@
 
     .back {
       position: absolute;
-      max-width: 420px;
+      max-width: 402px;
       width: 100%;
-      top: 15px;
+      top: 114px;
       right: 0;
       display: flex;
       justify-content: center;
       align-items: center;
       text-align: center;
       height: 470px;
-      padding: 36px 25px;
+      padding: 48px 59px;
       font-size: 25px;
       box-sizing: border-box;
       box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.14);

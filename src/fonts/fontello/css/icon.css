@@ -1,11 +1,11 @@
 @font-face {
   font-family: 'icon';
-  src: url('../font/icon.eot');
-  src: url('../font/icon.eot') format('embedded-opentype'),
-       url('../font/icon.woff2') format('woff2'),
-       url('../font/icon.woff') format('woff'),
-       url('../font/icon.ttf') format('truetype'),
-       url('../font/icon.svg') format('svg');
+  src: url('../font/icon.eot?69727884');
+  src: url('../font/icon.eot?69727884#iefix') format('embedded-opentype'),
+       url('../font/icon.woff2?69727884') format('woff2'),
+       url('../font/icon.woff?69727884') format('woff'),
+       url('../font/icon.ttf?69727884') format('truetype'),
+       url('../font/icon.svg?69727884#icon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -15,37 +15,52 @@
 @media screen and (-webkit-min-device-pixel-ratio:0) {
   @font-face {
     font-family: 'icon';
-    src: url('../font/icon.svg?25768711#icon') format('svg');
+    src: url('../font/icon.svg?69727884#icon') format('svg');
   }
 }
 */
+ 
  [class^="global-icon-"]:before, [class*=" global-icon-"]:before {
   font-family: "icon";
   font-style: normal;
   font-weight: normal;
   speak: none;
+ 
   display: inline-block;
   text-decoration: inherit;
   width: 1em;
   margin-right: .2em;
   text-align: center;
   /* opacity: .8; */
+ 
   /* For safety - reset parent styles, that can break glyph codes*/
   font-variant: normal;
   text-transform: none;
+ 
   /* fix buttons height, for twitter bootstrap */
   line-height: 1em;
+ 
   /* Animation center compensation - margins should be symmetric */
   /* remove if not needed */
   margin-left: .2em;
+ 
   /* you can be more comfortable with increased icons size */
   /* font-size: 120%; */
+ 
   /* Font smoothing. That was taken from TWBS */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+ 
   /* Uncomment for 3D effect */
   /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
 }
+ 
+.global-icon-benefits-3:before { content: '\e800'; } /* '' */
+.global-icon-benefits-4:before { content: '\e801'; } /* '' */
+.global-icon-benefits-5:before { content: '\e802'; } /* '' */
+.global-icon-benefits-6:before { content: '\e803'; } /* '' */
+.global-icon-benefits-1:before { content: '\e804'; } /* '' */
+.global-icon-benefits-2:before { content: '\e805'; } /* '' */
 .global-icon-twitter:before { content: '\f099'; } /* '' */
 .global-icon-facebook:before { content: '\f09a'; } /* '' */
 .global-icon-linkedin:before { content: '\f0e1'; } /* '' */

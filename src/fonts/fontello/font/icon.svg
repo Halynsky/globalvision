@@ -1,11 +1,23 @@
 <?xml version="1.0" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg xmlns="http://www.w3.org/2000/svg">
-<metadata>Copyright (C) 2017 by original authors @ fontello.com</metadata>
+<metadata>Copyright (C) 2018 by original authors @ fontello.com</metadata>
 <defs>
 <font id="icon" horiz-adv-x="1000" >
 <font-face font-family="icon" font-weight="400" font-stretch="normal" units-per-em="1000" ascent="850" descent="-150" />
 <missing-glyph horiz-adv-x="1000" />
+<glyph glyph-name="benefits-3" unicode="&#xe800;" d="M563 600a63 63 0 0 1-125 0c0-34 31-47 62-62s63-28 63-63a63 63 0 0 0-125 0m-219-328l-110 109v16a47 47 0 0 0 47 47h16l156-156a122 122 0 0 0 31-79v-125h-171v32a97 97 0 0 1-32 62l-109 110a97 97 0 0 0-31 62v250a47 47 0 0 0 93 0v-125m672-203l110 109v16a47 47 0 0 1-47 47h-16l-156-156a122 122 0 0 1-31-79v-125h172v32a97 97 0 0 0 31 62l109 110a97 97 0 0 1 31 62v250a47 47 0 0 1-93 0v-125m-282-500v94a16 16 0 0 0 16 15h203a16 16 0 0 0 16-15v-94m-688 0v94a16 16 0 0 0 16 15h203a16 16 0 0 0 16-15v-94" horiz-adv-x="1000" />
+
+<glyph glyph-name="benefits-4" unicode="&#xe801;" d="" horiz-adv-x="969" />
+
+<glyph glyph-name="benefits-5" unicode="&#xe802;" d="M844-9v31l47 156v141a31 31 0 0 1-63 0v31a31 31 0 0 1-62 0h0a31 31 0 0 1-63 0v31a31 31 0 0 1-62 0v-156l-125 125m109-500v125a16 16 0 0 0 16 16h218a16 16 0 0 0 16-16v-125m-625 500c0 94 94 125 94 125m187-125c0 94-93 125-93 125m31 86c0-55-31-102-78-102s-78 47-78 102 15 86 78 86 78-31 78-86z" horiz-adv-x="906" />
+
+<glyph glyph-name="benefits-6" unicode="&#xe803;" d="M554 335a295 295 0 0 1-178 124v155a47 47 0 0 1 0 93h-124m0 0a47 47 0 0 1 0-93v-155c-140-31-233-165-233-295a295 295 0 0 1 295-295m295 714h124v-341l248-326a46 46 0 0 0-47-47h-511c-62 0-62 47-62 47l248 326v341z m-512-419a217 217 0 0 0 217 217m-124 388h434a16 16 0 0 0 16-16v-124" horiz-adv-x="1000" />
+
+<glyph glyph-name="benefits-1" unicode="&#xe804;" d="M442 13h-279l-70 302h70l116-116h1000c93 0 186-70 186-70v-46s-93-70-186-70h-302m325 302v23a209 209 0 0 1-209 210h-23a116 116 0 0 1-163 163 289 289 0 0 1-233 116 279 279 0 0 1-279-279" horiz-adv-x="1488" />
+
+<glyph glyph-name="benefits-2" unicode="&#xe805;" d="M525 510v34a84 84 0 0 1-168 0v-101a84 84 0 0 0-85-85h-101m742 135h-135a84 84 0 0 1-84-84v-101a84 84 0 0 0-169 0v34" horiz-adv-x="1084" />
+
 <glyph glyph-name="twitter" unicode="&#xf099;" d="M904 622q-37-54-90-93 0-8 0-23 0-73-21-145t-64-139-103-117-144-82-181-30q-151 0-276 81 19-2 43-2 126 0 224 77-59 1-105 36t-64 89q19-3 34-3 24 0 48 6-63 13-104 62t-41 115v2q38-21 82-23-37 25-59 64t-22 86q0 49 25 91 68-83 164-133t208-55q-5 21-5 41 0 75 53 127t127 53q79 0 132-57 61 12 115 44-21-64-80-100 52 6 104 28z" horiz-adv-x="928.6" />
 
 <glyph glyph-name="facebook" unicode="&#xf09a;" d="M535 843v-147h-87q-48 0-65-20t-17-60v-106h164l-22-165h-142v-424h-171v424h-142v165h142v122q0 104 58 161t155 57q82 0 127-7z" horiz-adv-x="571.4" />

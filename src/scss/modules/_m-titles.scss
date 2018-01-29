@@ -75,6 +75,8 @@
     position: absolute;
     left: -20px;
     bottom: -25px;
+    opacity: 1;
+    transition: 0.6s;
 
     &.invert {
       top: -5px;
@@ -116,6 +118,8 @@
     position: absolute;
     right: -18px;
     top: -25px;
+    opacity: 1;
+    transition: 0.6s;
 
     &:after {
       content: '';

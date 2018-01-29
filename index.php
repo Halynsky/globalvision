@@ -1,14 +1,14 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <link rel="apple-touch-icon" sizes="180x180" href="public/images/favicon/apple-touch-icon.png?v=QEMm2EkzgY">
-    <link rel="icon" type="image/png" sizes="32x32" href="public/images/favicon/favicon-32x32.png?v=QEMm2EkzgY">
-    <link rel="icon" type="image/png" sizes="16x16" href="public/images/favicon/favicon-16x16.png?v=QEMm2EkzgY">
-    <link rel="manifest" href="public/images/favicon/manifest.json?v=QEMm2EkzgY">
-    <link rel="mask-icon" href="public/images/favicon/safari-pinned-tab.svg?v=QEMm2EkzgY" color="#603cba">
-    <link rel="shortcut icon" href="public/images/favicon/favicon.ico?v=QEMm2EkzgY">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="public/images/favicon/mstile-144x144.png?v=QEMm2EkzgY">
+    <link rel="apple-touch-icon" sizes="180x180" href="/public/images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/public/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/public/images/favicon/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/public/images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/public/images/favicon/manifest.json">
+    <link rel="mask-icon" href="/public/images/favicon/safari-pinned-tab.svg" color="#2b5797">
+    <meta name="msapplication-TileColor" content="#2b5797">
+    <meta name="msapplication-TileImage" content="/public/images/favicon/mstile-144x144.png">
     <meta name="theme-color" content="#ffffff">
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -32,7 +32,7 @@ include "src/html/work-proccess.html";
 include "src/html/benefits.html";
 include "src/html/portfolio.html";
 include "src/html/testimonials.html";
-//include "src/html/contacts.html";
+include "src/html/contacts.html";
 include "src/html/footer.html";
 ?>
 
@@ -42,8 +42,8 @@ include "src/html/footer.html";
 <script src="bower_components/wow/dist/wow.min.js"></script>
 <script src="bower_components/particles.js/particles.min.js"></script>
 <script src="public/js/main.min.js"></script>
-<!--<script src="src/js/map.js"></script>-->
-<!--<script-->
-<!--    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCLiTUW08h1QHEY8oP-nJG2RFeWa0k7Cvk&callback=initMap"></script>-->
-<!--</body>-->
+<script src="src/js/map.js"></script>
+<script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCLiTUW08h1QHEY8oP-nJG2RFeWa0k7Cvk&callback=initMap"></script>
+</body>
 </html>

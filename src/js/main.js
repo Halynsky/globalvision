@@ -70,6 +70,10 @@ $(document).ready(function () {
         event.preventDefault();
         $('html,body').animate({scrollTop: $('#portfolio').position().top - 62}, 800);
       });
+      $("a[href='#contacts']").on("click", function (event) {
+        event.preventDefault();
+        $('html,body').animate({scrollTop: $('#contacts').position().top - 62}, 800);
+      });
 
     },
     sendMail: function () {
@@ -127,10 +131,12 @@ $(document).ready(function () {
       });
     },
     toggleMenu: function () {
+      var navigation = $("#navigation");
+
       $(".hamburger").on('click', function () {
         console.log("Click-click");
         $(this).toggleClass("is-active");
-        $("#navigation").toggleClass("active-menu");
+        navigation.toggleClass("active-menu");
 
         if ($(this).hasClass("is-active")) {
 
@@ -147,27 +153,13 @@ $(document).ready(function () {
         }
       });
 
-      $("#navigation a").on('click', function (e) {
+      navigation.find('a').on('click', function (e) {
         console.log('Knock');
         e.preventDefault();
         $(".hamburger").removeClass('is-active');
         $(".header").removeClass('active');
-        $("#navigation").removeClass("active-menu");
-        $(".dark-overlay").css('display', 'none');
+        navigation.removeClass("active-menu");
         $("body").css('overflow', 'auto');
-      });
-
-    },
-    moveToMouse: function () {
-      var button = $('.m-btn');
-      button.on('mousemove', function (e) {
-        var mouseX = e.pageX - $(this).offset().left;
-        var mouseY = e.pageY - $(this).offset().top;
-        $(this).find('.animate-circle').css({'left': mouseX + 'px', 'top': mouseY + 'px'});
-      });
-
-      button.on('mouseleave', function () {
-        $(this).find('.animate-circle').css({'left': '-40px', 'top': '-40px'});
       });
 
     },
@@ -191,28 +183,6 @@ $(document).ready(function () {
           }
         }
       });
-
-      // var service = new Swiper('.m-services__cards .swiper-container', {
-      //   speed: 1500,
-      //   slidesPerView: 3,
-      //   spaceBetween: 26,
-      //   scrollbarHide: true,
-      //   grabCursor: true,
-      //   nextButton: '.swiper-button-next',
-      //   prevButton: '.swiper-button-prev',
-      //   breakpoints: {
-      //     1080: {
-      //       speed: 900,
-      //       slidesPerView: 2,
-      //       spaceBetween: 20
-      //     },
-      //     767: {
-      //       speed: 600,
-      //       slidesPerView: 1,
-      //       spaceBetween: 20
-      //     }
-      //   }
-      // });
     },
     wowInit: function () {
       new WOW({
@@ -227,7 +197,6 @@ $(document).ready(function () {
   main.menuScrollToSection();
   main.initSlider();
   main.sendMail();
-  main.moveToMouse();
   main.toggleMenu();
   // main.wowInit();
 

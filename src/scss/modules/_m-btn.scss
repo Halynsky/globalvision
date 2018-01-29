@@ -112,83 +112,16 @@ $bg-color: #eeeeee !default;
   }
 
   &.contacts {
-    width: 174px;
-    height: 46px;
-    //background-color: $button-default;
-    font-size: 16px;
+    width: 100%;
+    height: 49px;
+    background-color: transparent;
+    border: solid 2px $secondary-blue;
+    font-family: $Hind;
+    color: $secondary-blue;
+    font-size: 15px;
     font-weight: 600;
-    text-align: left;
-    overflow: hidden;
-    color: #ffffff;
-    box-shadow: 0 1px 7px 0 rgba(50, 0, 126, 0.26);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 15px;
-    position: relative;
-    z-index: 9999;
-  }
-
-  &.getEstimation {
-    padding: 12px 15px;
-    color: #ffffff;
-    font-weight: 400;
-    //background: $button-default;
-    box-shadow: 0 1px 7px 0 rgba(50, 0, 126, 0.26);
-    margin-left: 15px;
-    z-index: 9999;
-    position: relative;
-    text-decoration: none;
-    overflow: hidden;
-
-    @media (max-width: 767px) {
-      max-width: 127px;
-      max-height: 41px;
-      padding: 0!important;
-      font-size: 14px!important;
-      font-weight: 600!important;
-      color: #ffffff!important;
-    }
-  }
-
-  &.animate {
-    span {
-      position: absolute;
-      width: 10px;
-      height: 10px;
-      border-radius: 10px;
-      background: #563dd1;
-      -webkit-box-shadow: 0 0 20px 0 #563dd1;
-      box-shadow: 0 0 45px 25px #563dd1;
-      z-index: -1;
-      top: -40px;
-      left: -40px;
-    }
-
-    @media (max-width: 767px) {
-      padding: 13px 23px;
-      min-width: 179px;
-      min-height: 60px;
-      display: flex;
-      align-items: center;;
-      justify-content: center;
-      font-size: 20px;
-      font-weight: 600;
-      text-align: center;
-      color: #ffffff;
-    }
-
-    &:active {
-      text-decoration: none!important;
-
-      span {
-        @include size(225%, $btn-width*9.25);
-        opacity: 1;
-        transition: 0.3s;
-        left: 0!important;
-        top: 0!important;
-        background-color: #563dd1;
-      }
-    }
+    letter-spacing: 1.5px;
+    text-align: center;
+    text-transform: uppercase;
   }
 }
