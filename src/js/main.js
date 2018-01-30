@@ -21,14 +21,8 @@ $(document).ready(function () {
 
         var titles = $('.title-animate');
         var windowHeight = window.innerHeight;
-        console.log(windowHeight);
-
-        for(var i=0;i < titles.length;i++) {
+        for (var i = 0; i < titles.length; i++) {
           titles[i].boundaries = titles[i].getBoundingClientRect();
-          console.log("Element" + i ,titles[i].boundaries);
-          console.log("Wind",window.pageYOffset);
-          // console.log("Window",$(document).scrollTop() + windowHeight);
-          // console.log("Window2",$(document).scrollTop() + windowHeight + windowHeight /2);
           if ((titles[i].boundaries.top > 64) && ((titles[i].boundaries.top < windowHeight - 64))) {
 
             if (titles[i].classList.contains('animate')) {
@@ -167,8 +161,12 @@ $(document).ready(function () {
 
       var testimonial = new Swiper('.swiper-container', {
         pagination: '.swiper-pagination',
+        effect: 'fade',
+        loop: true,
+        autoplay: 7000,
+        speed: 2000,
+        autoplayDisableOnInteraction: false,
         slidesPerView: 1,
-        centeredSlides: true,
         paginationClickable: true,
         breakpoints: {
           1080: {
@@ -184,6 +182,38 @@ $(document).ready(function () {
         }
       });
     },
+    processInit: function () {
+
+      $(window).scroll(function () {
+        var line = $('.line-fill');
+        // console.log($('#work-process').position());
+
+        if ($(window).scrollTop() > $('#work-process').position().top && $(window).scrollTop() < $('#work-process').position().top + 10) {
+            var i = 1;
+            var intervalIncrease = setInterval(function () {
+              line.css('width', i + '%');
+              i++;
+
+              if (i > 100) {
+                clearInterval(intervalIncrease);
+              }
+            },50)
+
+        } else {
+          // var j = 100;
+          // var intervalDecrease = setInterval(function () {
+          //   line.css('width', j + '%');
+          //   j--;
+          //
+          //   if (j < 0) {
+          //     clearInterval(intervalDecrease);
+          //   }
+          // },0)
+        }
+
+      });
+
+    },
     wowInit: function () {
       new WOW({
         offset: 100,
@@ -198,6 +228,7 @@ $(document).ready(function () {
   main.initSlider();
   main.sendMail();
   main.toggleMenu();
+  main.processInit();
   // main.wowInit();
 
   $(window).resize(function () {

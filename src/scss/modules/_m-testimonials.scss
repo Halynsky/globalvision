@@ -11,6 +11,7 @@
     height: 610px;
     margin: 40px auto;
     max-width: 535px;
+    overflow: visible;
 
     @media(max-width: 767px) {
       height: 465px;
@@ -20,12 +21,14 @@
 
   .swiper-pagination {
     bottom: -7px;
+    width: 100%;
 
     .swiper-pagination-bullet {
-      width: 12px;
-      height: 12px;
+      width: 15px;
+      height: 15px;
       opacity: 0.5;
       background-color: $orange;
+      margin: 0 7px;
     }
 
     .swiper-pagination-bullet-active {
@@ -75,43 +78,218 @@
   }
 
   .items {
+    width: 100%;
+    position: relative;
 
     @media (max-width: 767px) {
       max-width: 100%;
     }
 
+    .swiper-slide-active {
+      .additional-slides {
+        display: block;
+      }
+    }
+
+    .additional-slides {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      top: -455px;
+      display: none;
+
+      .slide-1, .slide-2, .slide-3, .slide-4 {
+        position: absolute;
+        padding: 0;
+
+        .text {
+          padding: 68px 47px 64px 43px;
+          font-size: 15px;
+          line-height: 2;
+          text-align: justify;
+          color: #6b7175;
+          box-shadow: 5.9px 5.4px 95px 0 rgba(43, 81, 158, 0.17);
+
+          @media(max-width: 767px) {
+            box-shadow: none;
+            border: 1px solid #eee;
+            padding: 30px;
+          }
+        }
+
+        .user-info {
+          position: absolute;
+          bottom: -94px;
+
+          .avatar {
+            width: 80px;
+            height: 80px;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.58);
+            border: solid 5px #ffffff;
+            border-radius: 80px;
+            margin: 0 auto 10px auto;
+            background-size: cover !important;
+            background-position: 50% !important;
+          }
+
+          .name {
+            font-size: 20px;
+            font-weight: 600;
+            text-align: center;
+            color: $secondary-blue;
+          }
+
+          .company {
+            font-size: 20px;
+            text-align: center;
+            color: #6b7175;
+          }
+        }
+      }
+
+      .slide-1 {
+        width: 285px;
+        height: 220px;
+        top: -71px;
+        left: -265px;
+        opacity: .3;
+        z-index: 9;
+
+        .text {
+          font-size: 8.8px;
+          line-height: 2;
+          text-align: justify;
+          color: #6b7175;
+          padding: 40px 28px 37px 25px;
+        }
+
+        .user-info {
+          bottom: -33px;
+
+          .avatar {
+            width: 54px;
+            height: 54px;
+          }
+
+          .name, .company {
+            font-size: 11.8px;
+          }
+        }
+      }
+
+      .slide-2 {
+        width: 311px;
+        height: 240px;
+        top: 188px;
+        right: -278px;
+        opacity: .3;
+        z-index: 9;
+
+        .text {
+          font-size: 9.6px;
+          line-height: 2;
+          text-align: justify;
+          color: #6b7175;
+          padding: 40px 28px 37px 25px;
+        }
+
+        .user-info {
+          bottom: -34px;
+
+          .avatar {
+            width: 59px;
+            height: 59px;
+          }
+
+          .name, .company {
+            font-size: 12.8px;
+          }
+        }
+      }
+
+      .slide-3 {
+        width: 311px;
+        height: 240px;
+        top: -150px;
+        right: -245px;
+        opacity: .6;
+        z-index: 9;
+
+        .text {
+          font-size: 10.8px;
+          line-height: 2;
+          text-align: justify;
+          color: #6b7175;
+          padding: 40px 28px 37px 25px;
+        }
+
+        .user-info {
+          bottom: -60px;
+
+          .avatar {
+            width: 66.5px;
+            height: 66.5px;
+          }
+
+          .name, .company {
+            font-size: 14.4px;
+          }
+        }
+      }
+
+      .slide-4 {
+        width: 311px;
+        height: 240px;
+        top: 250px;
+        left: -350px;
+        opacity: .45;
+        z-index: 9;
+
+        .text {
+          font-size: 10.8px;
+          line-height: 2;
+          text-align: justify;
+          color: #6b7175;
+          padding: 49px 25px 46px;
+        }
+
+        .user-info {
+          bottom: -60px;
+
+          .avatar {
+            width: 66.5px;
+            height: 66.5px;
+          }
+
+          .name, .company {
+            font-size: 14.4px;
+          }
+        }
+      }
+    }
+
+
+    .swiper-slide-active {
+      .content {
+        display: flex;
+      }
+    }
+
     .content {
       width: 100%;
-      background-color: #ffffff;
-      display: flex;
       text-align: justify;
       align-items: center;
       justify-content: center;
       position: relative;
       font-size: 18px;
       height:100%;
-      padding: 55px;
+      padding: 15px;
+      z-index: 99;
+      display: none;
 
       @media(max-width: 767px) {
         padding: 0;
         height: auto;
-      }
-
-      .avatar {
-        width: 80px;
-        height: 80px;
-        box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.58);
-        border: solid 5px #ffffff;
-        border-radius: 80px;
-        margin: 0 auto 15px auto;
-        background-size: cover !important;
-        background-position: 50% !important;
-        position: absolute;
-        bottom: 115px;
-
-        @media(max-width: 767px) {
-          bottom: -54px;
-        }
       }
 
       .text {
@@ -121,6 +299,7 @@
         text-align: justify;
         color: #6b7175;
         box-shadow: 5.9px 5.4px 95px 0 rgba(43, 81, 158, 0.17);
+        background: #fff;
 
         @media(max-width: 767px) {
           box-shadow: none;
@@ -129,32 +308,35 @@
         }
       }
 
-      .name {
-        font-size: 20px;
-        font-weight: 600;
-        line-height: 2.9;
-        text-align: center;
-        color: $secondary-blue;
+      .user-info {
         position: absolute;
-        bottom: 70px;
+        bottom: 68px;
 
-        @media(max-width: 767px) {
-          bottom: -98px;
+        .avatar {
+          width: 80px;
+          height: 80px;
+          box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.58);
+          border: solid 5px #ffffff;
+          border-radius: 80px;
+          margin: 0 auto 10px auto;
+          background-size: cover !important;
+          background-position: 50% !important;
         }
-      }
 
-      .company {
-        font-size: 20px;
-        line-height: 2.9;
-        text-align: center;
-        color: #6b7175;
-        position: absolute;
-        bottom: 35px;
+        .name {
+          font-size: 20px;
+          font-weight: 600;
+          text-align: center;
+          color: $secondary-blue;
+        }
 
-        @media(max-width: 767px) {
-          bottom: -130px;
+        .company {
+          font-size: 20px;
+          text-align: center;
+          color: #6b7175;
         }
       }
     }
+
   }
 }

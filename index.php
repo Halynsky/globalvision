@@ -40,7 +40,6 @@ include "src/html/footer.html";
 <script src="bower_components/jquery-validation/dist/jquery.validate.min.js"></script>
 <script src="bower_components/swiper/dist/js/swiper.min.js"></script>
 <script src="bower_components/wow/dist/wow.min.js"></script>
-<script src="bower_components/particles.js/particles.min.js"></script>
 <script src="public/js/main.min.js"></script>
 <script src="src/js/map.js"></script>
 <script

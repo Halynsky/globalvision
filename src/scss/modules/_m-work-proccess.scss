@@ -21,6 +21,20 @@
     }
   }
 
+  .line-fill {
+    background: $secondary-blue;
+    width: 0;
+    height: 1px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 383px;
+
+    @media(max-width: 992px) {
+      display: none;
+    }
+  }
+
   &:after {
     content: '';
     background: #f9f9f9;
@@ -143,8 +157,8 @@
         align-items: center;
         justify-content: center;
 
-        img {
-          max-width: 45px;
+        svg {
+          width: 100%;
         }
       }
 
@@ -164,7 +178,7 @@
           height: 10px;
           border-radius: 10px;
           position: absolute;
-          top: 27px;
+          top: 30px;
           left: 0;
           right: 0;
           margin: auto;
