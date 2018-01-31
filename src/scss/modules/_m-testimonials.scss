@@ -1,6 +1,7 @@
 .m-testimonials {
   background-color: $white;
   padding: 54px 0 123px 0;
+  overflow: hidden;
 
   @media (max-width: 767px) {
     padding: 50px 0;
@@ -88,6 +89,10 @@
     .swiper-slide-active {
       .additional-slides {
         display: block;
+
+        @media(max-width: 992px) {
+          display: none;
+        }
       }
     }
 
@@ -311,6 +316,10 @@
       .user-info {
         position: absolute;
         bottom: 68px;
+
+        @media(max-width: 992px){
+          bottom: -111px;
+        }
 
         .avatar {
           width: 80px;

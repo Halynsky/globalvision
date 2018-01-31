@@ -138,6 +138,10 @@ a {
     width: 50%;
   }
 
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+
   @media (max-width: 576px) {
     width: 100%;
     padding: 0;
@@ -145,20 +149,61 @@ a {
 }
 
 .col-tech {
-  width: 9%;
-  padding: 0 30px;
+  width: 11.1111111111111%;
+  padding: 0 40px;
 
   img {
     margin: 25px auto;
-    display: block;width: 100%  }
+    display: block;width: 100%
+  }
+
+  @media(max-width: 1300px) {
+    padding: 0 30px;
+  };
 
   @media(max-width: 992px) {
-      padding: 0 15px;
+    padding: 0 20px;
   };
 
   @media (max-width: 767px) {
-    width: 25%;
+    width: 33.3333333%;
   }
+}
+
+.line-blink {
+  position: absolute;
+  opacity: 0;
+  width: 19px;
+  height: 6px;
+  background: $yellow;
+  right: 15px;
+  bottom: 10px;
+  animation: 1000ms blink infinite;
+
+  @media(max-width: 992px) {
+    height: 4px;
+    right: 5px;
+    bottom: 7px;
+    width: 16px;
+  }
+
+  @media(max-width: 767px) {
+    height: 4px;
+    right: 4px;
+    bottom: 5px;
+    width: 14px;
+  }
+}
+
+@keyframes blink {
+  0%,50% {
+    opacity: 0;
+  }
+
+  51%,100% {
+    opacity: 1;
+  }
+
 }
 
 .success-dialog {

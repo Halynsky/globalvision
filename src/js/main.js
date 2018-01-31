@@ -187,30 +187,12 @@ $(document).ready(function () {
       $(window).scroll(function () {
         var line = $('.line-fill');
         // console.log($('#work-process').position());
+        var isAnimate = true;
+        if (isAnimate && ($(window).scrollTop() > $('#work-process').position().top || $(window).scrollTop() < $('#work-process').position().top + $('#work-process').height())) {
 
-        if ($(window).scrollTop() > $('#work-process').position().top && $(window).scrollTop() < $('#work-process').position().top + 10) {
-            var i = 1;
-            var intervalIncrease = setInterval(function () {
-              line.css('width', i + '%');
-              i++;
-
-              if (i > 100) {
-                clearInterval(intervalIncrease);
-              }
-            },50)
 
         } else {
-          // var j = 100;
-          // var intervalDecrease = setInterval(function () {
-          //   line.css('width', j + '%');
-          //   j--;
-          //
-          //   if (j < 0) {
-          //     clearInterval(intervalDecrease);
-          //   }
-          // },0)
         }
-
       });
 
     },

@@ -20,12 +20,13 @@
     position: relative;
     z-index: 4;
     box-sizing: content-box;
+    margin-bottom: 30px;
 
     &:hover {
       box-shadow: 7.8px 11.6px 57px 0 rgba(64, 64, 63, 0.1);
     }
 
-    @media (max-width: 767px) {
+    @media (max-width: 576px) {
       min-width: inherit;
       box-sizing: inherit;
       width: 100%;
@@ -100,9 +101,9 @@
           text-transform: uppercase;
           text-decoration: none;
 
-          &:hover , &:active {
-            color: $yellow;
-          }
+          //&:hover , &:active {
+          //  color: $yellow;
+          //}
         }
       }
 
