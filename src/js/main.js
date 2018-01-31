@@ -211,9 +211,9 @@ $(document).ready(function () {
   main.sendMail();
   main.toggleMenu();
   main.processInit();
-  // main.wowInit();
+  main.wowInit();
 
   $(window).resize(function () {
-    // main.wowInit();
+    main.wowInit();
   });
 });

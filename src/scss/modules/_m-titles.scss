@@ -78,25 +78,10 @@
     opacity: 1;
     transition: 0.6s;
 
-    &.invert {
-      top: -5px;
-      bottom: inherit;
-
-      &:after {
-        top: -5px;
-        bottom: inherit;
-      }
-
-      &:before {
-        top: -5px;
-        bottom: inherit;
-      }
-    }
-
     &:after {
       content: '';
-      width: 19px;
-      height: 5px;
+      width: 16px;
+      height: 3px;
       background: $yellow;
       position: absolute;
       left: -16px;
@@ -105,8 +90,8 @@
 
     &:before {
       content: '';
-      width: 5px;
-      height: 19px;
+      width: 3px;
+      height: 16px;
       background: $yellow;
       position: absolute;
       left: -16px;
@@ -123,8 +108,8 @@
 
     &:after {
       content: '';
-      width: 19px;
-      height: 5px;
+      width: 16px;
+      height: 3px;
       background: $yellow;
       position: absolute;
       right: -16px;
@@ -133,8 +118,8 @@
 
     &:before {
       content: '';
-      width: 5px;
-      height: 19px;
+      width: 3px;
+      height: 16px;
       background: $yellow;
       position: absolute;
       right: -16px;

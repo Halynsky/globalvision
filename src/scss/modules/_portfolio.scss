@@ -14,7 +14,7 @@
     box-sizing: border-box;
     position: relative;
     text-align: center;
-    padding: 90px 0 0;
+    padding: 90px 0 180px;
     color: #999;
 
     .title {
@@ -63,6 +63,7 @@
     }
 
     .container {
+      margin-top: -180px;
       flex-direction: column;
     }
 

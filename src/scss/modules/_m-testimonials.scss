@@ -46,8 +46,7 @@
   .title {
     z-index: 99;
 
-    &:after {
-      content: '“';
+    .quotes {
       font-weight: bold;
       font-family: $Cabin;
       font-size: 1218.2px;

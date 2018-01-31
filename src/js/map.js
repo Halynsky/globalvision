@@ -3,9 +3,9 @@ function initMap() {
   var markerPosition = {lat: 40.7594578, lng: -73.9742032};
 
   var map = new google.maps.Map(document.getElementById('map'), {
-    center: mapPosition,
+    center: markerPosition,
     scrollwheel: true,
-    zoom: 14,
+    zoom: 13,
     styles: [
       {
         "elementType": "geometry",

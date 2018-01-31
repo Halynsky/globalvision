@@ -40,5 +40,12 @@
       align-items: center;
       justify-content: space-between;
     }
+
+    &:hover {
+      background: $yellow;
+      border: 1px solid $yellow;
+      color: $white;
+      transition: 0.3s;
+    }
   }
 }

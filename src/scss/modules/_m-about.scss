@@ -36,14 +36,14 @@
   }
 
   .description {
-    font-size: 16px;
+    font-size: 15px;
     line-height: 1.88;
     letter-spacing: 0.6px;
     text-align: center;
     color: $secondary-gray;
     padding-top: 68px;
     max-width: 680px;
-    font-family: $Raleway;
+    font-family: $OpenSans;
 
     @media (max-width: 767px) {
       font-size: 14px;
