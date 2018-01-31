@@ -38,20 +38,20 @@
     .left-angle {
       left: 0;
       bottom: -5px;
-      animation: 300ms focus-left cubic-bezier(.94,.14,1,.99);
+      animation: 400ms focus-left cubic-bezier(.94,.14,1,.99);
     }
 
     .right-angle {
       right: 2px;
       top: -5px;
-      animation: 300ms focus-right cubic-bezier(.94,.14,1,.99);
+      animation: 400ms focus-right cubic-bezier(.94,.14,1,.99);
     }
   }
 
   @keyframes focus-left {
     0% {
-      left: -20px;
-      bottom: -25px;
+      left: -9px;
+      bottom: -12px;
 
     }
     100% {
@@ -62,8 +62,8 @@
 
   @keyframes focus-right {
     0% {
-      right: -18px;
-      top: -25px;
+      right: -9px;
+      top: -12px;
     }
     100% {
       right: 2px;
@@ -73,8 +73,8 @@
 
   .left-angle {
     position: absolute;
-    left: -20px;
-    bottom: -25px;
+    left: -9px;
+    bottom: -12px;
     opacity: 1;
     transition: 0.6s;
 
@@ -101,8 +101,8 @@
 
   .right-angle {
     position: absolute;
-    right: -18px;
-    top: -25px;
+    right: -9px;
+    top: -12px;
     opacity: 1;
     transition: 0.6s;
 
