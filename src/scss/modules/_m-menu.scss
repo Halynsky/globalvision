@@ -76,12 +76,12 @@
     @media(max-width: 767px) {
       font-size: 18px;
       margin: 10px auto;
+      color: $main-blue;
     }
 
     @media (max-width: 576px) {
       font-size: 16px;
       text-align: left;
-      color: $main-blue;
       margin: 10px auto;
     }
   }

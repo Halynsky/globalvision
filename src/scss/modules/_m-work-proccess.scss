@@ -3,6 +3,21 @@
   padding: 64px 0 70px 0;
   position: relative;
 
+  &:hover {
+    .line-fill {
+      animation: 2s slide cubic-bezier(0,0,1,1);
+    }
+
+    .dot {
+      animation: 2000ms dot-fill ease-in;
+      animation-fill-mode: forwards;
+    }
+
+    .cls-1,.cls-2 {
+      animation: 2000ms dot-fill ease-in;
+      animation-fill-mode: forwards;
+    }
+  }
   @media(max-width: 992px) {
     padding: 0;
   }
@@ -23,7 +38,7 @@
 
   .line-fill {
     background: $secondary-blue;
-    width: 0;
+    width: 100%;
     height: 1px;
     position: absolute;
     left: 0;
@@ -107,6 +122,30 @@
       position: relative;
       margin: 0 15px;
 
+      &:nth-child(1) {
+        .dot,.cls-1,.cls-2 {
+          animation-delay: 0.5s!important;
+        }
+      }
+
+      &:nth-child(2) {
+        .dot,.cls-1,.cls-2 {
+          animation-delay: 0.9s!important;
+        }
+      }
+
+      &:nth-child(3) {
+        .dot,.cls-1,.cls-2 {
+          animation-delay: 1.2s!important;
+        }
+      }
+
+      &:nth-child(4) {
+        .dot,.cls-1,.cls-2 {
+          animation-delay: 1.5s!important;
+        }
+      }
+
       @media (max-width: 1080px) {
         min-width: 200px;
       }
@@ -163,9 +202,6 @@
             display: none;
           }
 
-          &.active {
-            background-color: $secondary-blue;
-          }
         }
 
         @media(max-width: 992px) {
@@ -193,5 +229,28 @@
         }
       }
     }
+  }
+}
+
+@keyframes slide {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
+
+
+@keyframes dot-fill {
+  0% {
+    background: #dedede;
+    stroke: #dedede;
+  }
+
+  1%,100% {
+    background: $main-blue;
+    stroke: $main-blue;
   }
 }
