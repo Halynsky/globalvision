@@ -185,13 +185,14 @@ $(document).ready(function () {
     processInit: function () {
 
       $(window).scroll(function () {
-        var line = $('.line-fill');
-        // console.log($('#work-process').position());
+        var process = $('#work-process');
+        // console.log($('#work-process').position().top);
         var isAnimate = true;
-        if (isAnimate && ($(window).scrollTop() > $('#work-process').position().top || $(window).scrollTop() < $('#work-process').position().top + $('#work-process').height())) {
-
+        if (isAnimate && ($(window).scrollTop() > $('#work-process').position().top - 600 && $(window).scrollTop() < $('#work-process').position().top + $('#work-process').height())) {
+          process.addClass('active');
 
         } else {
+          process.removeClass('active');
         }
       });
 
@@ -202,6 +203,99 @@ $(document).ready(function () {
         mobile: true,
         live: true
       }).init();
+    },
+    mySlider: function () {
+      var slider = $('.my-slider');
+      var slidesCoord;
+      var slides = $('.slide');
+      var slideActive = slider.find('.active');
+
+      if ($(document).width() > 992) {
+        var slidesPos = generateArrayPosition();
+
+        console.log(slidesPos);
+        slidesCoord = randomizer(slidesPos);
+      }
+
+      slides.each(function (index) {
+        var randomNum = Math.random() * (0.75 - 0.25) + 0.25;
+        var randScale = randomNum + 0.2;
+        $(this).css({"transform":"translate(" + slidesCoord[index].x * 100 + "%," + slidesCoord[index].y * 100 + "%) scale(" + randScale + ")",'opacity': randomNum,'z-index': randomNum});
+      });
+
+      slides.click(function (event) {
+        $('.slide.active').attr('data-slide', $(this).attr('data-slide')).css('transform', $(this).css('transform'));
+        $('.slide').removeClass('active').css({'z-index': 5, 'opacity': 0.5});
+        $(this).addClass('active');
+        $(this).attr('data-slide', 0);
+        $(this).css({'z-index': 10, 'opacity': 1});
+      });
+
+      function generateArrayPosition() {
+        var arrayLength = slides.length;
+        var numberArray = [];
+        var i = 0;
+        while (i < arrayLength) {
+          if (i === 0) {
+            numberArray.push(1);
+            i++;
+          }
+          else {
+
+            var randomNumber = Math.ceil(Math.random() * 5);
+
+            if (!numberArray.includes(randomNumber)) {
+              numberArray.push(randomNumber);
+              i++;
+            }
+          }
+        }
+
+        return numberArray;
+      }
+
+      function randomizer(value) {
+        var res = [];
+
+        // console.log(value);
+
+        for (var j = 0; j < value.length; j++) {
+          var result = (Math.random() * (0.75 - 0.25) + 0.25).toFixed(2);
+          if (result <= 0.75) {
+            result = 0.75;
+          }
+          // console.log(result);
+
+
+          switch (value[j]) {
+            case 1: {
+              res.push({x: 0, y: 0});
+            }
+              break;
+            case 2: {
+              res.push({x: parseFloat(result), y: parseFloat(result)});
+            }
+              break;
+            case 3: {
+              res.push({x: -parseFloat(result), y: -parseFloat(result)});
+            }
+              break;
+            case 4: {
+              res.push({x: parseFloat(result), y: -parseFloat(result)});
+            }
+              break;
+            case 5: {
+              res.push({x: -parseFloat(result), y: parseFloat(result)});
+            }
+              break;
+          }
+        }
+
+        // console.log(res);
+        return res;
+      }
+
+      // console.log(slides);
     }
   };
 
@@ -212,6 +306,7 @@ $(document).ready(function () {
   main.toggleMenu();
   main.processInit();
   main.wowInit();
+  main.mySlider();
 
   $(window).resize(function () {
     main.wowInit();
