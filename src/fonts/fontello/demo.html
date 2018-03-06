@@ -229,11 +229,11 @@ body {
 }
 @font-face {
       font-family: 'icon';
-      src: url('./font/icon.eot?63027663');
-      src: url('./font/icon.eot?63027663#iefix') format('embedded-opentype'),
-           url('./font/icon.woff?63027663') format('woff'),
-           url('./font/icon.ttf?63027663') format('truetype'),
-           url('./font/icon.svg?63027663#icon') format('svg');
+      src: url('./font/icon.eot?9415898');
+      src: url('./font/icon.eot?9415898#iefix') format('embedded-opentype'),
+           url('./font/icon.woff?9415898') format('woff'),
+           url('./font/icon.ttf?9415898') format('truetype'),
+           url('./font/icon.svg?9415898#icon') format('svg');
       font-weight: normal;
       font-style: normal;
     }
@@ -275,7 +275,7 @@ body {
       /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
     }
      </style>
-    <link rel="stylesheet" href="css/animation.css"><!--[if IE 7]><link rel="stylesheet" href="css/icon-ie7.css"><![endif]-->
+    <link rel="stylesheet" href="css/animation.css"><!--[if IE 7]><link rel="stylesheet" href="css/" + font.fontname + "-ie7.css"><![endif]-->
     <script>
       function toggleCodes(on) {
         var obj = document.getElementById('icons');
@@ -291,30 +291,29 @@ body {
   </head>
   <body>
     <div class="container header">
-      <h1>
-        icon
-         <small>font demo</small>
-      </h1>
+      <h1>icon <small>font demo</small></h1>
       <label class="switch">
         <input type="checkbox" onclick="toggleCodes(this.checked)">show codes
       </label>
     </div>
-    <div id="icons" class="container">
+    <div class="container" id="icons">
       <div class="row">
-        <div title="Code: 0xe800" class="the-icons span3"><i class="demo-icon global-icon-benefits-3">&#xe800;</i> <span class="i-name">global-icon-benefits-3</span><span class="i-code">0xe800</span></div>
-        <div title="Code: 0xe801" class="the-icons span3"><i class="demo-icon global-icon-benefits-4">&#xe801;</i> <span class="i-name">global-icon-benefits-4</span><span class="i-code">0xe801</span></div>
-        <div title="Code: 0xe802" class="the-icons span3"><i class="demo-icon global-icon-benefits-5">&#xe802;</i> <span class="i-name">global-icon-benefits-5</span><span class="i-code">0xe802</span></div>
-        <div title="Code: 0xe803" class="the-icons span3"><i class="demo-icon global-icon-benefits-6">&#xe803;</i> <span class="i-name">global-icon-benefits-6</span><span class="i-code">0xe803</span></div>
+        <div class="the-icons span3" title="Code: 0xe800"><i class="demo-icon global-icon-benefits-3">&#xe800;</i> <span class="i-name">global-icon-benefits-3</span><span class="i-code">0xe800</span></div>
+        <div class="the-icons span3" title="Code: 0xe801"><i class="demo-icon global-icon-benefits-4">&#xe801;</i> <span class="i-name">global-icon-benefits-4</span><span class="i-code">0xe801</span></div>
+        <div class="the-icons span3" title="Code: 0xe802"><i class="demo-icon global-icon-benefits-5">&#xe802;</i> <span class="i-name">global-icon-benefits-5</span><span class="i-code">0xe802</span></div>
+        <div class="the-icons span3" title="Code: 0xe803"><i class="demo-icon global-icon-benefits-6">&#xe803;</i> <span class="i-name">global-icon-benefits-6</span><span class="i-code">0xe803</span></div>
       </div>
       <div class="row">
-        <div title="Code: 0xe804" class="the-icons span3"><i class="demo-icon global-icon-benefits-1">&#xe804;</i> <span class="i-name">global-icon-benefits-1</span><span class="i-code">0xe804</span></div>
-        <div title="Code: 0xe805" class="the-icons span3"><i class="demo-icon global-icon-benefits-2">&#xe805;</i> <span class="i-name">global-icon-benefits-2</span><span class="i-code">0xe805</span></div>
-        <div title="Code: 0xf099" class="the-icons span3"><i class="demo-icon global-icon-twitter">&#xf099;</i> <span class="i-name">global-icon-twitter</span><span class="i-code">0xf099</span></div>
-        <div title="Code: 0xf09a" class="the-icons span3"><i class="demo-icon global-icon-facebook">&#xf09a;</i> <span class="i-name">global-icon-facebook</span><span class="i-code">0xf09a</span></div>
+        <div class="the-icons span3" title="Code: 0xe804"><i class="demo-icon global-icon-benefits-1">&#xe804;</i> <span class="i-name">global-icon-benefits-1</span><span class="i-code">0xe804</span></div>
+        <div class="the-icons span3" title="Code: 0xe805"><i class="demo-icon global-icon-benefits-2">&#xe805;</i> <span class="i-name">global-icon-benefits-2</span><span class="i-code">0xe805</span></div>
+        <div class="the-icons span3" title="Code: 0xe806"><i class="demo-icon global-icon-left-open">&#xe806;</i> <span class="i-name">global-icon-left-open</span><span class="i-code">0xe806</span></div>
+        <div class="the-icons span3" title="Code: 0xe807"><i class="demo-icon global-icon-right-open">&#xe807;</i> <span class="i-name">global-icon-right-open</span><span class="i-code">0xe807</span></div>
       </div>
       <div class="row">
-        <div title="Code: 0xf0e1" class="the-icons span3"><i class="demo-icon global-icon-linkedin">&#xf0e1;</i> <span class="i-name">global-icon-linkedin</span><span class="i-code">0xf0e1</span></div>
-        <div title="Code: 0xf16d" class="the-icons span3"><i class="demo-icon global-icon-instagram">&#xf16d;</i> <span class="i-name">global-icon-instagram</span><span class="i-code">0xf16d</span></div>
+        <div class="the-icons span3" title="Code: 0xf099"><i class="demo-icon global-icon-twitter">&#xf099;</i> <span class="i-name">global-icon-twitter</span><span class="i-code">0xf099</span></div>
+        <div class="the-icons span3" title="Code: 0xf09a"><i class="demo-icon global-icon-facebook">&#xf09a;</i> <span class="i-name">global-icon-facebook</span><span class="i-code">0xf09a</span></div>
+        <div class="the-icons span3" title="Code: 0xf0e1"><i class="demo-icon global-icon-linkedin">&#xf0e1;</i> <span class="i-name">global-icon-linkedin</span><span class="i-code">0xf0e1</span></div>
+        <div class="the-icons span3" title="Code: 0xf16d"><i class="demo-icon global-icon-instagram">&#xf16d;</i> <span class="i-name">global-icon-instagram</span><span class="i-code">0xf16d</span></div>
       </div>
     </div>
     <div class="container footer">Generated by <a href="http://fontello.com">fontello.com</a></div>
