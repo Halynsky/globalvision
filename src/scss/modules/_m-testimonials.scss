@@ -17,7 +17,7 @@
     margin-top: 100px;
 
     @media (max-width: 992px) {
-      height: 400px !important;
+      height: auto !important;
       margin-top: 50px !important;
     }
 
@@ -55,6 +55,7 @@
         cursor: none;
         position: relative;
         display: none;
+        max-height: 100% !important;
         width: 100%;
         align-items: flex-start !important;
         transform: translate(0%, 0%) scale(1) !important;
@@ -84,6 +85,10 @@
         height: 100%;
         z-index: 99;
 
+        @media(max-width: 992px){
+          flex-direction: column;
+        }
+
         @media(max-width: 767px) {
           padding: 0;
           height: auto;
@@ -105,13 +110,21 @@
           @media(max-width: 767px) {
             box-shadow: none;
             border: 1px solid #eee;
-            padding: 30px;
+            padding: 30px 15px 60px !important;
+            font-size: 13px;
+            line-height: 2;
+            text-align: center;
           }
         }
 
         .user-info {
           position: absolute;
           bottom: -111px;
+
+          @media (max-width: 992px){
+            position: relative;
+            bottom: 46px;
+          }
 
           .avatar {
             width: 80px;

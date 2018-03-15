@@ -361,7 +361,6 @@ $(document).ready(function () {
 
   main.attachHeader();
   main.menuScrollToSection();
-  main.initSlider();
   main.sendMail();
   main.toggleMenu();
   main.processInit();
@@ -369,6 +368,7 @@ $(document).ready(function () {
   main.mySlider();
 
   $(window).resize(function () {
+    main.mySlider();
     main.wowInit();
   });
 });
