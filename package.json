@@ -4,7 +4,8 @@
   "license": "MIT",
   "scripts": {
     "postinstall": "bower install && gulp prod",
-    "start": "gulp dev"
+    "start": "gulp dev",
+    "build": "gulp prod"
   },
   "private": true,
   "dependencies": {

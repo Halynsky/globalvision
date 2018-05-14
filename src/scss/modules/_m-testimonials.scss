@@ -82,6 +82,7 @@
         position: relative;
         font-size: 18px;
         display: flex;
+        flex-direction: column;
         height: 100%;
         z-index: 99;
 
@@ -95,7 +96,7 @@
         }
 
         .text {
-          padding: 68px 47px 64px 43px;
+          padding: 42px 47px;
           font-size: 15px;
           line-height: 2;
           text-align: justify;
@@ -118,12 +119,11 @@
         }
 
         .user-info {
-          position: absolute;
-          bottom: -111px;
+          transform: translateY(-25%);
 
           @media (max-width: 992px){
-            position: relative;
-            bottom: 46px;
+            //position: relative;
+            //bottom: 46px;
           }
 
           .avatar {
