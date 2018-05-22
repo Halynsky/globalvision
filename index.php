@@ -30,7 +30,7 @@ include "src/html/about.html";
 include "src/html/services.html";
 include "src/html/work-proccess.html";
 include "src/html/benefits.html";
-include "src/html/portfolio.html";
+//include "src/html/portfolio.html";
 include "src/html/testimonials.html";
 include "src/html/contacts.html";
 include "src/html/footer.html";
