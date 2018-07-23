@@ -170,7 +170,7 @@ function initMap() {
 
   var marker = new google.maps.Marker({
     position: markerPosition,
-    icon: '/public/images/marker.png',
+    icon: '/images/marker.png',
     map: map
   });
 }

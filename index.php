@@ -18,8 +18,8 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="bower_components/swiper/dist/css/swiper.min.css" rel="stylesheet">
     <link href="bower_components/wow/css/libs/animate.css" rel="stylesheet">
-    <link href="dist/fonts/fontello/css/icon.css" rel="stylesheet">
-    <link href="dist/css/styles.min.css" rel="stylesheet" type="text/css">
+    <link href="fonts/fontello/css/icon.css" rel="stylesheet">
+    <link href="css/styles.min.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 <div class="dark-overlay"></div>
