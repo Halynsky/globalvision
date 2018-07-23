@@ -1,14 +1,14 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <link rel="apple-touch-icon" sizes="180x180" href="/public/images/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/public/images/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="/public/images/favicon/android-chrome-192x192.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/public/images/favicon/favicon-16x16.png">
-    <link rel="manifest" href="/public/images/favicon/manifest.json">
-    <link rel="mask-icon" href="/public/images/favicon/safari-pinned-tab.svg" color="#2b5797">
+    <link rel="apple-touch-icon" sizes="180x180" href="/dist/images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/dist/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/dist/images/favicon/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/dist/images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/dist/images/favicon/manifest.json">
+    <link rel="mask-icon" href="/dist/images/favicon/safari-pinned-tab.svg" color="#2b5797">
     <meta name="msapplication-TileColor" content="#2b5797">
-    <meta name="msapplication-TileImage" content="/public/images/favicon/mstile-144x144.png">
+    <meta name="msapplication-TileImage" content="/dist/images/favicon/mstile-144x144.png">
     <meta name="theme-color" content="#ffffff">
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -18,30 +18,30 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="bower_components/swiper/dist/css/swiper.min.css" rel="stylesheet">
     <link href="bower_components/wow/css/libs/animate.css" rel="stylesheet">
-    <link href="public/fonts/fontello/css/icon.css" rel="stylesheet">
-    <link href="public/css/styles.min.css" rel="stylesheet" type="text/css">
+    <link href="dist/fonts/fontello/css/icon.css" rel="stylesheet">
+    <link href="dist/css/styles.min.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 <div class="dark-overlay"></div>
 <?php
-include "src/html/home.html";
-include "src/html/header.html";
-include "src/html/about.html";
-include "src/html/services.html";
-include "src/html/work-proccess.html";
-include "src/html/benefits.html";
-//include "src/html/portfolio.html";
-include "src/html/testimonials.html";
-include "src/html/contacts.html";
-include "src/html/footer.html";
+include "dist/home.html";
+include "dist/header.html";
+include "dist/about.html";
+include "dist/services.html";
+include "dist/work-proccess.html";
+include "dist/benefits.html";
+//include "dist/portfolio.html";
+include "dist/testimonials.html";
+include "dist/contacts.html";
+include "dist/footer.html";
 ?>
 
-<script src="bower_components/jquery/dist/jquery.min.js"></script>
-<script src="bower_components/jquery-validation/dist/jquery.validate.min.js"></script>
-<script src="bower_components/swiper/dist/js/swiper.min.js"></script>
-<script src="bower_components/wow/dist/wow.min.js"></script>
-<script src="public/js/main.min.js"></script>
-<script src="src/js/map.js"></script>
+<script src="./bower_components/jquery/dist/jquery.min.js"></script>
+<script src="./bower_components/jquery-validation/dist/jquery.validate.min.js"></script>
+<script src="./bower_components/swiper/dist/js/swiper.min.js"></script>
+<script src="./bower_components/wow/dist/wow.min.js"></script>
+<script src="dist/js/main.min.js"></script>
+<script src="dist/js/map.js"></script>
 <script
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCLiTUW08h1QHEY8oP-nJG2RFeWa0k7Cvk&callback=initMap"></script>
 </body>

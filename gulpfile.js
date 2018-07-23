@@ -11,13 +11,13 @@ const deletefile = require('gulp-delete-file');
 const sourcemaps = require('gulp-sourcemaps');
 const livereload = require('gulp-livereload');
 
+const outDir = 'dist';
+
 // Main tasks
 
-gulp.task('default', function() {
-  // place code for your default task here
-});
-gulp.task('prod', ['compress-css', 'compress-js', 'compress-images', 'fonts']);
-gulp.task('dev', ['compress-css', 'compress-js', 'compress-images' , 'fonts', 'watch']);
+gulp.task('default', ['copy-html', 'copy-php', 'compress-css', 'compress-js', 'compress-images', 'fonts']);
+gulp.task('prod', ['copy-html', 'copy-php', 'compress-css', 'compress-js', 'compress-images', 'fonts']);
+gulp.task('dev', ['copy-html', 'copy-php', 'compress-css', 'compress-js', 'compress-images' , 'fonts', 'watch']);
 
 // Task sequences
 
@@ -68,7 +68,7 @@ gulp.task('minify-css', function (callback) {
       gulp.src(['!src/css/**/*.min.css','src/css/**/*.css'], { base: "src" }),
       cleanCSS({compatibility: 'ie8'}),
       rename({ suffix: '.min' }),
-      gulp.dest('public'),
+      gulp.dest(outDir),
       livereload()
     ],
     callback
@@ -78,7 +78,7 @@ gulp.task('minify-css', function (callback) {
 gulp.task('fonts', function() {
   return gulp.src([
     'src/fonts/**/*.*'] , { base: "src" })
-    .pipe(gulp.dest('public'));
+    .pipe(gulp.dest(outDir));
 });
 
 
@@ -96,12 +96,12 @@ gulp.task('compress-js', function (callback) {
   };
 
   pump([
-      gulp.src(['!src/js/**/*.min.js','!src/js/map.js' ,'src/js/**/*.js'], { base: "src" }),
+      gulp.src(['!src/js/**/*.min.js','src/js/**/*.js'], { base: "src" }),
       sourcemaps.init(),
       uglify(options),
       rename({ suffix: '.min' }),
       sourcemaps.write(),
-      gulp.dest('public'),
+      gulp.dest(outDir),
       livereload()
     ],
     callback
@@ -113,16 +113,29 @@ gulp.task('compress-images', function (callback) {
   pump([
       gulp.src(['src/images/**/*'], { base: "src" }),
       imagemin(),
-      gulp.dest('public')
+      gulp.dest(outDir)
     ],
     callback
   );
 });
 
-gulp.task('reload-html', function(callback) {
+gulp.task('copy-html', function(callback) {
 
   pump([
-      gulp.src('src/html/**/*.html'),
+      gulp.src('src/html/**/*.html', { base: "src/html"}),
+      gulp.dest(outDir),
+      livereload()
+    ],
+    callback
+  );
+
+});
+
+gulp.task('copy-php', function(callback) {
+
+  pump([
+      gulp.src('**/*.php', { base: "."}),
+      gulp.dest(outDir),
       livereload()
     ],
     callback
@@ -136,6 +149,6 @@ gulp.task('watch', function() {
   gulp.watch('src/scss/**/*.scss', ['compress-css']);
   gulp.watch('src/js/**/*.js', ['compress-js'] );
   gulp.watch('src/images/**/*', ['compress-images']);
-  gulp.watch('src/html/**/*.html', ['reload-html']);
+  gulp.watch('src/html/**/*.html', ['copy-html']);
   gulp.watch('src/fonts/**/*.*', ['fonts']);
 });

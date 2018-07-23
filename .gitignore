@@ -54,6 +54,7 @@ fabric.properties
 node_modules/
 bower_components/
 public/
+dist/
 
 # compiled css files
 src/css/**/*.css
