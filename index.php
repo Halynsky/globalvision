@@ -24,24 +24,24 @@
 <body>
 <div class="dark-overlay"></div>
 <?php
-include "dist/home.html";
-include "dist/header.html";
-include "dist/about.html";
-include "dist/services.html";
-include "dist/work-proccess.html";
-include "dist/benefits.html";
-//include "dist/portfolio.html";
-include "dist/testimonials.html";
-include "dist/contacts.html";
-include "dist/footer.html";
+include "home.html";
+include "header.html";
+include "about.html";
+include "services.html";
+include "work-proccess.html";
+include "benefits.html";
+//include portfolio.html";
+include "testimonials.html";
+include "contacts.html";
+include "footer.html";
 ?>
 
 <script src="./bower_components/jquery/dist/jquery.min.js"></script>
 <script src="./bower_components/jquery-validation/dist/jquery.validate.min.js"></script>
 <script src="./bower_components/swiper/dist/js/swiper.min.js"></script>
 <script src="./bower_components/wow/dist/wow.min.js"></script>
-<script src="dist/js/main.min.js"></script>
-<script src="dist/js/map.js"></script>
+<script src="js/main.min.js"></script>
+<script src="js/map.js"></script>
 <script
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCLiTUW08h1QHEY8oP-nJG2RFeWa0k7Cvk&callback=initMap"></script>
 </body>

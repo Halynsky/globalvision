@@ -134,7 +134,7 @@ gulp.task('copy-html', function(callback) {
 gulp.task('copy-php', function(callback) {
 
   pump([
-      gulp.src('**/*.php', { base: "."}),
+      gulp.src(['!dist/**/*.*', '**/*.php'], { base: "."}),
       gulp.dest(outDir),
       livereload()
     ],
