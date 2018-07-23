@@ -96,7 +96,7 @@ gulp.task('compress-js', function (callback) {
   };
 
   pump([
-      gulp.src(['!src/js/**/*.min.js','src/js/**/*.js'], { base: "src" }),
+      gulp.src(['!src/js/**/*.min.js', '!src/js/map.js' ,'src/js/**/*.js'], { base: "src" }),
       sourcemaps.init(),
       uglify(options),
       rename({ suffix: '.min' }),
@@ -106,6 +106,9 @@ gulp.task('compress-js', function (callback) {
     ],
     callback
   );
+
+  gulp.src('src/js/map.js')
+    .pipe(gulp.dest(outDir + '/js'));
 
 });
 
