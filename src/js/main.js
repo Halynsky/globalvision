@@ -1,4 +1,4 @@
-console.log('GlobalVision Start');
+console.log('Code Vision Start');
 
 $(document).ready(function () {
 
