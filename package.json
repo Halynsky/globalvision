@@ -5,10 +5,10 @@
   "scripts": {
     "postinstall": "npm run build",
     "dev": "gulp dev",
-    "start": "http-server public -p8080",
-    "serve": "http-server public -p8082",
+    "start": "http-server dist -p8080",
+    "serve": "http-server dist -p8082",
     "build": "gulp && bower install",
-    "clean": "gulp clean",
+    "clean": "rimraf dist",
     "bundle": "gulp prod"
   },
   "private": true,

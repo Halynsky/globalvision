@@ -1,4 +1,4 @@
-console.log('Code Vision Start');
+console.log('CodeVision Start');
 
 $(document).ready(function () {
 
