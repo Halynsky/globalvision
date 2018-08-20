@@ -15,9 +15,9 @@ const outDir = 'dist';
 
 // Main tasks
 
-gulp.task('default', ['copy-html', 'copy-php', 'compress-css', 'compress-js', 'compress-images', 'fonts']);
-gulp.task('prod', ['copy-html', 'copy-php', 'compress-css', 'compress-js', 'compress-images', 'fonts']);
-gulp.task('dev', ['copy-html', 'copy-php', 'compress-css', 'compress-js', 'compress-images' , 'fonts', 'watch']);
+gulp.task('default', ['copy-html', 'copy-php', 'compress-css', 'compress-js', 'compress-images', 'fonts', 'copy-htaccess']);
+gulp.task('prod', ['copy-html', 'copy-php', 'compress-css', 'compress-js', 'compress-images', 'fonts', 'copy-htaccess']);
+gulp.task('dev', ['copy-html', 'copy-php', 'compress-css', 'compress-js', 'compress-images' , 'fonts', 'copy-htaccess', 'watch']);
 
 // Task sequences
 
@@ -123,7 +123,6 @@ gulp.task('compress-images', function (callback) {
 });
 
 gulp.task('copy-html', function(callback) {
-
   pump([
       gulp.src('src/html/**/*.html', { base: "src/html"}),
       gulp.dest(outDir),
@@ -131,11 +130,9 @@ gulp.task('copy-html', function(callback) {
     ],
     callback
   );
-
 });
 
 gulp.task('copy-php', function(callback) {
-
   pump([
       gulp.src(['!dist/**/*.*', '**/*.php'], { base: "."}),
       gulp.dest(outDir),
@@ -144,6 +141,16 @@ gulp.task('copy-php', function(callback) {
     callback
   );
 
+});
+
+gulp.task('copy-htaccess', function(callback) {
+  pump([
+      gulp.src(['**/.htaccess'], { base: "."}),
+      gulp.dest(outDir),
+      livereload()
+    ],
+    callback
+  );
 });
 
 gulp.task('watch', function() {
