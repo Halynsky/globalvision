@@ -39,13 +39,13 @@ if(isset($_POST) && !empty($_POST)) {
                 $mail->CharSet = 'UTF-8';
                 $mail->Host = 'smtp.rambler.ru';
                 $mail->SMTPAuth = true;
-                $mail->Username = 'pupkin-vova@rambler.ua';
-                $mail->Password = '102030Aa';
+                $mail->Username = 'mailer@codevision.com.ua';
+                $mail->Password = '*fH9w?-JZ}4egR$Ny(Q';
                 $mail->SMTPSecure = 'ssl';
                 $mail->Port = 465;
-                $mail->setFrom('pupkin-vova@rambler.ua', 'GlobalVision');
-                $mail->addAddress('noliynyk@codevision.com.ua');
-                $mail->addReplyTo('pupkin-vova@rambler.ua', 'Information');
+                $mail->setFrom('mailer@codevision.com.ua', 'CodeVision');
+                $mail->addAddress('sale@codevision.com.ua');
+                $mail->addReplyTo($email,  $name);
                 $mail->isHTML(false);
                 $mail->Subject = 'Contact Form';
                 $mail->Body    = $content;
